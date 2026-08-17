@@ -256,8 +256,8 @@ en:
       No trackers, no analytics, no third-party requests. Fonts are served from
       this domain.
     foot_ai: >-
-      Developed with disclosed generative-AI assistance. Arturo Sánchez Pineda
-      directed, reviewed and takes responsibility for the publication.
+      I wrote and directed this project with disclosed generative-AI assistance.
+      I remain its author and accept responsibility for the publication.
     ai_anchor: authorship-and-ai-assistance
     mode_dark: Dark
     mode_light: Light
@@ -476,8 +476,8 @@ es:
       Sin rastreadores, sin analítica, sin peticiones a terceros. Las tipografías
       se sirven desde este dominio.
     foot_ai: >-
-      Elaborado con asistencia declarada de inteligencia artificial generativa.
-      Arturo Sánchez Pineda dirigió, revisó y asume la responsabilidad de la publicación.
+      Escribí y dirigí este proyecto con asistencia declarada de inteligencia
+      artificial generativa. Soy su autor y asumo la responsabilidad de la publicación.
     ai_anchor: responsabilidad-autoral-y-asistencia-de-inteligencia-artificial
     mode_dark: Oscuro
     mode_light: Claro

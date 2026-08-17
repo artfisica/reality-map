@@ -115,14 +115,18 @@ domain.
 
 ## Authorship and AI assistance
 
-The originating concerns, civilian-manual purpose, selection and ordering of
-cases, Venezuelan perspective, authorial voice and final positions are Arturo
-Sánchez Pineda's. Generative AI assisted with analytical structuring, research
-organisation, source discovery for author review, bilingual editorial work,
-terminology checks, code, validation and visual production. AI output is not a
-source or authority. Arturo directed, corrected and approved the work and
-accepts responsibility for the published version. The full disclosure appears
-in both editions of the method and is linked from every page footer.
+Arturo Sánchez Pineda wrote the study: parts directly, and the rest through his
+own drafts, prompts, explanations, corrections and repeated revisions with
+generative-AI assistance. Its originating concerns, civilian-manual purpose,
+selection and ordering of cases, Venezuelan perspective, authorial voice and
+final positions are his. He also wrote the prompts directing AI to search for
+possible references; AI helped locate and organise candidate sources, while he
+decided which to examine, describe and retain. AI additionally assisted with
+analytical structuring, bilingual editorial work, terminology checks, code,
+validation and visual production. AI output is not a source or authority.
+Arturo directed, corrected and approved the work and accepts responsibility for
+the published version. The full first-person disclosure appears in both
+editions of the method and is linked from every page footer.
 
 ## Corrections
 

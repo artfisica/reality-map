@@ -23,6 +23,9 @@ is recorded here.
   summarized it in the README and linked it from every page footer. It separates
   Arturo Sánchez Pineda's originating ideas and final responsibility from the
   research, editorial, bilingual, coding and visual assistance provided by AI.
+- Clarified in the first person that Arturo wrote the study and the prompts used
+  to direct AI searches for possible references, while preserving a precise
+  account of the drafting and technical assistance AI provided.
 - Case studies reordered: the Caribbean killings become IV, Venezuela becomes V.
 - Claim anchors are now stable. They no longer come from row order, so adding a
   claim does not renumber the ones below it or break an existing citation.

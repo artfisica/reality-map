@@ -19,11 +19,11 @@ I do not write from the comfortable position of someone who declares himself bra
 
 ## Authorship and AI assistance
 
-The impulse behind this project, its purpose as a civilian manual, the selection and ordering of the cases, the political and legal questions, the Venezuelan perspective, the authorial voice and the final positions expressed here are mine. Parts of the analytical structure and its formulation—including categories, tables, the sequence of exposition and the bilingual presentation—were developed iteratively with generative-AI assistance.
+I wrote this study. Its originating questions, its purpose as a civilian manual, the selection and ordering of the cases, the political and legal concerns, the Venezuelan perspective, the authorial voice and the final positions expressed here are mine. I wrote parts of the text directly and developed the rest through my own drafts, prompts, explanations, corrections and repeated revisions with generative-AI assistance. Parts of the analytical structure and its exact formulation were refined iteratively through that process.
 
-I used generative AI as a research, editorial and production tool. It helped organise material, compare formulations, identify possible sources for my review, maintain terminological consistency between English and Spanish, and develop the code, validation tools and visual maps for the website. Its output was not treated as evidence or authority. The documents cited in the publication—not the AI—are the sources for claims about the external world.
+I also wrote the prompts and instructions that directed the AI to search for possible references, compare formulations, identify gaps and organise material. The AI helped me locate and organise candidate sources; I decided which references to examine, how to describe them and which to retain. I did not treat its output as evidence or authority. The documents cited in the publication—not the AI—are the sources for claims about the external world.
 
-I directed the project, challenged and corrected the generated material, selected the sources and formulations retained, revised the text and approved the published version. Responsibility for the final argument, and for any error that remains, is mine.
+AI also assisted with bilingual editing, terminological consistency, portions of the analytical taxonomy and presentation, and the code, validation tools and visual maps for the website. It did not choose the project’s purpose, cases, political or legal positions, or final conclusions. I directed the project, challenged and corrected generated material, selected the sources and formulations retained, revised the complete text and approved the published version. I am the author of this study, and responsibility for its final argument and for any error that remains is mine.
 
 ## Objectivity is not neutrality
 
