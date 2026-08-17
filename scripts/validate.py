@@ -121,6 +121,14 @@ def check_edition(cfg: dict, code: str) -> dict:  # noqa: C901
             say("warn", f'[{code}] {path.name} does not carry the edition date '
                         f'"{L["edition"]}"')
 
+    # every map marker must have geometry behind it
+    import json as _json
+    geo = _json.loads((ROOT / "assets" / "map.json").read_text(encoding="utf-8"))
+    for place in L.get("map", {}).get("places", []):
+        if place["id"] not in geo["points"]:
+            say("error", f'[{code}] map place "{place["id"]}" has no projected '
+                         f"point. Add it to scripts/make_map.mjs and re-run it.")
+
     # prohibited terminology
     for term in cfg["site"].get("prohibited", {}).get(code, []):
         pattern = re.compile(rf"\b{re.escape(term)}\b", re.I)
@@ -158,6 +166,12 @@ def main() -> int:
             say("warn", f"semantic id {i} exists in English but not Spanish")
         for i in sorted(only_es):
             say("warn", f"semantic id {i} exists in Spanish but not English")
+
+    map_ids = {code: [p["id"] for p in cfg[code].get("map", {}).get("places", [])]
+               for code in ("en", "es")}
+    if map_ids["en"] != map_ids["es"]:
+        say("error", "the two editions list different map places, so the map "
+                     "would show a different atlas in each language")
 
     files = {code: len(data["sections"]) for code, data in editions.items()}
     if len(set(files.values())) != 1:

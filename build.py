@@ -432,6 +432,7 @@ def chrome(L: dict, alt: dict, prefix: str, active: str, alt_url: str) -> str:
     items = [("method", L["method"]["label"], f'{base}{L["method"]["slug"]}/')]
     for s in L["studies"]:
         items.append((s["slug"], s["numeral"], f'{base}{L["studies_dir"]}/{s["slug"]}/'))
+    items.append(("map", L["map"]["label"], f'{base}{L["map"]["slug"]}/'))
     items.append(("ledger", L["ledger"]["label"], f'{base}{L["ledger"]["slug"]}/'))
 
     links = ""
@@ -505,6 +506,73 @@ def shell(L: dict, alt: dict, *, title: str, description: str, depth: int, body:
 <script src="{prefix}assets/atlas.js" defer></script>
 </body>
 </html>"""
+
+
+def render_map(L, alt, geo, alt_url, path, alt_path):
+    """The atlas located. Markers say where a study looks, never what a place is.
+
+    Nothing here is coloured. On the rest of the site colour means evidence
+    class; a filled territory would be colour asserting a legal conclusion, so
+    the map stays monochrome and puts the status in words instead.
+    """
+    M, ui = L["map"], L["ui"]
+    depth = 2 if L["dir"] else 1
+    prefix = "../" * depth
+    base = prefix + (L["dir"] + "/" if L["dir"] else "")
+    by_numeral = {study["numeral"]: study["slug"] for study in L["studies"]}
+
+    pins, rows, groups = [], [], {}
+    for place in M["places"]:
+        x, y = geo["points"][place["id"]]
+        # Two markers can land within a few pixels of each other at world
+        # scale. A small screen-space nudge keeps both readable; the geography
+        # underneath is unchanged.
+        dx, dy = place.get("offset", (0, 0))
+        x, y = x + dx, y + dy
+        href = f'{base}{L["studies_dir"]}/{by_numeral[place["numeral"]]}/'
+        label = f'{place["numeral"]} \u00b7 {place["name"]}'
+        pins.append(
+            f'<a class="pin" href="{href}" aria-label="{e(label)}">'
+            f'<circle class="pin__halo" cx="{x}" cy="{y}" r="17"/>'
+            f'<circle class="pin__dot" cx="{x}" cy="{y}" r="11"/>'
+            f'<text class="pin__t" x="{x}" y="{y}">{e(place["numeral"])}</text>'
+            f'<title>{e(place["name"])}</title></a>')
+        groups.setdefault(place["numeral"], []).append(place)
+
+    for numeral, places in groups.items():
+        items = "".join(
+            f'<li class="place"><span class="place__n">{e(p["name"])}</span>'
+            f'<span class="place__s">{e(p["status"])}</span></li>' for p in places)
+        rows.append(
+            f'<div class="legend__group">'
+            f'<a class="legend__study" href="{base}{L["studies_dir"]}/{by_numeral[numeral]}/">'
+            f'<span class="legend__num">{e(numeral)}</span>'
+            f'<span>{e(t(ui, "case_study"))} {e(numeral)}</span></a>'
+            f'<ul class="places">{items}</ul></div>')
+
+    body = f"""
+<article class="mappage">
+  <header class="doc__head">
+    <p class="eyebrow">{e(M['eyebrow'])}</p>
+    <h1 class="doc__title">{e(M['title'])}</h1>
+    <p class="doc__subtitle">{e(M['subtitle'])}</p>
+  </header>
+  <p class="lede mappage__lede">{e(M['lede'])}</p>
+  <figure class="atlasmap">
+    <svg viewBox="{geo['viewBox']}" role="img" xmlns="http://www.w3.org/2000/svg"
+         aria-label="{e(M['title'])}">
+      <path class="sphere" d="{geo['sphere']}"/>
+      <path class="grat" d="{geo['graticule']}"/>
+      <path class="land" d="{geo['land']}"/>
+      <g class="pins">{"".join(pins)}</g>
+    </svg>
+    <figcaption class="note">{e(M['note'])}</figcaption>
+  </figure>
+  <div class="legend">{"".join(rows)}</div>
+</article>"""
+    return shell(L, alt, title=M["title"], description=M["lede"][:180], depth=depth,
+                 body=body, active="map", page="page-map", alt_url=alt_url,
+                 path=path, alt_path=alt_path)
 
 
 # --------------------------------------------------------------------------
@@ -594,12 +662,165 @@ def render_home(L, alt, method, studies, sections, claims, standfirst, alt_url, 
       <span class="way__d">{e(t(ui, 'way2_d'))}</span></a>
     <a class="way" href="{L['ledger']['slug']}/"><span class="way__k">{e(t(ui, 'way3_k'))}</span>
       <span class="way__d">{e(t(ui, 'way3_d', n=len(claims), f=len(sections)))}</span></a>
+    <a class="way" href="{L['map']['slug']}/"><span class="way__k">{e(t(ui, 'way4_k'))}</span>
+      <span class="way__d">{e(t(ui, 'way4_d'))}</span></a>
   </div>
 </section>
 """
     return shell(L, alt, title=L["title"], description=L["description"], depth=depth,
                  body=body, active="home", page="page-home", alt_url=alt_url,
                  path=path, alt_path=alt_path)
+
+
+def render_method_map(L: dict) -> str:
+    """Render the method as a compact, bilingual operational map."""
+    maps = {
+        "en": {
+            "eyebrow": "The method at a glance",
+            "title": "From official language to observable conduct",
+            "lede": ("Classify the claim, compare declared order with the forces "
+                     "that predict conduct, measure the response, apply the five "
+                     "tests and turn the result into civilian preparation."),
+            "gate": "Classify every claim",
+            "classes": "fact · position · finding · court rule · allegation · inference · risk",
+            "declared": "Declared order",
+            "observed": "What predicts conduct",
+            "layers_label": "02 · Six-layer power map",
+            "distance": "The distance between them is the object of study",
+            "layers": [
+                ("01", "Rule", "What does law require?"),
+                ("02", "Declaration", "What principle is invoked?"),
+                ("03", "Interest", "What objective is protected?"),
+                ("04", "Dependency", "What limits freedom of action?"),
+                ("05", "Instrument", "What tool is used or withheld?"),
+                ("06", "Cost", "Who benefits; who absorbs it?"),
+            ],
+            "gradient": "Enforcement gradient",
+            "gradient_href": "#3-the-enforcement-gradient",
+            "steps": ["Concern", "Humanitarian aid", "Evidence", "Suspension",
+                      "Individual measures", "Arms restrictions", "Isolation",
+                      "Collective action"],
+            "tests_label": "Five tests",
+            "tests": [
+                ("04", "Protected ally", "#4-the-protected-ally-test"),
+                ("05", "Colonial continuity", "#5-the-colonial-continuity-test"),
+                ("06", "Intervention lifecycle", "#6-the-intervention-lifecycle"),
+                ("07", "Target construction", "#7-the-target-construction-test"),
+                ("08", "Sovereignty under coercion", "#8-sovereignty-under-coercion"),
+            ],
+            "protocol_label": "Civilian operating protocol",
+            "protocol": [
+                ("Build an evidence file", "#build-an-evidence-file"),
+                ("Map practical dependencies", "#map-practical-dependencies"),
+                ("Read institutional behaviour", "#read-institutional-behaviour"),
+                ("Maintain intellectual discipline", "#maintain-intellectual-discipline"),
+            ],
+            "result": "Do not confuse a declared right with effective protection.",
+            "layer_href": "#2-the-six-layer-power-map",
+            "gate_href": "#1-the-discipline-of-naming-facts",
+        },
+        "es": {
+            "eyebrow": "El método, en una mirada",
+            "title": "Del lenguaje oficial a la conducta observable",
+            "lede": ("Clasifique la afirmación, compare el orden declarado con las "
+                     "fuerzas que predicen la conducta, mida la respuesta, aplique las "
+                     "cinco pruebas y traduzca el resultado en preparación civil."),
+            "gate": "Clasifique cada afirmación",
+            "classes": "hecho · posición · conclusión · decisión judicial · alegación · inferencia · riesgo",
+            "declared": "Orden declarado",
+            "observed": "Lo que predice la conducta",
+            "layers_label": "02 · Mapa de poder en seis capas",
+            "distance": "La distancia entre ambos es el objeto de estudio",
+            "layers": [
+                ("01", "Norma", "¿Qué exige el derecho?"),
+                ("02", "Declaración", "¿Qué principio se invoca?"),
+                ("03", "Interés", "¿Qué objetivo se protege?"),
+                ("04", "Dependencia", "¿Qué limita el margen de acción?"),
+                ("05", "Instrumento", "¿Qué herramienta se usa o se retiene?"),
+                ("06", "Costo", "¿Quién gana; quién lo absorbe?"),
+            ],
+            "gradient": "Escala de respuesta estatal",
+            "gradient_href": "#3-la-escala-de-respuesta-estatal",
+            "steps": ["Preocupación", "Ayuda humanitaria", "Pruebas e investigación",
+                      "Suspensión", "Medidas individuales", "Restricción de armas",
+                      "Aislamiento", "Acción colectiva"],
+            "tests_label": "Cinco pruebas",
+            "tests": [
+                ("04", "Aliado protegido", "#4-la-prueba-del-aliado-protegido"),
+                ("05", "Continuidad colonial", "#5-la-prueba-de-continuidad-colonial"),
+                ("06", "Ciclo de intervención", "#6-el-ciclo-de-vida-de-una-intervencion"),
+                ("07", "Construcción del objetivo", "#7-la-prueba-de-construccion-del-objetivo"),
+                ("08", "Soberanía bajo coerción", "#8-soberania-bajo-coercion"),
+            ],
+            "protocol_label": "Protocolo operativo civil",
+            "protocol": [
+                ("Construya un expediente", "#construya-un-expediente"),
+                ("Dibuje sus dependencias", "#dibuje-sus-dependencias-practicas"),
+                ("Lea la conducta institucional", "#lea-la-conducta-institucional"),
+                ("Mantenga disciplina intelectual", "#mantenga-disciplina-intelectual"),
+            ],
+            "result": "No confunda un derecho reconocido con una protección efectiva.",
+            "layer_href": "#2-el-mapa-de-poder-en-seis-capas",
+            "gate_href": "#1-la-disciplina-de-nombrar-los-hechos",
+        },
+    }
+    M = maps[L["code"]]
+
+    def layer(item):
+        n, name, question = item
+        return (f'<a class="methodmap__layer" href="{M["layer_href"]}">'
+                f'<span class="methodmap__n">{n}</span>'
+                f'<span><strong>{e(name)}</strong><small>{e(question)}</small></span></a>')
+
+    declared = "".join(layer(x) for x in M["layers"][:2])
+    observed = "".join(layer(x) for x in M["layers"][2:])
+    steps = "".join(f'<li><span>{i:02d}</span>{e(label)}</li>'
+                    for i, label in enumerate(M["steps"], 1))
+    tests = "".join(
+        f'<a href="{href}"><span>{n}</span><strong>{e(label)}</strong></a>'
+        for n, label, href in M["tests"])
+    protocol = "".join(
+        f'<a href="{href}"><span>{i:02d}</span>{e(label)}</a>'
+        for i, (label, href) in enumerate(M["protocol"], 1))
+
+    return f"""
+<section class="methodmap on-deep" aria-labelledby="methodmap-title">
+  <header class="methodmap__head">
+    <p class="eyebrow">{e(M['eyebrow'])}</p>
+    <h2 id="methodmap-title">{e(M['title'])}</h2>
+    <p>{e(M['lede'])}</p>
+  </header>
+  <a class="methodmap__gate" href="{M['gate_href']}">
+    <span class="methodmap__section">01</span>
+    <strong>{e(M['gate'])}</strong>
+    <small>{e(M['classes'])}</small>
+  </a>
+  <div class="methodmap__arrow" aria-hidden="true">&#8595;</div>
+  <p class="methodmap__layers-label">{e(M['layers_label'])}</p>
+  <div class="methodmap__layers">
+    <section aria-label="{e(M['declared'])}">
+      <p>{e(M['declared'])}</p>{declared}
+    </section>
+    <div class="methodmap__distance"><span>{e(M['distance'])}</span></div>
+    <section aria-label="{e(M['observed'])}">
+      <p>{e(M['observed'])}</p>{observed}
+    </section>
+  </div>
+  <div class="methodmap__arrow" aria-hidden="true">&#8595;</div>
+  <a class="methodmap__gradient" href="{M['gradient_href']}">
+    <span class="methodmap__section">03</span><strong>{e(M['gradient'])}</strong>
+    <ol>{steps}</ol>
+  </a>
+  <div class="methodmap__arrow methodmap__arrow--branch" aria-hidden="true">&#8595;</div>
+  <section class="methodmap__tests" aria-label="{e(M['tests_label'])}">
+    <p>{e(M['tests_label'])}</p><div>{tests}</div>
+  </section>
+  <div class="methodmap__arrow" aria-hidden="true">&#8595;</div>
+  <section class="methodmap__protocol" aria-label="{e(M['protocol_label'])}">
+    <p><span>09</span>{e(M['protocol_label'])}</p><div>{protocol}</div>
+  </section>
+  <p class="methodmap__result">{e(M['result'])}</p>
+</section>"""
 
 
 def render_doc(L, alt, doc, claims, kind, prev, nxt, alt_url, alt_path):
@@ -642,6 +863,7 @@ def render_doc(L, alt, doc, claims, kind, prev, nxt, alt_url, alt_path):
     eyebrow = t(ui, "the_method") if kind == "method" else \
         f'{t(ui, "case_study")} {doc.numeral}'
     stand = f'<div class="doc__standfirst">{doc.standfirst}</div>' if doc.standfirst else ""
+    method_map = render_method_map(L) if kind == "method" else ""
 
     body = f"""
 <article class="doc">
@@ -658,6 +880,7 @@ def render_doc(L, alt, doc, claims, kind, prev, nxt, alt_url, alt_path):
   </header>
   {issuers(doc, ui)}
   {evidence}
+  {method_map}
   <div class="doc__layout">
     {toc_html(doc.toc, t(ui, 'in_this_document'))}
     <div class="prose">{doc.body_html}</div>
@@ -827,6 +1050,14 @@ def build_lang(cfg, code: str) -> dict:
               render_doc(L, alt, doc, claims, "study", order[i - 1], order[i + 1],
                          alt_for(doc.depth, f'{abase}{alt["studies_dir"]}/{aslug}/'),
                          f'{abase}{alt["studies_dir"]}/{aslug}/'))
+    geo = json.loads((ASSETS / "map.json").read_text(encoding="utf-8"))
+    mdepth = depth_base + 1
+    write(OUT / base / L["map"]["slug"] / "index.html",
+          render_map(L, alt, geo,
+                     alt_for(mdepth, f'{abase}{alt["map"]["slug"]}/'),
+                     f'{base}{L["map"]["slug"]}/',
+                     f'{abase}{alt["map"]["slug"]}/'))
+
     ldepth = depth_base + 1
     write(OUT / base / L["ledger"]["slug"] / "index.html",
           render_ledger(L, alt, intro, sections, outro, claims, section_study,
@@ -842,7 +1073,8 @@ def build_lang(cfg, code: str) -> dict:
                     "file": c.section, "class": c.class_id,
                     "classification": c.classification, "claim": c.claim_text,
                     "source": c.source_url} for c in claims],
-        "urls": [base or ""] + [u for u, _ in order]}
+        "urls": [base or ""] + [u for u, _ in order]
+                + [f'{base}{L["map"]["slug"]}/']}
 
 
 def main() -> int:

@@ -79,6 +79,65 @@ en:
     - {file: 05-venezuela.md,     slug: venezuela,     numeral: V,
        ledger_sections: ["Venezuela, sovereignty and the ICC"]}
 
+  map:
+    slug: map
+    label: Map
+    eyebrow: Where the atlas looks
+    title: Ten places, five studies
+    subtitle: The ground the arguments stand on
+    lede: >-
+      Every case in the atlas, located. The markers say where a study looks.
+      They do not encode legal status, and nothing on this map is coloured,
+      because a filled territory would assert a conclusion the ledger has to
+      earn in prose.
+    note: >-
+      Drawn in the Equal Earth projection, in which areas are comparable.
+      Mercator would inflate the metropolitan north and shrink almost every
+      territory examined here, which is the opposite of the point.
+    places:
+      - id: levant
+        numeral: I
+        offset: [-15, 9]
+        name: Gaza and Lebanon
+        status: Documented violations met with declaratory response
+      - id: puerto-rico
+        numeral: II
+        name: Puerto Rico
+        status: US unincorporated territory, not on the UN list since 1953
+      - id: guam
+        numeral: II
+        name: Guam
+        status: US unincorporated territory and UN Non-Self-Governing Territory
+      - id: new-caledonia
+        numeral: II
+        name: New Caledonia
+        status: French sui generis collectivity, UN Non-Self-Governing Territory
+      - id: french-guiana
+        numeral: II
+        name: French Guiana
+        status: Incorporated under Article 73, not on the UN list
+      - id: mesopotamia
+        numeral: III
+        offset: [11, -11]
+        name: Iraq and Syria
+        status: Invasion and cumulative internationalisation
+      - id: afghanistan
+        numeral: III
+        name: Afghanistan
+        status: Twenty years of state building, then withdrawal
+      - id: caribbean
+        numeral: IV
+        name: Caribbean Sea
+        status: Maritime strikes in place of arrest and trial
+      - id: eastern-pacific
+        numeral: IV
+        name: Eastern Pacific
+        status: Maritime strikes in place of arrest and trial
+      - id: venezuela
+        numeral: V
+        name: Venezuela
+        status: Unlawful intervention, not a belligerent occupation at the date of the Swiss assessment
+
   ledger:
     file: ledger.md
     slug: ledger
@@ -180,6 +239,10 @@ en:
       means after an intervention.
     way3_k: Start with the evidence
     way3_d: "Search {n} classified claims across {f} files."
+    way4_k: Start with the map
+    way4_d: >-
+      Ten places across five studies, located and named with the status the
+      record supports.
     foot_1: >-
       Written by Arturo Sánchez Pineda. Every factual claim is classified and
       traced in the ledger. Corrections are part of the method.
@@ -226,6 +289,65 @@ es:
        ledger_sections: ["Ejecuciones marítimas en el Caribe y el Pacífico"]}
     - {file: 05-venezuela.md,     slug: venezuela,     numeral: V,
        ledger_sections: ["Venezuela, soberanía y CPI"]}
+
+  map:
+    slug: mapa
+    label: Mapa
+    eyebrow: Dónde mira el atlas
+    title: Diez lugares, cinco estudios
+    subtitle: El terreno sobre el que se sostienen los argumentos
+    lede: >-
+      Cada caso del atlas, ubicado. Los marcadores indican dónde mira un
+      estudio. No codifican estatus jurídico, y nada en este mapa está
+      coloreado, porque un territorio relleno afirmaría una conclusión que el
+      registro debe ganarse en prosa.
+    note: >-
+      Trazado en la proyección Equal Earth, en la que las áreas son
+      comparables. Mercator inflaría el norte metropolitano y encogería casi
+      todos los territorios examinados aquí, que es justo lo contrario.
+    places:
+      - id: levant
+        numeral: I
+        offset: [-15, 9]
+        name: Gaza y Líbano
+        status: Violaciones documentadas respondidas con declaraciones
+      - id: puerto-rico
+        numeral: II
+        name: Puerto Rico
+        status: Territorio no incorporado de EE. UU., fuera de la lista de la ONU desde 1953
+      - id: guam
+        numeral: II
+        name: Guam
+        status: Territorio no incorporado de EE. UU. y territorio no autónomo de la ONU
+      - id: new-caledonia
+        numeral: II
+        name: Nueva Caledonia
+        status: Colectividad francesa sui generis, territorio no autónomo de la ONU
+      - id: french-guiana
+        numeral: II
+        name: Guayana Francesa
+        status: Incorporada bajo el artículo 73, fuera de la lista de la ONU
+      - id: mesopotamia
+        numeral: III
+        offset: [11, -11]
+        name: Irak y Siria
+        status: Invasión e internacionalización acumulativa
+      - id: afghanistan
+        numeral: III
+        name: Afganistán
+        status: Veinte años de construcción estatal y luego retirada
+      - id: caribbean
+        numeral: IV
+        name: Mar Caribe
+        status: Ataques marítimos en lugar de detención y juicio
+      - id: eastern-pacific
+        numeral: IV
+        name: Pacífico oriental
+        status: Ataques marítimos en lugar de detención y juicio
+      - id: venezuela
+        numeral: V
+        name: Venezuela
+        status: Intervención sin base legal, no una ocupación beligerante a la fecha de la evaluación suiza
 
   ledger:
     file: registro.md
@@ -327,6 +449,10 @@ es:
       soberana formal después de una intervención.
     way3_k: Empezar por la evidencia
     way3_d: "Buscar {n} afirmaciones clasificadas en {f} expedientes."
+    way4_k: Empezar por el mapa
+    way4_d: >-
+      Diez lugares en cinco estudios, ubicados y nombrados con el estatus que
+      el expediente sostiene.
     foot_1: >-
       Escrito por Arturo Sánchez Pineda. Cada afirmación factual está
       clasificada y trazada en el registro. Corregir es parte del método.

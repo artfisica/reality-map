@@ -31,8 +31,9 @@ to GitHub Pages. Enable it once under **Settings > Pages > Build and deployment
 3. Add an entry under `studies` in `site.yaml` for that language, listing the
    ledger section names it draws on under `ledger_sections`.
 
-Numerals, reading times, source counts, the evidence bar, the mosaic, the ledger
-filters and the series navigation are all computed.
+Numerals, reading times, source counts, the evidence bar, the mosaic, the
+linked graphic method map, the ledger filters and the series navigation are all
+computed.
 
 ## Checks
 
@@ -42,6 +43,19 @@ python scripts/validate.py --strict   # what CI runs on every pull request
 python scripts/check_links.py         # every internal link and anchor
 python scripts/make_social.py         # redraw assets/social.png from the ledger
 ```
+
+The world map geometry in `assets/map.json` is generated once and committed, so
+the site build needs no JavaScript. Regenerate it only when the set of places
+changes:
+
+```bash
+npm install world-atlas topojson-client d3-geo
+node scripts/make_map.mjs
+```
+
+Place coordinates live in `scripts/make_map.mjs`; their names, status text and
+any screen-space nudge live per language under `map.places` in `site.yaml`. Both
+editions must list the same place ids, which `validate.py` enforces.
 
 `validate.py` reports three severities. Errors always fail: an unknown
 classification, a malformed claim row, a duplicate anchor, a study pointed at a

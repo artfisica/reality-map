@@ -4,4 +4,6 @@ __pycache__/
 .DS_Store
 .fontcache/
 .venv/
-.venv/
+node_modules/
+package-lock.json
+package.json
