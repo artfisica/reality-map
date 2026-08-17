@@ -1,0 +1,108 @@
+# The Civilian Geopolitical Reality Map
+
+A bilingual static site for the manual, the five case studies and the claim and
+source ledger. English at the root, Spanish under `/es/`.
+
+The markdown in `content/` is the record. Everything the site displays about
+evidence classes, claim counts and cross references is derived from that
+markdown at build time, so the published apparatus cannot drift from the text.
+
+## Build
+
+```bash
+pip install -r requirements.txt
+python build.py            # writes docs/
+python build.py --serve    # writes docs/ and serves it on :8000
+```
+
+## Publish
+
+Push to `main`. The workflow in `.github/workflows/pages.yml` builds and deploys
+to GitHub Pages. Enable it once under **Settings > Pages > Build and deployment
+> Source: GitHub Actions**. Set `site.base_url` in `site.yaml` to the public URL.
+
+## Add or revise a document
+
+1. Put the markdown in `content/en/` or `content/es/`, in the same shape as the
+   existing files: an H1 title, an H2 subtitle, a bold byline block, the body,
+   then a final `## Sources` or `## Fuentes` section as a numbered list with each
+   URL in angle brackets.
+2. Add the claims to the ledger file under an H2 with the same five columns.
+3. Add an entry under `studies` in `site.yaml` for that language, listing the
+   ledger section names it draws on under `ledger_sections`.
+
+Numerals, reading times, source counts, the evidence bar, the mosaic, the ledger
+filters and the series navigation are all computed.
+
+## Checks
+
+```bash
+python scripts/validate.py            # local, tolerant
+python scripts/validate.py --strict   # what CI runs on every pull request
+python scripts/check_links.py         # every internal link and anchor
+python scripts/make_social.py         # redraw assets/social.png from the ledger
+```
+
+`validate.py` reports three severities. Errors always fail: an unknown
+classification, a malformed claim row, a duplicate anchor, a study pointed at a
+ledger section that does not exist, out-of-sequence source numbering, prohibited
+Spanish terminology, or the two editions disagreeing on the number of claims.
+Warnings fail only under `--strict`: a claim with no source link, a ledger
+section not attached to any study, mismatched edition versions. Notes never fail.
+
+## What the build derives
+
+- **Evidence class** for every claim, matched from the Classification column
+  against the rules in `site.yaml`, in the order given by `site.match_order`.
+  There is no default. An unrecognised classification stops the build, because
+  falling through to "record" would silently promote an unmapped category to a
+  verified event.
+- **Stable claim anchors.** End a claim cell with `{#VEN-EO14373}` to set a
+  permanent semantic id. Without one, the anchor is derived from the claim text,
+  which survives insertions but changes if the claim is rewritten. Assign
+  semantic ids before the ledger is indexed or cited anywhere.
+
+- **Source links.** "Same memorandum" or "Mismo memorando" inherits the link
+  from the row above. An aggregate reference such as "DoD IG reports" stays
+  unlinked on purpose, because it does not identify one document.
+- **The mosaic** on the cover: one tile per claim, grouped by file, each linking
+  to its ledger row.
+- **The evidence bar**, which counts ledger claims by class. It is a count,
+  not a confidence score and not a measure of evidentiary weight.
+- **Aggregate source references.** A claim whose source names several documents
+  rather than one, such as "DoD IG reports", stays unlinked on purpose. List the
+  exact phrase under `site.aggregate_patterns` so strict validation treats it as
+  a deliberate aggregate instead of a missing URL.
+- **`atlas.json`**, a machine readable index of both editions.
+
+## The design contract
+
+Colour means one thing only: what kind of evidence stands behind a claim. The
+six evidence colours are the entire palette; everything else is ink on paper.
+A reader learns the six once, on the cover, and can then read the standing of
+any claim anywhere in the atlas. The site cannot use colour to make an argument
+feel stronger than its record, which is the discipline the ledger already
+imposes on the prose.
+
+## Privacy
+
+No analytics, no trackers, no third party requests. Fonts are served from this
+domain.
+
+## Corrections
+
+The ledger is the control. When a court rules, a policy changes or new evidence
+appears, update the ledger row first, then the prose that depends on it.
+
+## Licences
+
+The code is MIT, in `LICENSE-CODE`. The publication is separate and reserves all
+rights, in `LICENSE-CONTENT`. Possible future changes, including whether the
+text moves to a Creative Commons licence, are recorded in `DECISIONS.md`.
+
+Typefaces are Newsreader and IBM Plex under the SIL Open Font Licence, with the
+terms in `assets/fonts/OFL.txt`.
+
+Cite the version consulted; see `CITATION.cff`. Changes are recorded in
+`CHANGELOG.md`. Tag a release for each edition so a citation resolves to a fixed
+state of the record.

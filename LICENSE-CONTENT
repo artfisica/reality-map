@@ -1,0 +1,17 @@
+Licence for the publication
+===========================
+
+Applies to everything in content/, that is the manual, the case studies and the
+claim and source ledger, in both editions, together with the text rendered from
+them into docs/.
+
+    Copyright 2026 Arturo Sánchez Pineda. All rights reserved.
+
+The text may be quoted for comment, criticism, reporting and scholarship under
+the fair dealing and fair use provisions of applicable law, with attribution. It
+may not be republished in full without permission.
+
+The code is licensed separately and permissively; see LICENSE-CODE.
+
+The typefaces in assets/fonts/ are licensed under the SIL Open Font Licence and
+carry their own terms in assets/fonts/OFL.txt.
