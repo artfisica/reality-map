@@ -3,7 +3,7 @@
 ## Cómo entender a los Estados por lo que hacen, no por lo que declaran
 
 **Por Arturo Sánchez Pineda**  
-**Versión 0.3 — 17 de agosto de 2026**
+**17 de agosto de 2026**
 
 ## Posición del autor
 
