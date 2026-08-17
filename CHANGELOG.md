@@ -10,12 +10,19 @@ is recorded here.
 - Added the graphic method map on both method pages: the classification gate,
   the six-layer power map, the response scale, the five tests and the civilian
   protocol, each linked to the section it summarises.
-- Added the world map at `/map/` and `/es/mapa/`: ten places across five
+- Added the world map at `/map/` and `/es/mapa/`: ten mapped locations across five
   studies, drawn in Equal Earth so areas are comparable, as one borderless
   landmass so it takes no position on any disputed boundary, and monochrome so
   colour keeps meaning evidence class and nothing else. Markers locate where a
   study looks; each place's legal status is stated in words, not encoded in the
   drawing.
+- Kept geographic markers legible on small screens with fixed-size HTML labels,
+  separated dense clusters with documented pixel offsets, and fitted the SVG to
+  the complete Equal Earth sphere so its outline is not clipped.
+- Added a bilingual authorship and generative-AI disclosure to the method,
+  summarized it in the README and linked it from every page footer. It separates
+  Arturo Sánchez Pineda's originating ideas and final responsibility from the
+  research, editorial, bilingual, coding and visual assistance provided by AI.
 - Case studies reordered: the Caribbean killings become IV, Venezuela becomes V.
 - Claim anchors are now stable. They no longer come from row order, so adding a
   claim does not renumber the ones below it or break an existing citation.
@@ -46,9 +53,6 @@ is recorded here.
   Spanish versions.
 - Added the English `documentary fact` evidence match used by the Executive
   Order 14373 claim.
-- Added a bilingual, responsive and fully linked graphic map of the method:
-  evidence classification, the six layers of power, the enforcement gradient,
-  the five analytical tests and the civilian operating protocol.
 
 ## 0.2 — 17 August 2026
 

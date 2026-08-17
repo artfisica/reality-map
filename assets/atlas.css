@@ -287,7 +287,8 @@ a.stamp:hover{background:color-mix(in srgb,var(--c) 18%,transparent)}
 .way__k{display:block;font-size:1.15rem;font-weight:560;margin-bottom:.5rem;
   letter-spacing:-.012em}
 .way__d{display:block;color:var(--ink-2);font-size:.9375rem}
-@media (min-width:48rem){.ways__grid{grid-template-columns:repeat(3,1fr)}}
+@media (min-width:48rem){.ways__grid{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:74rem){.ways__grid{grid-template-columns:repeat(4,1fr)}}
 
 /* --- document ------------------------------------------------------------- */
 
@@ -504,6 +505,9 @@ a.claim__source:hover{color:var(--ink);border-color:var(--ink)}
 .foot__meta{font-family:var(--sans);font-size:.8125rem;line-height:1.6;
   color:var(--ink-2);max-width:56ch}
 .foot__meta + .foot__meta{margin-top:.85rem}
+.foot__link{color:inherit;text-decoration:underline;text-decoration-color:var(--rule-2);
+  text-underline-offset:.16em}
+.foot__link:hover{color:var(--ink);text-decoration-color:var(--ink)}
 .foot__rule{margin-top:2.25rem;padding-top:1.1rem;border-top:1px solid var(--rule);
   font-family:var(--mono);font-size:.6875rem;color:var(--ink-3)}
 @media (min-width:54rem){.foot__grid{grid-template-columns:1fr 1.5fr;gap:3.5rem}}
@@ -651,21 +655,32 @@ a.claim__ref:hover{color:var(--ink);border-bottom-color:var(--ink-3)}
 .mappage__lede{margin-top:2rem;max-width:58ch}
 
 .atlasmap{margin:clamp(2rem,5vw,3.5rem) 0 0}
+.atlasmap__stage{position:relative}
 .atlasmap svg{display:block;width:100%;height:auto;overflow:visible}
 .sphere{fill:var(--paper-2);stroke:var(--rule);stroke-width:1}
 .grat{fill:none;stroke:var(--rule);stroke-width:.6;opacity:.55}
 .land{fill:var(--paper-3);stroke:var(--rule-2);stroke-width:.7;
   stroke-linejoin:round;vector-effect:non-scaling-stroke}
 
-.pin{cursor:pointer}
-.pin__halo{fill:var(--paper);opacity:.75}
-.pin__dot{fill:var(--ink);transition:r .12s ease}
-.pin__t{fill:var(--paper);font-family:var(--sans);font-weight:600;font-size:12px;
-  letter-spacing:.04em;text-anchor:middle;dominant-baseline:central;
-  pointer-events:none}
-.pin:hover .pin__dot,.pin:focus-visible .pin__dot{r:14}
-.pin:focus-visible{outline:none}
-.pin:focus-visible .pin__halo{fill:none;stroke:var(--ink);stroke-width:2}
+.map-pins{position:absolute;inset:0;pointer-events:none}
+.map-pin{position:absolute;left:var(--map-x);top:var(--map-y);
+  transform:translate(-50%,-50%) translate(var(--map-dx),var(--map-dy));
+  display:grid;place-items:center;width:2rem;height:2rem;border-radius:50%;
+  font-family:var(--sans);font-weight:600;font-size:.6875rem;letter-spacing:.04em;
+  color:var(--paper);background:var(--ink);border:3px solid var(--paper);
+  box-shadow:0 0 0 1px var(--ink);text-decoration:none;pointer-events:auto;
+  transition:transform .12s ease}
+.map-pin:hover,.map-pin:focus-visible{
+  transform:translate(-50%,-50%) translate(var(--map-dx),var(--map-dy)) scale(1.12)}
+.map-pin::after{content:attr(data-label);position:absolute;left:50%;bottom:calc(100% + .55rem);
+  transform:translateX(-50%);width:max-content;max-width:12rem;padding:.35rem .5rem;
+  font-family:var(--sans);font-weight:500;font-size:.6875rem;line-height:1.3;
+  letter-spacing:0;color:var(--ink);background:var(--paper);border:1px solid var(--rule-2);
+  opacity:0;visibility:hidden;pointer-events:none;z-index:2}
+.map-pin:hover::after,.map-pin:focus-visible::after{opacity:1;visibility:visible}
+@media (max-width:36rem){
+  .map-pin{width:1.75rem;height:1.75rem;border-width:2px}
+}
 
 .atlasmap .note{margin-top:1.5rem}
 
@@ -688,4 +703,7 @@ a.claim__ref:hover{color:var(--ink);border-bottom-color:var(--ink-3)}
   .places{margin-top:0}
   .place{grid-template-columns:14rem 1fr;gap:.25rem 2rem;align-items:baseline}
 }
-@media print{.atlasmap svg{max-width:100%}}
+@media print{
+  .atlasmap svg{max-width:100%}
+  .map-pins{display:none}
+}

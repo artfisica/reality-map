@@ -14,6 +14,7 @@ Run:
 from __future__ import annotations
 
 import argparse
+import json
 import re
 import sys
 from pathlib import Path
@@ -121,13 +122,46 @@ def check_edition(cfg: dict, code: str) -> dict:  # noqa: C901
             say("warn", f'[{code}] {path.name} does not carry the edition date '
                         f'"{L["edition"]}"')
 
-    # every map marker must have geometry behind it
-    import json as _json
-    geo = _json.loads((ROOT / "assets" / "map.json").read_text(encoding="utf-8"))
+    # Every map marker must have geometry behind it and belong to a study. The
+    # viewBox check prevents a valid point from being silently clipped.
+    geo = json.loads((ROOT / "assets" / "map.json").read_text(encoding="utf-8"))
+    try:
+        vx, vy, vw, vh = (float(value) for value in geo["viewBox"].split())
+        if vw <= 0 or vh <= 0:
+            raise ValueError
+    except (KeyError, TypeError, ValueError):
+        say("error", f'[{code}] assets/map.json has an invalid viewBox')
+        vx = vy = vw = vh = 0
+    geo_points = geo.get("points", {})
+    if not isinstance(geo_points, dict):
+        say("error", f'[{code}] assets/map.json has no valid points object')
+        geo_points = {}
+    map_seen = set()
+    study_numerals = {study["numeral"] for study in L["studies"]}
     for place in L.get("map", {}).get("places", []):
-        if place["id"] not in geo["points"]:
-            say("error", f'[{code}] map place "{place["id"]}" has no projected '
+        pid = place.get("id")
+        if pid in map_seen:
+            say("error", f'[{code}] map place id "{pid}" is duplicated')
+        map_seen.add(pid)
+        for field in ("id", "numeral", "name", "status"):
+            if not place.get(field):
+                say("error", f'[{code}] a map place is missing "{field}"')
+        if not pid:
+            continue
+        if place.get("numeral") not in study_numerals:
+            say("error", f'[{code}] map place "{pid}" points to unknown study '
+                         f'{place.get("numeral")}')
+        if pid not in geo_points:
+            say("error", f'[{code}] map place "{pid}" has no projected '
                          f"point. Add it to scripts/make_map.mjs and re-run it.")
+            continue
+        x, y = geo_points[pid]
+        if vw and vh and not (vx <= x <= vx + vw and vy <= y <= vy + vh):
+            say("error", f'[{code}] map place "{pid}" lies outside the viewBox')
+        offset = place.get("offset", [0, 0])
+        if (not isinstance(offset, list) or len(offset) != 2
+                or not all(isinstance(value, (int, float)) for value in offset)):
+            say("error", f'[{code}] map place "{pid}" has an invalid offset')
 
     # prohibited terminology
     for term in cfg["site"].get("prohibited", {}).get(code, []):
@@ -169,9 +203,18 @@ def main() -> int:
 
     map_ids = {code: [p["id"] for p in cfg[code].get("map", {}).get("places", [])]
                for code in ("en", "es")}
+    for code, listed in map_ids.items():
+        if len(listed) != len(set(listed)):
+            say("error", f"[{code}] map place ids are not unique")
     if map_ids["en"] != map_ids["es"]:
         say("error", "the two editions list different map places, so the map "
                      "would show a different atlas in each language")
+    geo_ids = set(json.loads((ROOT / "assets" / "map.json").read_text(
+        encoding="utf-8")).get("points", {}))
+    unused_geo = geo_ids - set(map_ids["en"])
+    if unused_geo:
+        say("warn", "map geometry contains unused points: "
+             + ", ".join(sorted(unused_geo)))
 
     files = {code: len(data["sections"]) for code, data in editions.items()}
     if len(set(files.values())) != 1:

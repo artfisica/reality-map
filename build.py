@@ -458,6 +458,8 @@ def shell(L: dict, alt: dict, *, title: str, description: str, depth: int, body:
           alt_path: str = "") -> str:
     prefix = "../" * depth
     ui = L["ui"]
+    lang_base = prefix + (L["dir"] + "/" if L["dir"] else "")
+    ai_href = f'{lang_base}{L["method"]["slug"]}/#{t(ui, "ai_anchor")}'
     site_base = L["base_url"].rstrip("/")
     canonical = f'{site_base}/{path.lstrip("/")}'
     alt_abs = f'{site_base}/{alt_path.lstrip("/")}'
@@ -499,7 +501,8 @@ def shell(L: dict, alt: dict, *, title: str, description: str, depth: int, body:
     <div><p class="foot__title">{e(L['title'])}</p>
       <p class="foot__meta">{e(L['edition'])} \u00b7 v{e(L['version'])}</p></div>
     <div><p class="foot__meta">{e(t(ui, 'foot_1'))}</p>
-      <p class="foot__meta">{e(t(ui, 'foot_2'))}</p></div>
+      <p class="foot__meta">{e(t(ui, 'foot_2'))}</p>
+      <p class="foot__meta"><a class="foot__link" href="{ai_href}">{e(t(ui, 'foot_ai'))}</a></p></div>
   </div>
   <p class="foot__rule">&copy; {date.today().year} {e(L.get('author', 'Arturo Sanchez Pineda'))}</p>
 </footer>
@@ -520,23 +523,24 @@ def render_map(L, alt, geo, alt_url, path, alt_path):
     prefix = "../" * depth
     base = prefix + (L["dir"] + "/" if L["dir"] else "")
     by_numeral = {study["numeral"]: study["slug"] for study in L["studies"]}
+    vb_x, vb_y, vb_w, vb_h = (float(value) for value in geo["viewBox"].split())
 
     pins, rows, groups = [], [], {}
     for place in M["places"]:
         x, y = geo["points"][place["id"]]
-        # Two markers can land within a few pixels of each other at world
-        # scale. A small screen-space nudge keeps both readable; the geography
-        # underneath is unchanged.
+        # Markers are HTML overlays so their labels remain legible when the SVG
+        # contracts on a phone. Offsets are CSS pixels, not geographic units:
+        # they separate dense clusters without changing the basemap geometry.
         dx, dy = place.get("offset", (0, 0))
-        x, y = x + dx, y + dy
+        px = (x - vb_x) / vb_w * 100
+        py = (y - vb_y) / vb_h * 100
         href = f'{base}{L["studies_dir"]}/{by_numeral[place["numeral"]]}/'
         label = f'{place["numeral"]} \u00b7 {place["name"]}'
         pins.append(
-            f'<a class="pin" href="{href}" aria-label="{e(label)}">'
-            f'<circle class="pin__halo" cx="{x}" cy="{y}" r="17"/>'
-            f'<circle class="pin__dot" cx="{x}" cy="{y}" r="11"/>'
-            f'<text class="pin__t" x="{x}" y="{y}">{e(place["numeral"])}</text>'
-            f'<title>{e(place["name"])}</title></a>')
+            f'<a class="map-pin" href="{href}" aria-label="{e(label)}" '
+            f'data-label="{e(place["name"])}" style="--map-x:{px:.3f}%;'
+            f'--map-y:{py:.3f}%;--map-dx:{dx}px;--map-dy:{dy}px">'
+            f'<span aria-hidden="true">{e(place["numeral"])}</span></a>')
         groups.setdefault(place["numeral"], []).append(place)
 
     for numeral, places in groups.items():
@@ -559,13 +563,16 @@ def render_map(L, alt, geo, alt_url, path, alt_path):
   </header>
   <p class="lede mappage__lede">{e(M['lede'])}</p>
   <figure class="atlasmap">
-    <svg viewBox="{geo['viewBox']}" role="img" xmlns="http://www.w3.org/2000/svg"
-         aria-label="{e(M['title'])}">
-      <path class="sphere" d="{geo['sphere']}"/>
-      <path class="grat" d="{geo['graticule']}"/>
-      <path class="land" d="{geo['land']}"/>
-      <g class="pins">{"".join(pins)}</g>
-    </svg>
+    <div class="atlasmap__stage">
+      <svg viewBox="{geo['viewBox']}" role="img" xmlns="http://www.w3.org/2000/svg">
+        <title>{e(M['title'])}</title>
+        <desc>{e(M['lede'])}</desc>
+        <path class="sphere" fill="#ffffff" stroke="#767676" d="{geo['sphere']}"/>
+        <path class="grat" fill="none" stroke="#c4c4c4" d="{geo['graticule']}"/>
+        <path class="land" fill="#e8e8e8" stroke="#9a9a9a" d="{geo['land']}"/>
+      </svg>
+      <div class="map-pins">{"".join(pins)}</div>
+    </div>
     <figcaption class="note">{e(M['note'])}</figcaption>
   </figure>
   <div class="legend">{"".join(rows)}</div>

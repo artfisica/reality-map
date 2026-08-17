@@ -17,6 +17,14 @@ El origen personal de este proyecto quedó registrado en dos textos anteriores: 
 
 No escribo desde la posición cómoda de quien se declara más valiente o más puro que los demás. En *Miedo* me incluí en la acusación: «sí, claro, yo también». En *Dolor* rechacé el gesto barato del «te lo dije». Esas dos decisiones definen la voz de este manual. La distancia puede darme seguridad física; no me concede inocencia ni superioridad moral. Mi tarea es convertir el miedo, la incomodidad y el dolor en preguntas que puedan ser examinadas, contradichas y corregidas.
 
+## Responsabilidad autoral y asistencia de inteligencia artificial
+
+El impulso de este proyecto, su propósito como manual civil, la selección y el orden de los casos, las preguntas políticas y jurídicas, la perspectiva venezolana, la voz autoral y las posiciones finales expresadas aquí son míos. Parte de la estructura analítica y de su formulación —incluidas las categorías, las tablas, la secuencia expositiva y la presentación bilingüe— fue desarrollada de manera iterativa con asistencia de inteligencia artificial generativa.
+
+Utilicé inteligencia artificial generativa como herramienta de investigación, edición y producción. Me ayudó a ordenar materiales, comparar formulaciones, identificar posibles fuentes para mi revisión, mantener la consistencia terminológica entre el español y el inglés, y desarrollar el código, las herramientas de validación y los mapas visuales del sitio. Sus resultados no fueron tratados como prueba ni como autoridad. Los documentos citados en la publicación —no la inteligencia artificial— son las fuentes de las afirmaciones sobre el mundo exterior.
+
+Yo dirigí el proyecto, cuestioné y corregí el material generado, seleccioné las fuentes y formulaciones conservadas, revisé el texto y aprobé la versión publicada. La responsabilidad por el argumento final, y por cualquier error que permanezca, es mía.
+
 ## La objetividad no es neutralidad
 
 La política no es física de partículas. Los Estados no pueden aislarse en un detector, los acontecimientos históricos no pueden repetirse bajo condiciones controladas y la intención humana no es una variable directamente medible. Por eso, un método serio debe ser modesto al hablar de causalidad. Debe identificar los actos observables, declarar sus supuestos, comparar explicaciones alternativas, describir la información ausente y precisar qué evidencia debilitaría una conclusión.

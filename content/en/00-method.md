@@ -17,6 +17,14 @@ The personal origin of this project is recorded in two earlier texts, *Miedo* an
 
 I do not write from the comfortable position of someone who declares himself braver or morally purer than everyone else. In *Miedo*, I included myself in the accusation: “yes, of course, me too.” In *Dolor*, I rejected the cheap gesture of “I told you so.” Those two decisions define the voice of this manual. Distance may give me physical safety; it does not grant me innocence or moral superiority. My task is to convert fear, discomfort and pain into questions that can be examined, challenged and corrected.
 
+## Authorship and AI assistance
+
+The impulse behind this project, its purpose as a civilian manual, the selection and ordering of the cases, the political and legal questions, the Venezuelan perspective, the authorial voice and the final positions expressed here are mine. Parts of the analytical structure and its formulation—including categories, tables, the sequence of exposition and the bilingual presentation—were developed iteratively with generative-AI assistance.
+
+I used generative AI as a research, editorial and production tool. It helped organise material, compare formulations, identify possible sources for my review, maintain terminological consistency between English and Spanish, and develop the code, validation tools and visual maps for the website. Its output was not treated as evidence or authority. The documents cited in the publication—not the AI—are the sources for claims about the external world.
+
+I directed the project, challenged and corrected the generated material, selected the sources and formulations retained, revised the text and approved the published version. Responsibility for the final argument, and for any error that remains, is mine.
+
 ## Objectivity is not neutrality
 
 Politics is not particle physics. States cannot be isolated in a detector, historical events cannot be repeated under controlled conditions and human intention is not directly measurable. A serious method must therefore be modest about causation. It should identify observable acts, state its assumptions, compare rival explanations, describe missing information and specify what evidence would weaken its conclusion.

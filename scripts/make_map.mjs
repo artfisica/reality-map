@@ -16,9 +16,9 @@ import world from "world-atlas/countries-110m.json" with { type: "json" };
 const W = 1600;
 const H = 780;
 
-// Places the atlas examines. Coordinates are the point the study is about, not
-// a capital. Cases that collide at world scale are merged into one marker and
-// named together in the legend.
+// Locations the atlas examines. Coordinates identify the geographic subject,
+// not a capital. Nearby markers are separated later with small CSS-pixel
+// offsets, while the projected coordinate below remains unchanged.
 const PLACES = {
   levant: [35.2, 32.7],
   mesopotamia: [41.0, 34.3],
@@ -51,12 +51,23 @@ const projection = geoEqualEarth().fitExtent(
 // costs a third of the payload, which readers on slow connections pay for.
 const path = geoPath(projection);
 const round = (d) => d.replace(/(-?\d+)\.\d+/g, "$1");
+const sphere = { type: "Sphere" };
+const [[x0, y0], [x1, y1]] = path.bounds(sphere);
+const VIEW_PAD = 8;
+const viewBox = [
+  Math.floor(x0 - VIEW_PAD),
+  Math.floor(y0 - VIEW_PAD),
+  Math.ceil(x1 - x0 + VIEW_PAD * 2),
+  Math.ceil(y1 - y0 + VIEW_PAD * 2),
+].join(" ");
 
 const out = {
-  viewBox: `0 0 ${W} ${H}`,
+  // Fit the SVG to the full projected sphere, not only to the land used when
+  // fitting the projection. Otherwise the Equal Earth outline is clipped.
+  viewBox,
   land: round(path(land)),
   graticule: round(path(geoGraticule().step([30, 30])())),
-  sphere: round(path({ type: "Sphere" })),
+  sphere: round(path(sphere)),
   points: Object.fromEntries(
     Object.entries(PLACES).map(([id, lonlat]) => {
       const xy = projection(lonlat);

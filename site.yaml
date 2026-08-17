@@ -83,13 +83,13 @@ en:
     slug: map
     label: Map
     eyebrow: Where the atlas looks
-    title: Ten places, five studies
+    title: Ten locations, five studies
     subtitle: The ground the arguments stand on
     lede: >-
       Every case in the atlas, located. The markers say where a study looks.
-      They do not encode legal status, and nothing on this map is coloured,
-      because a filled territory would assert a conclusion the ledger has to
-      earn in prose.
+      They do not encode legal status. The drawing is monochrome because
+      filling a territory would turn a contested legal conclusion into a
+      visual premise.
     note: >-
       Drawn in the Equal Earth projection, in which areas are comparable.
       Mercator would inflate the metropolitan north and shrink almost every
@@ -102,6 +102,7 @@ en:
         status: Documented violations met with declaratory response
       - id: puerto-rico
         numeral: II
+        offset: [20, -14]
         name: Puerto Rico
         status: US unincorporated territory, not on the UN list since 1953
       - id: guam
@@ -114,27 +115,32 @@ en:
         status: French sui generis collectivity, UN Non-Self-Governing Territory
       - id: french-guiana
         numeral: II
+        offset: [26, 12]
         name: French Guiana
         status: Incorporated under Article 73, not on the UN list
       - id: mesopotamia
         numeral: III
-        offset: [11, -11]
+        offset: [0, -15]
         name: Iraq and Syria
         status: Invasion and cumulative internationalisation
       - id: afghanistan
         numeral: III
+        offset: [20, 10]
         name: Afghanistan
         status: Twenty years of state building, then withdrawal
       - id: caribbean
         numeral: IV
+        offset: [-24, -8]
         name: Caribbean Sea
         status: Maritime strikes in place of arrest and trial
       - id: eastern-pacific
         numeral: IV
+        offset: [-10, 18]
         name: Eastern Pacific
         status: Maritime strikes in place of arrest and trial
       - id: venezuela
         numeral: V
+        offset: [10, 18]
         name: Venezuela
         status: Unlawful intervention, not a belligerent occupation at the date of the Swiss assessment
 
@@ -228,7 +234,7 @@ en:
     register_lede: >-
       One manual and five case studies. The manual sets the method; each study
       applies it to a documented record.
-    ways_h: Three ways in
+    ways_h: Four ways in
     way1_k: Start with the method
     way1_d: >-
       The six-layer power map, the enforcement gradient and the tests that
@@ -241,7 +247,7 @@ en:
     way3_d: "Search {n} classified claims across {f} files."
     way4_k: Start with the map
     way4_d: >-
-      Ten places across five studies, located and named with the status the
+      Ten mapped locations across five studies, named with the status the
       record supports.
     foot_1: >-
       Written by Arturo Sánchez Pineda. Every factual claim is classified and
@@ -249,6 +255,10 @@ en:
     foot_2: >-
       No trackers, no analytics, no third-party requests. Fonts are served from
       this domain.
+    foot_ai: >-
+      Developed with disclosed generative-AI assistance. Arturo Sánchez Pineda
+      directed, reviewed and takes responsibility for the publication.
+    ai_anchor: authorship-and-ai-assistance
     mode_dark: Dark
     mode_light: Light
 
@@ -294,13 +304,13 @@ es:
     slug: mapa
     label: Mapa
     eyebrow: Dónde mira el atlas
-    title: Diez lugares, cinco estudios
+    title: Diez ubicaciones, cinco estudios
     subtitle: El terreno sobre el que se sostienen los argumentos
     lede: >-
       Cada caso del atlas, ubicado. Los marcadores indican dónde mira un
-      estudio. No codifican estatus jurídico, y nada en este mapa está
-      coloreado, porque un territorio relleno afirmaría una conclusión que el
-      registro debe ganarse en prosa.
+      estudio. No codifican estatus jurídico. El dibujo es monocromo porque
+      rellenar un territorio convertiría una conclusión jurídica discutida en
+      una premisa visual.
     note: >-
       Trazado en la proyección Equal Earth, en la que las áreas son
       comparables. Mercator inflaría el norte metropolitano y encogería casi
@@ -313,6 +323,7 @@ es:
         status: Violaciones documentadas respondidas con declaraciones
       - id: puerto-rico
         numeral: II
+        offset: [20, -14]
         name: Puerto Rico
         status: Territorio no incorporado de EE. UU., fuera de la lista de la ONU desde 1953
       - id: guam
@@ -325,27 +336,32 @@ es:
         status: Colectividad francesa sui generis, territorio no autónomo de la ONU
       - id: french-guiana
         numeral: II
+        offset: [26, 12]
         name: Guayana Francesa
         status: Incorporada bajo el artículo 73, fuera de la lista de la ONU
       - id: mesopotamia
         numeral: III
-        offset: [11, -11]
+        offset: [0, -15]
         name: Irak y Siria
         status: Invasión e internacionalización acumulativa
       - id: afghanistan
         numeral: III
+        offset: [20, 10]
         name: Afganistán
         status: Veinte años de construcción estatal y luego retirada
       - id: caribbean
         numeral: IV
+        offset: [-24, -8]
         name: Mar Caribe
         status: Ataques marítimos en lugar de detención y juicio
       - id: eastern-pacific
         numeral: IV
+        offset: [-10, 18]
         name: Pacífico oriental
         status: Ataques marítimos en lugar de detención y juicio
       - id: venezuela
         numeral: V
+        offset: [10, 18]
         name: Venezuela
         status: Intervención sin base legal, no una ocupación beligerante a la fecha de la evaluación suiza
 
@@ -438,7 +454,7 @@ es:
     register_lede: >-
       Un manual y cinco estudios de caso. El manual fija el método; cada estudio
       lo aplica a un expediente documentado.
-    ways_h: Tres formas de entrar
+    ways_h: Cuatro formas de entrar
     way1_k: Empezar por el método
     way1_d: >-
       El mapa de poder de seis capas, la escala de respuesta estatal y las pruebas
@@ -451,7 +467,7 @@ es:
     way3_d: "Buscar {n} afirmaciones clasificadas en {f} expedientes."
     way4_k: Empezar por el mapa
     way4_d: >-
-      Diez lugares en cinco estudios, ubicados y nombrados con el estatus que
+      Diez ubicaciones en cinco estudios, nombradas con el estatus que
       el expediente sostiene.
     foot_1: >-
       Escrito por Arturo Sánchez Pineda. Cada afirmación factual está
@@ -459,5 +475,9 @@ es:
     foot_2: >-
       Sin rastreadores, sin analítica, sin peticiones a terceros. Las tipografías
       se sirven desde este dominio.
+    foot_ai: >-
+      Elaborado con asistencia declarada de inteligencia artificial generativa.
+      Arturo Sánchez Pineda dirigió, revisó y asume la responsabilidad de la publicación.
+    ai_anchor: responsabilidad-autoral-y-asistencia-de-inteligencia-artificial
     mode_dark: Oscuro
     mode_light: Claro
