@@ -26,6 +26,9 @@ is recorded here.
 - Clarified in the first person that Arturo wrote the study and the prompts used
   to direct AI searches for possible references, while preserving a precise
   account of the drafting and technical assistance AI provided.
+- Added French Guiana's exclusion from Schengen under Article 138 and separated
+  it from the Spain-specific visa and departure-control regime governing Ceuta
+  and Melilla; synchronized the analysis, ledgers and map labels in both languages.
 - Case studies reordered: the Caribbean killings become IV, Venezuela becomes V.
 - Claim anchors are now stable. They no longer come from row order, so adding a
   claim does not renumber the ones below it or break an existing citation.
@@ -51,7 +54,7 @@ is recorded here.
   authorial method derived from *Miedo* and *Dolor*, the Caribbean-to-Venezuela
   chronology, Executive Order 14373, the BBC investigation and the analysis of
   de facto tutelage.
-- Both editions now contain the same 45 claims in the same case-study order.
+- Both editions now contain the same 46 claims in the same case-study order.
 - Every claim has a permanent semantic identifier shared by its English and
   Spanish versions.
 - Added the English `documentary fact` evidence match used by the Executive

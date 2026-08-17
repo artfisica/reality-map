@@ -114,7 +114,7 @@ For each territory, examine:
 
 Puerto Rico and Guam entered United States sovereignty through the 1898 war and treaty with Spain. Puerto Rico is an unincorporated US territory whose relationship remains subject to congressional authority. Guam is also an unincorporated territory and remains on the [UN list of Non-Self-Governing Territories](https://documents.un.org/doc/undoc/gen/n22/749/47/pdf/n2274947.pdf). Neither should be casually described as a present belligerent occupation; both display the conversion of military acquisition into durable legal administration.
 
-France annexed New Caledonia in 1853. It is a sui generis collectivity and a UN-listed Non-Self-Governing Territory whose institutional future remains contested. French Guiana is different: it is constitutionally integrated into France under Article 73, with French and European citizenship and national representation, while remaining marked by the material dependencies and inequalities of colonial incorporation. Formal citizenship changes the legal analysis; it does not make history or structural dependency disappear.
+France annexed New Caledonia in 1853. It is a sui generis collectivity and a UN-listed Non-Self-Governing Territory whose institutional future remains contested. French Guiana is different: it is constitutionally integrated into France under Article 73, with French and European citizenship and national representation, while remaining marked by the material dependencies and inequalities of colonial incorporation. That integration is differentiated: [Article 138 of the Convention implementing the Schengen Agreement](https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000165861) limits its application for France to the European territory of the Republic, leaving French Guiana outside Schengen. Formal citizenship changes the legal analysis; it does not make history or structural dependency disappear.
 
 Venezuela does not belong in this territorial category. It is a sovereign UN member subjected in 2026 to unlawful foreign military force and continuing coercion. Conflating that intervention with legal occupation would obscure the applicable test: occupation requires effective control over territory, and the Swiss government’s legal assessment found that threshold had not been met at the time of its memorandum.
 
@@ -241,6 +241,7 @@ I began this work with fear and continued it with pain. Neither emotion proves a
 12. US Department of the Interior, political classifications of insular areas: <https://www.doi.gov/oia/islands/politicatypes>
 13. French Ministry for Overseas Territories, New Caledonia: <https://www.outre-mer.gouv.fr/territoires/nouvelle-caledonie>
 14. French Ministry for Overseas Territories, French Guiana: <https://www.outre-mer.gouv.fr/territoires/guyane>
+15. Convention implementing the Schengen Agreement, Article 138, official French publication: <https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000165861>
 
 ### Authorial context
 

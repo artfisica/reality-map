@@ -55,7 +55,11 @@ French Guiana must not be confused with the sovereign state of Guyana. France es
 
 French Guiana is not on the UN list of Non-Self-Governing Territories. It is not accurately described as a present foreign military occupation. Its formal incorporation and political rights are genuine differences from Guam or New Caledonia.
 
+There is a further legal distinction that belongs on this map. French Guiana is part of the European Union as an outermost region, but it is outside the territorial scope of Schengen: [Article 138 of the Convention implementing the Schengen Agreement](https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000165861) limits the Convention's application for France to the European territory of the French Republic. Ceuta and Melilla are not an exact analogue. [Spain's Schengen accession declaration](https://www.boe.es/diario_boe/txt.php?id=BOE-A-1994-7586) instead preserves a specific regime, including local border-visa rules and identity and document checks on sea and air connections from the two cities to the rest of Spain or another Schengen state. It is therefore inaccurate to say that all three territories are simply excluded from Schengen in the same way: French Guiana is territorially excluded, while Ceuta and Melilla are governed by a Spain-specific special arrangement with departure controls.
+
 Yet incorporation does not erase colonial continuity. The territory remains economically and administratively dependent on decisions made in metropolitan France; it displays severe inequality, infrastructure gaps and a strategic function through the Guiana Space Centre. The useful description is **colonial incorporation with formal citizenship, national representation and continuing structural dependency**.
+
+I include this distinction because it demonstrates how incorporation can be complete in one legal layer and limited in another. French and EU citizenship are real; exclusion from Schengen is also real. A civilian map must record both instead of allowing the word “integrated” to conceal differentiated territorial treatment.
 
 ## What the comparison reveals
 
@@ -92,6 +96,8 @@ For this reason I do not use “colony,” “occupation” or “incorporation�
 8. French National Assembly, rejection of the 2026 constitutional bill concerning New Caledonia, 2 April 2026: <https://www.assemblee-nationale.fr/dyn/17/textes/l17t0262_texte-adopte-seance>
 9. French Ministry for Overseas Territories, French Guiana: <https://www.outre-mer.gouv.fr/territoires/guyane>
 10. UN Special Committee on Decolonization, working paper on New Caledonia, A/AC.109/2024/L.22: <https://digitallibrary.un.org/record/4052180/files/A_AC.109_2024_L.22-EN.pdf>
+11. Convention implementing the Schengen Agreement, Article 138, official French publication: <https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000165861>
+12. Spain's instrument of ratification and declaration concerning Ceuta and Melilla: <https://www.boe.es/diario_boe/txt.php?id=BOE-A-1994-7586>
 
 ### Authorial context
 

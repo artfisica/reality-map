@@ -55,7 +55,11 @@ La Guayana Francesa no debe confundirse con el Estado soberano de Guyana. Franci
 
 La Guayana Francesa no aparece en la lista de Territorios No Autónomos de la ONU. No puede describirse con exactitud como una ocupación militar extranjera actual. Su incorporación formal y sus derechos políticos constituyen diferencias reales frente a Guam o Nueva Caledonia.
 
+Existe otra diferencia jurídica que debe figurar en este mapa. La Guayana Francesa forma parte de la Unión Europea como región ultraperiférica, pero está fuera del ámbito territorial de Schengen: el [artículo 138 del Convenio de Aplicación del Acuerdo de Schengen](https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000165861) limita, para Francia, la aplicación del Convenio al territorio europeo de la República Francesa. Ceuta y Melilla no son un equivalente exacto. El [Acta Final de la adhesión española a Schengen](https://www.boe.es/diario_boe/txt.php?id=BOE-A-1994-7586) conserva un régimen específico, con reglas locales de visado fronterizo y controles de identidad y documentos en las conexiones marítimas y aéreas desde ambas ciudades hacia el resto de España u otro Estado Schengen. Por tanto, no es exacto afirmar que los tres territorios están simplemente excluidos de Schengen de la misma manera: la Guayana Francesa está excluida territorialmente, mientras Ceuta y Melilla se rigen por un arreglo especial español con controles de salida.
+
 Sin embargo, la incorporación no borra la continuidad colonial. El territorio continúa dependiendo económica y administrativamente de decisiones tomadas en la Francia metropolitana; presenta desigualdades graves, déficits de infraestructura y una función estratégica a través del Centro Espacial de Guayana. La descripción útil es **incorporación colonial con ciudadanía formal, representación nacional y dependencia estructural persistente**.
+
+Incluyo esta distinción porque demuestra que la incorporación puede ser completa en una capa jurídica y limitada en otra. La ciudadanía francesa y europea es real; la exclusión de Schengen también lo es. Un mapa civil debe registrar ambas cosas, en lugar de permitir que la palabra «integrada» oculte un tratamiento territorial diferenciado.
 
 ## Lo que revela la comparación
 
@@ -92,6 +96,8 @@ Por eso no utilizo «colonia», «ocupación» e «incorporación» como acusaci
 8. Asamblea Nacional francesa, decisión del 2 de abril de 2026: <https://www.assemblee-nationale.fr/dyn/17/textes/l17t0262_texte-adopte-seance>
 9. Ministerio francés de Ultramar, Guayana Francesa: <https://www.outre-mer.gouv.fr/territoires/guyane>
 10. Comité Especial de Descolonización de la ONU, documento de trabajo sobre Nueva Caledonia, 2024: <https://digitallibrary.un.org/record/4052180/files/A_AC.109_2024_L.22-EN.pdf>
+11. Convenio de Aplicación del Acuerdo de Schengen, artículo 138, publicación oficial francesa: <https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000165861>
+12. Instrumento español de ratificación y declaración relativa a Ceuta y Melilla: <https://www.boe.es/diario_boe/txt.php?id=BOE-A-1994-7586>
 
 ### Contexto autoral
 

@@ -117,7 +117,7 @@ en:
         numeral: II
         offset: [26, 12]
         name: French Guiana
-        status: Incorporated under Article 73, not on the UN list
+        status: French and EU territory under Article 73; outside Schengen; not on the UN list
       - id: mesopotamia
         numeral: III
         offset: [0, -15]
@@ -338,7 +338,7 @@ es:
         numeral: II
         offset: [26, 12]
         name: Guayana Francesa
-        status: Incorporada bajo el artículo 73, fuera de la lista de la ONU
+        status: Territorio francés y de la UE bajo el artículo 73; fuera de Schengen; fuera de la lista de la ONU
       - id: mesopotamia
         numeral: III
         offset: [0, -15]

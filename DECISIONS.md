@@ -24,7 +24,7 @@ If the licence changes, replace the licence paragraph, record it in
 
 ## 2. Semantic claim identifiers — resolved in 0.3
 
-All 45 claims carry permanent semantic identifiers, with the same identifier
+All 46 claims carry permanent semantic identifiers, with the same identifier
 used for the corresponding claim in both editions. `validate.py` reports an
 identifier present in only one edition and rejects duplicates within either
 edition.

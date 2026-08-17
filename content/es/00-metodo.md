@@ -114,7 +114,7 @@ Para cada territorio debemos examinar:
 
 Puerto Rico y Guam pasaron a la soberanía estadounidense mediante la guerra de 1898 y el [Tratado de París](https://www.govinfo.gov/content/pkg/STATUTE-30/pdf/STATUTE-30-Pg1754.pdf). Puerto Rico es un territorio no incorporado de Estados Unidos cuya relación permanece sujeta a la autoridad del Congreso. Guam también es un territorio no incorporado y continúa en la [lista de Territorios No Autónomos de la ONU](https://documents.un.org/doc/undoc/gen/n22/749/47/pdf/n2274947.pdf). Ninguno debe describirse de manera ligera como una ocupación beligerante actual; ambos muestran cómo una adquisición militar puede convertirse en administración jurídica duradera.
 
-Francia anexó Nueva Caledonia en 1853. Es una colectividad *sui generis* y un Territorio No Autónomo de la ONU cuyo futuro institucional continúa en disputa. La Guayana Francesa es diferente: está integrada constitucionalmente en Francia bajo el artículo 73, con ciudadanía francesa y europea y representación nacional, aunque conserva dependencias materiales y desigualdades propias de la incorporación colonial. La ciudadanía formal modifica el análisis jurídico; no hace desaparecer la historia ni la dependencia estructural.
+Francia anexó Nueva Caledonia en 1853. Es una colectividad *sui generis* y un Territorio No Autónomo de la ONU cuyo futuro institucional continúa en disputa. La Guayana Francesa es diferente: está integrada constitucionalmente en Francia bajo el artículo 73, con ciudadanía francesa y europea y representación nacional, aunque conserva dependencias materiales y desigualdades propias de la incorporación colonial. Esa integración es diferenciada: el [artículo 138 del Convenio de Aplicación del Acuerdo de Schengen](https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000165861) limita su aplicación para Francia al territorio europeo de la República y deja a la Guayana Francesa fuera de Schengen. La ciudadanía formal modifica el análisis jurídico; no hace desaparecer la historia ni la dependencia estructural.
 
 Venezuela no pertenece a esta categoría territorial. Es un Estado soberano miembro de la ONU sometido en 2026 a fuerza militar extranjera contraria al derecho internacional y a coerción continuada. Confundir esa intervención con una ocupación jurídica ocultaría la prueba aplicable: la ocupación exige control efectivo del territorio y la [evaluación jurídica del Gobierno suizo](https://www.eda.admin.ch/dam/en/sd-web/uAgalQgitFmZ/20260113-memo-voelkerrechtliche-einschaetzung-usa-venezuela.pdf) concluyó que ese umbral todavía no se había alcanzado cuando fue redactada.
 
@@ -241,6 +241,7 @@ Comencé este trabajo con miedo y lo continué con dolor. Ninguna de esas emocio
 12. Departamento del Interior de Estados Unidos, clasificaciones políticas de las áreas insulares: <https://www.doi.gov/oia/islands/politicatypes>
 13. Ministerio francés de Ultramar, Nueva Caledonia: <https://www.outre-mer.gouv.fr/territoires/nouvelle-caledonie>
 14. Ministerio francés de Ultramar, Guayana Francesa: <https://www.outre-mer.gouv.fr/territoires/guyane>
+15. Convenio de Aplicación del Acuerdo de Schengen, artículo 138, publicación oficial francesa: <https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000165861>
 
 ### Contexto autoral
 
