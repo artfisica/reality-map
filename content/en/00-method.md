@@ -7,7 +7,7 @@
 
 ## Author’s position
 
-I write as a Venezuelan living in Switzerland and as a scientist and engineer with a PhD in physics, trained to separate observation, assumption, uncertainty and conclusion. My residence outside Venezuela gives me neither neutrality nor permission to ignore what is happening. My scientific training does not make my values disappear; it obliges me to show where the evidence ends and my interpretation begins.
+I write as a Venezuelan living in Switzerland and as a scientist and engineer, trained to separate observation, assumption, uncertainty and conclusion. My residence outside Venezuela gives me neither neutrality nor permission to ignore what is happening. My scientific training does not make my values disappear; it obliges me to show where the evidence ends and my interpretation begins.
 
 This manual is not a theory that law is irrelevant. It begins from the opposite premise: law supplies the vocabulary by which force can be identified, rights can be claimed and responsibility can be recorded. But a rule on paper is not an enforcement mechanism. Civilians who confuse legal entitlement with practical protection misunderstand both their risks and the institutions on which they rely.
 

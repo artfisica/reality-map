@@ -472,7 +472,7 @@ def shell(L: dict, alt: dict, *, title: str, description: str, depth: int, body:
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(full)}</title>
 <meta name="description" content="{e(description)}">
-<meta name="author" content="{e(L.get('author', 'Arturo Sanchez Pineda'))}">
+<meta name="author" content="{e(L.get('author', 'Arturo Sánchez Pineda, PhD'))}">
 <meta property="og:title" content="{e(full)}">
 <meta property="og:description" content="{e(description)}">
 <meta property="og:type" content="article">
@@ -504,7 +504,7 @@ def shell(L: dict, alt: dict, *, title: str, description: str, depth: int, body:
       <p class="foot__meta">{e(t(ui, 'foot_2'))}</p>
       <p class="foot__meta"><a class="foot__link" href="{ai_href}">{e(t(ui, 'foot_ai'))}</a></p></div>
   </div>
-  <p class="foot__rule">&copy; {date.today().year} {e(L.get('author', 'Arturo Sanchez Pineda'))}</p>
+  <p class="foot__rule">&copy; {date.today().year} {e(L.get('author', 'Arturo Sánchez Pineda, PhD'))}</p>
 </footer>
 <script src="{prefix}assets/atlas.js" defer></script>
 </body>
@@ -634,7 +634,7 @@ def render_home(L, alt, method, studies, sections, claims, standfirst, alt_url, 
       {mosaic(sections, L["ledger"]["slug"] + "/", classes)}
       <p class="cover__caption">{e(t(ui, 'mosaic_caption'))}</p>
     </div>
-    <p class="cover__by">{e(L.get('author', 'Arturo Sanchez Pineda'))}</p>
+    <p class="cover__by">{e(L.get('author', 'Arturo Sánchez Pineda, PhD'))}</p>
   </div>
 </header>
 
