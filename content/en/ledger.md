@@ -3,7 +3,7 @@
 ## The Civilian Geopolitical Reality Map
 
 **Author: Arturo Sánchez Pineda**  
-**Edition: 18 August 2026**
+**Edition: 17 August 2026**
 
 This ledger is the evidentiary control for the manual and case studies. “Permitted wording” is language supported by the cited record. “Avoid” identifies claims that are broader than the evidence or that confuse distinct legal categories. The ledger should be updated whenever a court rules, a policy changes or new primary evidence becomes available.
 
