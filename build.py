@@ -556,12 +556,14 @@ def render_map(L, alt, geo, alt_url, path, alt_path):
 
     body = f"""
 <article class="mappage">
-  <header class="doc__head">
-    <p class="eyebrow">{e(M['eyebrow'])}</p>
-    <h1 class="doc__title">{e(M['title'])}</h1>
-    <p class="doc__subtitle">{e(M['subtitle'])}</p>
-  </header>
-  <p class="lede mappage__lede">{e(M['lede'])}</p>
+  <div class="mappage__intro">
+    <header class="doc__head">
+      <p class="eyebrow">{e(M['eyebrow'])}</p>
+      <h1 class="doc__title">{e(M['title'])}</h1>
+      <p class="doc__subtitle">{e(M['subtitle'])}</p>
+    </header>
+    <p class="lede mappage__lede">{e(M['lede'])}</p>
+  </div>
   <figure class="atlasmap">
     <div class="atlasmap__stage">
       <svg viewBox="{geo['viewBox']}" role="img" xmlns="http://www.w3.org/2000/svg">

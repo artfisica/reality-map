@@ -652,10 +652,11 @@ a.claim__ref:hover{color:var(--ink);border-bottom-color:var(--ink-3)}
 /* --- the map -------------------------------------------------------------- */
 
 .mappage{padding-bottom:2rem}
+.mappage__intro{width:var(--wrap);margin-inline:auto}
 .mappage__lede{margin-top:2rem;max-width:58ch}
 
 .atlasmap{margin:clamp(2rem,5vw,3.5rem) 0 0}
-.atlasmap__stage{position:relative}
+.atlasmap__stage{position:relative;width:var(--wrap);margin-inline:auto}
 .atlasmap svg{display:block;width:100%;height:auto;overflow:visible}
 .sphere{fill:var(--paper-2);stroke:var(--rule);stroke-width:1}
 .grat{fill:none;stroke:var(--rule);stroke-width:.6;opacity:.55}
@@ -682,9 +683,10 @@ a.claim__ref:hover{color:var(--ink);border-bottom-color:var(--ink-3)}
   .map-pin{width:1.75rem;height:1.75rem;border-width:2px}
 }
 
-.atlasmap .note{margin-top:1.5rem}
+.atlasmap .note{width:var(--wrap);margin:1.5rem auto 0}
 
-.legend{margin-top:clamp(2.5rem,5vw,4rem);border-top:1px solid var(--ink)}
+.legend{width:var(--wrap);margin:clamp(2.5rem,5vw,4rem) auto 0;
+  border-top:1px solid var(--ink)}
 .legend__group{padding:1.5rem 0;border-bottom:1px solid var(--rule)}
 .legend__study{display:inline-flex;align-items:baseline;gap:.75rem;
   text-decoration:none;font-family:var(--sans);font-weight:600;font-size:.75rem;

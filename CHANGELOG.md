@@ -29,6 +29,9 @@ is recorded here.
 - Added French Guiana's exclusion from Schengen under Article 138 and separated
   it from the Spain-specific visa and departure-control regime governing Ceuta
   and Melilla; synchronized the analysis, ledgers and map labels in both languages.
+- Restored the map page's missing horizontal content wrapper so its heading,
+  introduction, geographic drawing, projection note and legend align within the
+  same responsive measure as the rest of the site.
 - Case studies reordered: the Caribbean killings become IV, Venezuela becomes V.
 - Claim anchors are now stable. They no longer come from row order, so adding a
   claim does not renumber the ones below it or break an existing citation.
