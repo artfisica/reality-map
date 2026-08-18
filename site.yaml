@@ -7,6 +7,7 @@ site:
   base_url: "https://artfisica.github.io/reality-map"
   default_lang: en
   author: Arturo Sánchez Pineda
+  author_url: "https://www.linkedin.com/in/arturo-sanchez-pineda/"
 
   # Classification matching runs in this order, most specific first. It is
   # deliberately not the display order: "Historical synthesis supported by UN
@@ -252,7 +253,6 @@ en:
     foot_1: >-
       Written by Arturo Sánchez Pineda. Every factual claim is classified and
       traced in the ledger. Corrections are part of the method.
-    1_anchor: https://www.linkedin.com/in/arturo-sanchez-pineda/
     foot_2: >-
       No trackers, no analytics, no third-party requests. Fonts are served from
       this domain.
@@ -473,7 +473,6 @@ es:
     foot_1: >-
       Escrito por Arturo Sánchez Pineda. Cada afirmación factual está
       clasificada y trazada en el registro. Corregir es parte del método.
-    1_anchor: https://www.linkedin.com/in/arturo-sanchez-pineda/
     foot_2: >-
       Sin rastreadores, sin analítica, sin peticiones a terceros. Las tipografías
       se sirven desde este dominio.

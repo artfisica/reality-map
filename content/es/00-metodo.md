@@ -7,7 +7,7 @@
 
 ## Posición del autor
 
-Escribo como venezolano residente en Suiza y como científico e ingeniero, formado para separar observación, supuesto, incertidumbre y conclusión. Vivir fuera de Venezuela no me otorga neutralidad ni me da permiso para ignorar lo que ocurre. Mi formación científica no hace desaparecer mis valores; me obliga a mostrar dónde termina la evidencia y dónde comienza mi interpretación.
+Escribo como venezolano residente en Suiza y como científico e ingeniero con un doctorado en física, formado para separar observación, supuesto, incertidumbre y conclusión. Vivir fuera de Venezuela no me otorga neutralidad ni me da permiso para ignorar lo que ocurre. Mi formación científica no hace desaparecer mis valores; me obliga a mostrar dónde termina la evidencia y dónde comienza mi interpretación.
 
 Este manual no sostiene que el derecho sea irrelevante. Parte de la premisa contraria: el derecho aporta el vocabulario con el cual podemos identificar la fuerza, reclamar derechos y registrar responsabilidades. Pero una norma escrita no es un mecanismo de cumplimiento. El civil que confunde un derecho reconocido con una protección efectiva entiende mal tanto sus riesgos como las instituciones de las cuales depende.
 

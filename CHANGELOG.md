@@ -32,6 +32,8 @@ is recorded here.
 - Restored the map page's missing horizontal content wrapper so its heading,
   introduction, geographic drawing, projection note and legend align within the
   same responsive measure as the rest of the site.
+- Linked the author credit on the cover, document metadata and footer to Arturo
+  Sánchez Pineda's LinkedIn profile using a single site-level URL and `rel="me"`.
 - Case studies reordered: the Caribbean killings become IV, Venezuela becomes V.
 - Claim anchors are now stable. They no longer come from row order, so adding a
   claim does not renumber the ones below it or break an existing citation.

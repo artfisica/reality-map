@@ -120,6 +120,23 @@ def t(ui: dict, key: str, **kw) -> str:
     return value
 
 
+def author_link(L: dict, name: str = "") -> str:
+    """Render the credited author as a verified profile link when configured."""
+    label = name or L.get("author", "")
+    url = str(L.get("author_url", "")).strip()
+    if not url:
+        return e(label)
+    return (f'<a class="author-link" href="{e(url)}" rel="me">'
+            f'{e(label)}</a>')
+
+
+def author_sentence(L: dict, text: str) -> str:
+    """Escape a UI sentence, then link its first exact author-name mention."""
+    escaped = e(text)
+    name = str(L.get("author", ""))
+    return escaped.replace(e(name), author_link(L), 1) if name else escaped
+
+
 def parse_reference(rest: str, n: int) -> Source:
     url = ""
     link = re.search(r"<(https?://[^>\s]+)>\s*$", rest) or \
@@ -472,7 +489,7 @@ def shell(L: dict, alt: dict, *, title: str, description: str, depth: int, body:
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(full)}</title>
 <meta name="description" content="{e(description)}">
-<meta name="author" content="{e(L.get('author', 'Arturo Sánchez Pineda, PhD'))}">
+<meta name="author" content="{e(L.get('author', 'Arturo Sanchez Pineda'))}">
 <meta property="og:title" content="{e(full)}">
 <meta property="og:description" content="{e(description)}">
 <meta property="og:type" content="article">
@@ -500,11 +517,11 @@ def shell(L: dict, alt: dict, *, title: str, description: str, depth: int, body:
   <div class="foot__grid">
     <div><p class="foot__title">{e(L['title'])}</p>
       <p class="foot__meta">{e(L['edition'])} \u00b7 v{e(L['version'])}</p></div>
-    <div><p class="foot__meta">{e(t(ui, 'foot_1'))}</p>
+    <div><p class="foot__meta">{author_sentence(L, t(ui, 'foot_1'))}</p>
       <p class="foot__meta">{e(t(ui, 'foot_2'))}</p>
       <p class="foot__meta"><a class="foot__link" href="{ai_href}">{e(t(ui, 'foot_ai'))}</a></p></div>
   </div>
-  <p class="foot__rule">&copy; {date.today().year} {e(L.get('author', 'Arturo Sánchez Pineda, PhD'))}</p>
+  <p class="foot__rule">&copy; {date.today().year} {author_link(L)}</p>
 </footer>
 <script src="{prefix}assets/atlas.js" defer></script>
 </body>
@@ -634,7 +651,7 @@ def render_home(L, alt, method, studies, sections, claims, standfirst, alt_url, 
       {mosaic(sections, L["ledger"]["slug"] + "/", classes)}
       <p class="cover__caption">{e(t(ui, 'mosaic_caption'))}</p>
     </div>
-    <p class="cover__by">{e(L.get('author', 'Arturo Sánchez Pineda, PhD'))}</p>
+    <p class="cover__by">{author_link(L)}</p>
   </div>
 </header>
 
@@ -881,7 +898,7 @@ def render_doc(L, alt, doc, claims, kind, prev, nxt, alt_url, alt_path):
     <p class="eyebrow">{e(eyebrow)}</p>
     <h1 class="doc__title">{e(doc.title)}</h1>
     <p class="doc__subtitle">{e(doc.subtitle)}</p>
-    <div class="doc__meta"><span>{e(doc.author or L.get('author', ''))}</span>
+    <div class="doc__meta"><span>{author_link(L, doc.author or L.get('author', ''))}</span>
       <span>{e(doc.dateline)}</span>
       <span>{doc.minutes} {e(t(ui, 'min_read'))}</span>
       <span>{len(doc.sources)} {e(t(ui, 'sources'))}</span></div>
@@ -961,7 +978,7 @@ def render_ledger(L, alt, intro, sections, outro, claims, section_study, alt_url
     <p class="eyebrow">{e(L['ledger']['eyebrow'])}</p>
     <h1 class="doc__title">{e(L['ledger']['title'])}</h1>
     <p class="doc__subtitle">{e(L['ledger']['subtitle'])}</p>
-    <div class="doc__meta"><span>{e(L.get('author', ''))}</span><span>{e(L['edition'])}</span>
+    <div class="doc__meta"><span>{author_link(L)}</span><span>{e(L['edition'])}</span>
       <span>{len(claims)} {e(t(ui, 'claims'))}</span>
       <span>{len(sections)} {e(t(ui, 'files'))}</span></div>
   </header>
@@ -998,6 +1015,7 @@ def write(path: Path, text: str) -> None:
 def build_lang(cfg, code: str) -> dict:
     L = dict(cfg[code])
     L["author"] = cfg["site"]["author"]
+    L["author_url"] = cfg["site"].get("author_url", "")
     L["base_url"] = cfg["site"]["base_url"]
     alt = dict(cfg[L["other"]])
     base = (L["dir"] + "/") if L["dir"] else ""

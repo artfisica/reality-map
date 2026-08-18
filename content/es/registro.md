@@ -13,15 +13,17 @@ El proyecto combina dos formas de responsabilidad.
 
 La **responsabilidad científica** exige categorías explícitas, comparaciones reproducibles, condiciones de alcance declaradas, explicaciones alternativas y conclusiones revisables ante nueva evidencia. Una cifra debe conservar la definición de su fuente; una estimación no puede convertirse en conteo observado; una secuencia temporal no debe presentarse como prueba de causalidad.
 
-La **responsabilidad autoral** La primera persona es apropiada para identificar posición, responsabilidad moral, miedo, dolor o la razón por la cual se formula una pregunta. No debe sustituir la evidencia documental. [*Miedo*](https://www.linkedin.com/pulse/miedo-arturo-s%C3%A1nchez-pineda-bhf8e/) y [*Dolor*](https://www.linkedin.com/pulse/dolor-arturo-s%C3%A1nchez-pineda-zu1se/) son contexto autoral, no prueba de hechos geopolíticos.
+La **responsabilidad autoral** exige que Arturo Sánchez Pineda permanezca presente en el texto. La primera persona es apropiada para identificar posición, responsabilidad moral, miedo, dolor o la razón por la cual se formula una pregunta. No debe sustituir la evidencia documental. [*Miedo*](https://www.linkedin.com/pulse/miedo-arturo-s%C3%A1nchez-pineda-bhf8e/) y [*Dolor*](https://www.linkedin.com/pulse/dolor-arturo-s%C3%A1nchez-pineda-zu1se/) son contexto autoral, no prueba de hechos geopolíticos.
 
 La voz del proyecto conserva cinco rasgos de esos artículos:
 
 1. **implicación personal:** el autor no se sitúa fuera del miedo, la distancia o la cobardía que examina;
 2. **rechazo del «te lo dije»:** una advertencia anterior sirve para establecer cronología, no para reclamar superioridad después de una tragedia;
-3. **consecuencia humana concreta:** detrás de «civiles», «daños» o «desplazamiento» existen familias, viviendas, niñas y niños;
+3. **consecuencia humana concreta:** detrás de «civiles», «daños» o «desplazamiento» existen familias, viviendas, cuerpos, niñas y niños;
 4. **lenguaje moral directo:** asesinato, miedo, dolor, cobardía o doble rasero pueden utilizarse cuando la categoría y la evidencia están explicadas;
 5. **disciplina probatoria:** la repetición enfática y la primera persona pertenecen a la voz; las faltas gramaticales, la confusión entre tribunales o una acusación superior al expediente no pertenecen a ella.
+
+La edición debe preservar la cadencia de Arturo, no reproducir mecánicamente cada frase de *Miedo* o *Dolor*. Corregir una concordancia o una categoría jurídica no neutraliza la voz. Convertir todo el texto en prosa institucional sí lo haría.
 
 La objetividad significa que aliados, adversarios y los propios gobernantes venezolanos reciben la misma prueba. No exige neutralidad entre un uso documentado de la fuerza contrario al derecho internacional y la población que lo padece.
 
