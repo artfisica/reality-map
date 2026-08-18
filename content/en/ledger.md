@@ -13,7 +13,7 @@ The project combines two forms of accountability.
 
 **Scientific accountability** requires explicit categories, reproducible comparisons, stated scope conditions, rival explanations and conclusions that can be revised by new evidence. A number must retain its source’s definition; an estimate must not become an observed count; temporal sequence must not be presented as proof of causation.
 
-**Authorial accountability** requires Arturo Sánchez Pineda to remain present in the work. First person is appropriate when identifying standpoint, moral responsibility, fear, pain or the reason a question is being asked. It must not replace documentary evidence. *Miedo* and *Dolor* are therefore authorial context, not proof of geopolitical facts.
+**Authorial accountability** First person is appropriate when identifying standpoint, moral responsibility, fear, pain or the reason a question is being asked. It must not replace documentary evidence. [*Miedo*](https://www.linkedin.com/pulse/miedo-arturo-s%C3%A1nchez-pineda-bhf8e/) and [*Dolor*](https://www.linkedin.com/pulse/dolor-arturo-s%C3%A1nchez-pineda-zu1se/) are therefore authorial context, not proof of geopolitical facts.
 
 The project’s voice retains five features of those articles:
 
@@ -22,8 +22,6 @@ The project’s voice retains five features of those articles:
 3. **concrete human consequence:** behind “civilians,” “damage” and “displacement” are families, homes, bodies and children;
 4. **direct moral language:** killing, fear, pain, cowardice and double standard may be used when the category and evidence are explained;
 5. **evidentiary discipline:** emphatic repetition and first person belong to the voice; grammatical errors, confusion between courts or accusations broader than the record do not.
-
-Editing must preserve Arturo’s cadence, not mechanically reproduce every phrase in *Miedo* or *Dolor*. Correcting agreement or a legal category does not neutralise the voice. Turning the entire project into institutional prose would.
 
 Objectivity means that allies, adversaries and Venezuela’s own rulers receive the same evidentiary test. It does not require neutrality between a documented use of unlawful force and the civilians subjected to it.
 
