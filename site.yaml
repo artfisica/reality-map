@@ -222,6 +222,8 @@ en:
     clear: Clear the filters
     supports_study: "Case study {numeral}"
     position_label: Author's position
+    method_disclosure: "Method, sources and a statement on AI assistance:"
+    method_disclosure_link: see the manual
     key_h: Every claim carries its evidence class
     key_lede: >-
       A rule on paper is not an enforcement mechanism, and an accusation is not
@@ -442,6 +444,8 @@ es:
     clear: Limpiar los filtros
     supports_study: "Estudio de caso {numeral}"
     position_label: Posición del autor
+    method_disclosure: "Método, fuentes y declaración sobre la asistencia de inteligencia artificial:"
+    method_disclosure_link: consulte el manual
     key_h: Cada afirmación lleva su clase de evidencia
     key_lede: >-
       Una regla escrita no es un mecanismo de aplicación, y una acusación no es

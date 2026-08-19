@@ -7,7 +7,7 @@
 
 Foreign military intervention is commonly narrated from the viewpoint of the intervening power. The debate begins with its threat perception, follows its troops and ends when its government declares withdrawal or success. For civilians in the target state, that chronology is false. The loss of relatives, institutions, homes, education and economic security continues long after the intervening power has revised its objectives.
 
-Afghanistan, Iraq and Syria were not one war and do not share a single cause. They should not be collapsed into the statement that the United States alone “destroyed” them. Their comparison supports a more disciplined conclusion: external powers repeatedly used or prolonged force while overstating their ability to engineer political order, externalising the long-term cost to local populations and retaining control over when their own responsibility would be treated as finished.
+Afghanistan, Iraq and Syria were not one war and do not share a single cause. They should not be collapsed into the statement that the United States alone “destroyed” them. Their comparison supports a more disciplined conclusion. External powers repeatedly used or prolonged force while overstating their ability to engineer political order. They externalised the long-term cost to local populations and retained control over when their own responsibility would be treated as finished.
 
 I am not comparing these societies because Venezuelans are destined to repeat their histories. I compare them because civilians cannot evaluate an intervention only through the intervening state’s stated intention or its first military result. As a physicist I would not extrapolate from systems with different initial conditions without stating the limits. As a Venezuelan I cannot ignore a recurring mechanism merely because the final outcomes will not be identical.
 
@@ -19,7 +19,7 @@ Evidence of sustainable security, representative government and institutional ca
 
 ## Iraq: invasion before peaceful options were exhausted
 
-The 2003 US-led invasion overthrew Saddam Hussein rapidly. The British Iraq Inquiry later found that the diplomatic options had not been exhausted, military action was not a last resort, there was no explicit Security Council authorisation for the invasion, judgments concerning Iraq’s weapons capabilities were presented with unjustified certainty, and post-conflict planning was inadequate.
+The 2003 US-led invasion overthrew Saddam Hussein rapidly. The British Iraq Inquiry later found that diplomatic options had not been exhausted, military action was not a last resort and no explicit Security Council authorisation existed. It also found that judgments concerning Iraq’s weapons capabilities were presented with unjustified certainty and that post-conflict planning was inadequate.
 
 Those findings matter because they come from an official inquiry by a principal coalition state. They establish that the catastrophe cannot be explained merely as an unforeseeable failure after a sound decision. The coalition entered without adequately preparing for the society and institutions that would exist after regime collapse.
 
@@ -27,7 +27,7 @@ The invasion and occupation were followed by state breakdown, insurgency, sectar
 
 ## Afghanistan: two decades of goals without a workable theory
 
-The intervention in Afghanistan began after the attacks of 11 September 2001 and expanded into a twenty-year attempt to defeat armed groups and build a centralised state. The US Special Inspector General for Afghanistan Reconstruction concluded that the United States struggled to develop and execute a coherent strategy, imposed unrealistic timelines, rotated personnel too quickly, failed to understand local institutions and often created projects that could not be sustained.
+The intervention in Afghanistan began after the attacks of 11 September 2001 and expanded into a twenty-year attempt to defeat armed groups and build a centralised state. The US Special Inspector General for Afghanistan Reconstruction concluded that the United States struggled to develop and execute a coherent strategy. It imposed unrealistic timelines, rotated personnel too quickly, failed to understand local institutions and often created projects that could not be sustained.
 
 The Taliban’s return to national power in August 2021 exposed the difference between expenditure and durable capacity. Some gains in education, health, infrastructure, media and urban life were real, particularly for women and girls. Their fragility makes the failure more serious, not less. A project advertised as transformation left Afghans with renewed authoritarian rule, severe restrictions on women and girls, displacement and a humanitarian crisis after the principal external power chose its exit.
 

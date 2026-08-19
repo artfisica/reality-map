@@ -889,6 +889,12 @@ def render_doc(L, alt, doc, claims, kind, prev, nxt, alt_url, alt_path):
     eyebrow = t(ui, "the_method") if kind == "method" else \
         f'{t(ui, "case_study")} {doc.numeral}'
     stand = f'<div class="doc__standfirst">{doc.standfirst}</div>' if doc.standfirst else ""
+    method_note = ""
+    if kind == "study":
+        method_href = (f'{prefix}{L["dir"] + "/" if L["dir"] else ""}'
+                       f'{L["method"]["slug"]}/#{t(ui, "ai_anchor")}')
+        method_note = (f'<p class="doc__method-note">{e(t(ui, "method_disclosure"))} '
+                       f'<a href="{method_href}">{e(t(ui, "method_disclosure_link"))}</a>.</p>')
     method_map = render_method_map(L) if kind == "method" else ""
 
     body = f"""
@@ -902,6 +908,7 @@ def render_doc(L, alt, doc, claims, kind, prev, nxt, alt_url, alt_path):
       <span>{e(doc.dateline)}</span>
       <span>{doc.minutes} {e(t(ui, 'min_read'))}</span>
       <span>{len(doc.sources)} {e(t(ui, 'sources'))}</span></div>
+    {method_note}
     {stand}
   </header>
   {issuers(doc, ui)}

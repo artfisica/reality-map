@@ -7,9 +7,9 @@
 
 *Primer estudio de caso del **Mapa civil de la realidad geopolítica**, un marco para entender a los Estados mediante su conducta, sus capacidades y sus intereses observables, y no únicamente mediante sus declaraciones.*
 
-Abordo esta comparación como venezolano y como físico. La primera posición explica por qué la aplicación selectiva del derecho no es un asunto abstracto para mí. La segunda me obliga a definir qué estoy comparando, conservar las diferencias materiales entre los casos e indicar cuándo el expediente sostiene un hecho, una conclusión jurídica o una inferencia. Objetividad significa aquí un método que otros puedan examinar y repetir; no significa distancia emocional frente al sufrimiento civil.
+Abordo esta comparación como venezolano y como físico e ingeniero. La primera posición explica por qué la aplicación selectiva del derecho no es un asunto abstracto para mí. La segunda me obliga a definir qué estoy comparando, conservar las diferencias materiales entre los casos e indicar cuándo el expediente sostiene un hecho, una conclusión jurídica o una inferencia. Objetividad significa aquí un método que otros puedan examinar y repetir; no significa distancia emocional frente al sufrimiento civil.
 
-Tampoco escribo para decir «se los dije» ni para presentarme fuera de la cobardía que critico. En *Miedo* me incluí entre quienes miramos, tememos las consecuencias personales y aun así hacemos demasiado poco. En *Dolor* escribí que el «te lo dije» sería repugnante frente a quienes perdieron sus casas, sus familias o partes de sus cuerpos. Por eso este estudio no busca superioridad moral. Busca identificar el punto exacto en el cual el miedo de los gobiernos se convierte en silencio, el silencio en protección política y esa protección en sufrimiento para otros.
+Tampoco escribo para decir «te lo dije» ni para presentarme fuera de la cobardía que critico. En *Miedo* me incluí entre quienes miramos, tememos las consecuencias personales y aun así hacemos demasiado poco. En *Dolor* escribí que el «te lo dije» sería repugnante frente a quienes perdieron sus casas, sus familias o partes de sus cuerpos. Por eso este estudio no busca superioridad moral. Busca identificar el punto exacto en el cual el miedo de los gobiernos se convierte en silencio, el silencio en protección política y esa protección en sufrimiento para otros.
 
 El 6 de agosto de 2026, la [Unión Europea acogió un acuerdo](https://www.consilium.europa.eu/de/press/press-releases/2026/08/06/gaza-statement-by-the-high-representative-on-behalf-of-the-european-union/) que preveía el desarme de Hamás y otros grupos armados no estatales, la retirada completa de las fuerzas israelíes de Gaza y una transición hacia un gobierno civil. Si se ejecuta plenamente, podría cerrar la fase inmediata de la catástrofe. No responde, sin embargo, a la pregunta que Europa y Suiza evitaron durante casi tres años: ¿por qué gobiernos que movilizaron sanciones, finanzas y capital político con tanta rapidez para Ucrania se negaron a ejercer una presión comparable mientras Gaza era destruida?
 
@@ -19,18 +19,13 @@ La evidencia favorece con mayor fuerza la segunda explicación. Europa y Suiza n
 
 ## Método para leer la conducta estatal
 
-Este estudio no es solamente una evaluación de Gaza, Ucrania, Europa y Suiza. También demuestra un procedimiento que la población civil puede utilizar para estudiar una crisis sin confundir el mundo descrito en tratados y discursos con el mundo en el cual los Estados realmente actúan.
+Este estudio aplica el [mapa de poder en seis capas](../../metodo/#2-el-mapa-de-poder-en-seis-capas) completo del manual. Tres capas realizan la mayor parte del trabajo comparativo:
 
-Toda evaluación seria debe examinar al menos seis capas:
+1. **La dependencia:** ¿qué alianzas, sistemas financieros, tecnologías, fuentes de energía o potencias protectoras limitan el margen de decisión?
+2. **El instrumento:** ¿qué herramientas —sanciones, comercio, armas, diplomacia, tribunales o ayuda— son utilizadas o retenidas deliberadamente?
+3. **El costo:** ¿quién obtiene el beneficio y quién es obligado a absorber las consecuencias?
 
-1. **La norma:** ¿qué exige, permite o prohíbe el derecho nacional e internacional?
-2. **La declaración:** ¿qué principios invoca públicamente el Estado?
-3. **El interés:** ¿qué objetivo de seguridad, económico, electoral o institucional protege?
-4. **La dependencia:** ¿qué alianzas, sistemas financieros, tecnologías, fuentes de energía o potencias protectoras limitan su margen de decisión?
-5. **El instrumento:** ¿qué herramientas —sanciones, comercio, armas, diplomacia, tribunales o ayuda— utiliza o retiene deliberadamente?
-6. **El costo:** ¿quién obtiene el beneficio y quién absorbe las consecuencias?
-
-La distancia entre las dos primeras capas y las cuatro restantes es donde la conducta estatal se hace visible. El derecho continúa siendo esencial: define obligaciones, derechos y violaciones. Pero el derecho, por sí solo, no permite predecir cómo será aplicado. Para anticipar la conducta debemos cartografiar también el poder, la dependencia, los vetos institucionales y la distribución de costos.
+La norma y la declaración pública siguen siendo controles indispensables, mientras el interés protegido ayuda a explicar la elección. La comparación se vuelve visible cuando esos compromisos declarados se contrastan con la dependencia, el instrumento y el costo.
 
 ## Lo que ha sido determinado jurídicamente —y lo que todavía no
 

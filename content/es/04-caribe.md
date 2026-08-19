@@ -92,7 +92,7 @@ Hasta que esas preguntas sean respondidas, «lucha contra el narcotráfico» es 
 
 ## El límite europeo y suizo
 
-Es inexacto afirmar que Europa guardó silencio. Funcionarios europeos formularon la regla aplicable y organismos internacionales condenaron las muertes. La pregunta pertinente es en qué punto de la escala de respuesta se detuvieron.
+Es inexacto afirmar que Europa guardó silencio. Funcionarios europeos formularon la regla aplicable y organismos internacionales condenaron las muertes. La pregunta pertinente es en qué punto de la **escala de respuesta estatal** se detuvieron.
 
 Hubo críticas, escrutinio y lenguaje diplomático. No se identificaron públicamente medidas coercitivas europeas o suizas contra funcionarios, unidades, activos o canales de cooperación responsables de la campaña. La diferencia frente al trato de los adversarios reaparece: la conducta del aliado es nombrada, pero la relación política permanece protegida.
 

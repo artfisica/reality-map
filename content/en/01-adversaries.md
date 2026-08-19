@@ -7,7 +7,7 @@
 
 *The first case study in **The Civilian Geopolitical Reality Map**—a framework for understanding states through their observed conduct, capabilities and interests rather than through their declarations alone.*
 
-I approach this comparison as a Venezuelan and as a physicist. The first position determines why selective enforcement is not abstract to me. The second requires me to define the objects being compared, preserve material differences between the cases and identify where the record supports a fact, a legal conclusion or an inference. Objectivity here means a reproducible method, not emotional distance from civilian suffering.
+I approach this comparison as a Venezuelan and as a physicist and engineer. The first position determines why selective enforcement is not abstract to me. The second requires me to define the objects being compared, preserve material differences between the cases and identify where the record supports a fact, a legal conclusion or an inference. Objectivity here means a reproducible method, not emotional distance from civilian suffering.
 
 I am not writing to say “I told you so,” or to place myself outside the cowardice I criticise. In *Miedo*, I included myself among those who look away, fear the personal consequences and still do far too little. In *Dolor*, I wrote that “I told you so” would be repugnant in the face of people who had lost their homes, families or parts of their bodies. This study does not seek moral superiority. It identifies the point at which governmental fear becomes silence, silence becomes political protection, and that protection is paid for through other people’s suffering.
 
@@ -19,18 +19,13 @@ The evidence supports the latter explanation more strongly. Europe and Switzerla
 
 ## A method for reading state behaviour
 
-This study is not only an assessment of Gaza, Ukraine, Europe and Switzerland. It also demonstrates a method civilians can use to understand geopolitical events without confusing the world described in treaties and speeches with the world in which states actually operate.
+This study applies the manual's full [six-layer power map](../../method/#2-the-six-layer-power-map). Three layers do most of the comparative work here:
 
-Every serious analysis should examine at least six layers:
+1. **The dependency:** Which alliances, financial systems, technologies, energy supplies or protecting powers limit freedom of action?
+2. **The instrument:** Which available tools—sanctions, trade, weapons, diplomacy, courts or humanitarian aid—are used or deliberately withheld?
+3. **The cost:** Who benefits from the decision, and who is made to absorb its consequences?
 
-1. **The rule:** What do international and domestic law require, permit or prohibit?
-2. **The declaration:** What principles does the state publicly invoke?
-3. **The interest:** What security, economic, electoral or institutional objective is the state protecting?
-4. **The dependency:** Which alliances, financial systems, technologies, energy supplies or protecting powers limit its freedom of action?
-5. **The instrument:** Which available tools—sanctions, trade, weapons, diplomacy, courts or humanitarian aid—does it actually use or deliberately withhold?
-6. **The cost:** Who benefits from the decision, and who is made to absorb its consequences?
-
-The gap between the first two layers and the last four is where actual state behaviour becomes visible. Law remains essential: it defines obligations, rights and violations. But law alone does not predict enforcement. To anticipate conduct, civilians must also map power, dependency, institutional vetoes and the distribution of costs.
+The rule and the public declaration remain necessary controls, while the protected interest helps explain the choice. The comparison becomes visible when those stated commitments are tested against dependency, instrument and cost.
 
 ## What has—and has not—been legally determined
 

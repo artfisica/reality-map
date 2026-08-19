@@ -303,6 +303,12 @@ a.stamp:hover{background:color-mix(in srgb,var(--c) 18%,transparent)}
   font-style:italic;color:var(--ink-2)}
 .doc__meta{display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;margin-top:1.6rem;
   font-family:var(--mono);font-size:.6875rem;color:var(--ink-3)}
+.doc__method-note{margin-top:.8rem;font-family:var(--sans);font-size:.75rem;
+  line-height:1.5;color:var(--ink-3)}
+.doc__method-note a{color:inherit;text-decoration:underline;
+  text-decoration-color:var(--rule-2);text-underline-offset:.16em}
+.doc__method-note a:hover,.doc__method-note a:focus-visible{
+  color:var(--ink);text-decoration-color:var(--ink)}
 .doc__standfirst{margin-top:1.6rem;padding-left:1.1rem;
   border-left:2px solid var(--rule-2);color:var(--ink-2)}
 

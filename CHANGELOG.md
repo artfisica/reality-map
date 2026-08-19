@@ -34,6 +34,12 @@ is recorded here.
   same responsive measure as the rest of the site.
 - Linked the author credit on the cover, document metadata and footer to Arturo
   Sánchez Pineda's LinkedIn profile using a single site-level URL and `rel="me"`.
+- Harmonised Arturo's physicist-and-engineer description and the Spanish
+  «te lo dije» phrase, repeated the name of the Spanish response scale where it
+  is applied, and reduced duplicated method exposition in Study I.
+- Added a bilingual method, sources and AI-assistance link to every standalone
+  study page, and split the densest sentences in Study III without altering its
+  findings or source record.
 - Case studies reordered: the Caribbean killings become IV, Venezuela becomes V.
 - Claim anchors are now stable. They no longer come from row order, so adding a
   claim does not renumber the ones below it or break an existing citation.
