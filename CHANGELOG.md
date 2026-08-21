@@ -4,6 +4,20 @@ Editions are dated and versioned together. When a court rules, a policy changes
 or new primary evidence appears, the ledger row is updated first and the change
 is recorded here.
 
+## 0.6.1 — 22 August 2026
+
+- Rebuilt the bilingual listening pages as a responsive audio library with a
+  clearly separated current episode, full-width controls and readable episode
+  cards that scale to the complete study collection.
+- Restyled the player embedded in individual studies so it reads as part of the
+  article instead of an unformatted block of controls and links.
+- Added versioned CSS and JavaScript URLs so GitHub Pages and browsers cannot
+  keep serving the pre-audio stylesheet after an interface update.
+- Corrected singular episode labels and made all audio-interface ornament
+  neutral ink so it cannot be confused with the evidence-class colour system.
+- Removed the accidentally committed nested copy of the 0.4 repository and
+  made validation reject any future nested repository copy.
+
 ## 0.6 — 22 August 2026
 
 - Corrected the audio model introduced in 0.5: the recordings are long-form

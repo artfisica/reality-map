@@ -55,7 +55,7 @@ en:
   short: Reality Map
   tagline: How to understand states by what they do, not what they declare
   edition: 22 August 2026
-  version: "0.6"
+  version: "0.6.1"
   description: >-
     A civilian framework for reading state conduct through instruments,
     dependencies and costs, with every factual claim classified and traced to a
@@ -64,19 +64,22 @@ en:
   audio:
     slug: listen
     label: Listen
-    eyebrow: The audio edition
+    eyebrow: The audio library
     title: Listen to the studies
-    subtitle: Long-form companions to the written record
+    subtitle: Each study, in its own voice
     description: >-
-      One listening desk for the complete collection. Start an episode, leave
-      the screen alone and continue through the available studies from here.
+      Choose a study and listen from here, or use the individual player inside
+      its written article. Your place is saved on this device.
     available: Available episodes
-    queue: Now queued
+    episode: Episode
+    episodes: Episodes
+    choose: Choose an episode
+    queue: Now playing
     open_article: Open the written study
     library_link: Open the audio edition
     library_note: Long-form episodes, collected in one place.
-    more: More study episodes will appear here as the audio edition grows.
-    autoplay: The next available episode starts automatically.
+    more: Each recording belongs to one written study. More will appear here as the audio edition grows.
+    autoplay: When an episode ends, the next available recording begins.
     play: Play episode
     download: Download audio
     ready: Your position is saved on this device.
@@ -319,7 +322,7 @@ es:
   short: Mapa civil
   tagline: Cómo entender a los Estados por lo que hacen, no por lo que declaran
   edition: 22 de agosto de 2026
-  version: "0.6"
+  version: "0.6.1"
   description: >-
     Un marco civil para leer la conducta de los Estados a través de sus
     instrumentos, dependencias y costos, con cada afirmación clasificada y
@@ -328,19 +331,23 @@ es:
   audio:
     slug: escuchar
     label: Escuchar
-    eyebrow: La edición en audio
+    eyebrow: La biblioteca de audio
     title: Escucha los estudios
-    subtitle: Compañeros de largo formato del expediente escrito
+    subtitle: Cada estudio, con su propia voz
     description: >-
-      Un solo lugar para escuchar la colección. Inicia un episodio, deja la
-      pantalla a un lado y continúa desde aquí por los estudios disponibles.
+      Elige un estudio y escúchalo desde aquí, o utiliza el reproductor
+      individual dentro del artículo escrito. Tu posición queda guardada en
+      este dispositivo.
     available: Episodios disponibles
+    episode: Episodio
+    episodes: Episodios
+    choose: Elige un episodio
     queue: En reproducción
     open_article: Abrir el estudio escrito
     library_link: Abrir la edición en audio
     library_note: Episodios de largo formato, reunidos en un solo lugar.
-    more: Los demás estudios aparecerán aquí a medida que crezca la edición en audio.
-    autoplay: El siguiente episodio disponible comienza automáticamente.
+    more: Cada grabación pertenece a un estudio escrito. Los demás aparecerán aquí a medida que crezca la edición en audio.
+    autoplay: Al terminar un episodio, comienza la siguiente grabación disponible.
     play: Reproducir episodio
     download: Descargar audio
     ready: Tu posición se guarda en este dispositivo.

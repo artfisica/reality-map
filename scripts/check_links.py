@@ -8,7 +8,7 @@ the atlas never sends a reader to a page of its own that is not there.
 import re
 import sys
 from pathlib import Path
-from urllib.parse import urldefrag
+from urllib.parse import urlsplit
 
 OUT = Path(__file__).resolve().parent.parent / "docs"
 
@@ -32,7 +32,8 @@ def main() -> int:
                 external.add(href.split("/")[2] if "//" in href else href)
                 continue
 
-            target, fragment = urldefrag(href)
+            parsed = urlsplit(href)
+            target, fragment = parsed.path, parsed.fragment
 
             if not target:  # same page anchor
                 if fragment and fragment not in ids[page] and "=" not in fragment:

@@ -509,7 +509,7 @@ def shell(L: dict, alt: dict, *, title: str, description: str, depth: int, body:
 <link rel="alternate" hreflang="{L['code']}" href="{canonical}">
 <link rel="alternate" hreflang="{alt['code']}" href="{alt_abs}">
 <link rel="alternate" hreflang="x-default" href="{site_base}/">
-<link rel="stylesheet" href="{prefix}assets/atlas.css">
+<link rel="stylesheet" href="{prefix}assets/atlas.css?v={e(L['version'])}">
 <link rel="icon" href="{prefix}assets/mark.svg" type="image/svg+xml">
 <script>(function(){{try{{var m=localStorage.getItem('rm-mode');if(m)document.documentElement.dataset.mode=m;}}catch(e){{}}}})();</script>
 </head>
@@ -529,7 +529,7 @@ def shell(L: dict, alt: dict, *, title: str, description: str, depth: int, body:
   </div>
   <p class="foot__rule">&copy; {date.today().year} {author_link(L)}</p>
 </footer>
-<script src="{prefix}assets/atlas.js" defer></script>
+<script src="{prefix}assets/atlas.js?v={e(L['version'])}" defer></script>
 </body>
 </html>"""
 
@@ -570,6 +570,7 @@ def render_audio_callout(L: dict, available: int) -> str:
     """A compact home-page entrance to the listening desk."""
     A = L["audio"]
     bars = "".join("<span></span>" for _ in range(7))
+    count_label = A["episode"] if available == 1 else A["episodes"]
     return f"""<section class="listen-callout">
   <div class="listen-callout__signal" aria-hidden="true">{bars}</div>
   <div class="listen-callout__copy">
@@ -577,7 +578,7 @@ def render_audio_callout(L: dict, available: int) -> str:
     <h2>{e(A['title'])}</h2>
     <p>{e(A['library_note'])}</p>
   </div>
-  <p class="listen-callout__count"><strong>{available}</strong><span>{e(A['available'])}</span></p>
+  <p class="listen-callout__count"><strong>{available}</strong><span>{e(count_label)}</span></p>
   <a class="cta" href="{e(A['slug'])}/">{e(A['library_link'])}
     <span aria-hidden="true">&#8250;</span></a>
 </section>"""
@@ -592,6 +593,15 @@ def render_listen(L, alt, tracks, alt_url, path, alt_path):
     if not tracks:
         raise ValueError(f'[{L["code"]}] the audio library has no episodes')
 
+    total_seconds = 0
+    for doc in tracks:
+        minutes, seconds = (int(bit) for bit in doc.audio["duration"].split(":"))
+        total_seconds += minutes * 60 + seconds
+    total_minutes = total_seconds // 60
+    hours, minutes = divmod(total_minutes, 60)
+    duration_label = f"{hours} h {minutes:02d} min" if hours else f"{minutes} min"
+    episode_label = A["episode"] if len(tracks) == 1 else A["episodes"]
+
     cards = []
     for index, doc in enumerate(tracks):
         E = doc.audio
@@ -602,15 +612,18 @@ def render_listen(L, alt, tracks, alt_url, path, alt_path):
         cards.append(f"""<li class="episode-card{' is-current' if index == 0 else ''}">
   <button type="button" data-episode data-src="{e(src)}" data-key="{e(key)}"
     data-title="{e(E['title'])}" data-kind="{e(kind)}"
-    data-duration="{e(E['duration'])}" data-article="{e(article)}"
+    data-duration="{e(E['duration'])}" data-number="{e(doc.numeral)}"
+    data-description="{e(E['description'])}" data-article="{e(article)}"
     aria-current="{'true' if index == 0 else 'false'}">
-    <span class="episode-card__num">{e(doc.numeral)}</span>
-    <span class="episode-card__main"><span>{e(kind)} · {e(E['duration'])}</span>
-      <strong>{e(E['title'])}</strong><small>{e(doc.title)}</small></span>
-    <span class="episode-card__play">{e(A['play'])} &#8250;</span>
+    <span class="episode-card__num" aria-hidden="true">{e(doc.numeral)}</span>
+    <span class="episode-card__main">
+      <span class="episode-card__meta">{e(kind)} <i>{e(E['duration'])}</i></span>
+      <strong>{e(E['title'])}</strong><small>{e(E['description'])}</small></span>
+    <span class="episode-card__play"><span aria-hidden="true">&#9654;</span>{e(A['play'])}</span>
   </button>
   <div class="episode-card__links"><a href="{e(article)}" target="_blank" rel="noopener">
-      {e(A['open_article'])}</a><a href="{e(src)}" download>{e(A['download'])}</a></div>
+      {e(A['open_article'])} <span aria-hidden="true">&#8599;</span></a>
+    <a href="{e(src)}" download>{e(A['download'])} <span aria-hidden="true">&#8595;</span></a></div>
 </li>""")
 
     first = tracks[0]
@@ -619,41 +632,57 @@ def render_listen(L, alt, tracks, alt_url, path, alt_path):
     first_article = f'{base}{L["studies_dir"]}/{first.slug}/'
     first_kind = f'{t(ui, "case_study")} {first.numeral}'
     first_key = f'rm-audio-{L["code"]}-{first.slug}-v{L["version"]}'
-    bars = "".join("<span></span>" for _ in range(11))
+    bars = "".join("<span></span>" for _ in range(13))
     body = f"""
 <article class="listenpage" data-audio-library data-audio-key="{e(first_key)}"
   data-resume="{e(A['resume'])}" data-ready="{e(A['ready'])}"
   data-complete="{e(A['complete'])}">
-  <header class="doc__head listenpage__head">
-    <p class="eyebrow">{e(A['eyebrow'])}</p>
-    <h1 class="doc__title">{e(A['title'])}</h1>
-    <p class="doc__subtitle">{e(A['subtitle'])}</p>
-    <p class="lede">{e(A['description'])}</p>
-  </header>
-  <section class="listen-deck">
-    <div class="listen-deck__wave" aria-hidden="true">{bars}</div>
-    <div class="listen-deck__now">
-      <p class="eyebrow">{e(A['queue'])}</p>
-      <p data-library-kind>{e(first_kind)} · {e(E['duration'])}</p>
-      <h2 data-library-title>{e(E['title'])}</h2>
+  <header class="listen-hero">
+    <div class="listen-hero__copy">
+      <p class="eyebrow">{e(A['eyebrow'])}</p>
+      <h1>{e(A['title'])}</h1>
+      <p class="listen-hero__subtitle">{e(A['subtitle'])}</p>
+      <p class="listen-hero__lede">{e(A['description'])}</p>
     </div>
-    <div class="listen-deck__player">
-      <audio controls preload="metadata" data-library-audio>
-        <source src="{e(first_src)}" type="audio/mp4">
-        {e(t(ui, 'audio_fallback'))}
-      </audio>
-      <div class="listen-deck__actions">
-        <span data-library-status aria-live="polite">{e(A['ready'])}</span>
-        <a data-library-article href="{e(first_article)}" target="_blank" rel="noopener">
-          {e(A['open_article'])} &#8599;</a>
-        <a data-library-download href="{e(first_src)}" download>{e(A['download'])} &#8595;</a>
+    <div class="listen-hero__stat" aria-label="{len(tracks)} {e(episode_label.lower())}, {e(duration_label)}">
+      <strong>{len(tracks)}</strong><span>{e(episode_label)}</span><small>{e(duration_label)}</small>
+    </div>
+  </header>
+  <section class="listen-player" aria-labelledby="listen-now-title">
+    <div class="listen-player__cover" aria-hidden="true">
+      <span>{e(t(ui, 'case_study'))}</span>
+      <strong data-library-number>{e(first.numeral)}</strong>
+      <div class="listen-player__wave">{bars}</div>
+      <small data-library-duration>{e(E['duration'])}</small>
+    </div>
+    <div class="listen-player__body">
+      <div class="listen-player__now">
+        <p class="eyebrow">{e(A['queue'])}</p>
+        <p data-library-kind>{e(first_kind)} · {e(E['duration'])}</p>
+        <h2 id="listen-now-title" data-library-title>{e(E['title'])}</h2>
+        <p data-library-description>{e(E['description'])}</p>
+      </div>
+      <div class="listen-player__controls">
+        <audio controls preload="metadata" data-library-audio>
+          <source src="{e(first_src)}" type="audio/mp4">
+          {e(t(ui, 'audio_fallback'))}
+        </audio>
+        <div class="listen-player__actions">
+          <a data-library-article href="{e(first_article)}" target="_blank" rel="noopener">
+            {e(A['open_article'])} <span aria-hidden="true">&#8599;</span></a>
+          <a data-library-download href="{e(first_src)}" download>
+            {e(A['download'])} <span aria-hidden="true">&#8595;</span></a>
+        </div>
+      </div>
+      <div class="listen-player__notice">
+        <p data-library-status aria-live="polite">{e(A['ready'])}</p>
+        <p>{e(A['autoplay'])} {e(A['note'])}</p>
       </div>
     </div>
-    <p class="listen-deck__note">{e(A['autoplay'])} {e(A['note'])}</p>
   </section>
   <section class="episode-library">
     <div class="episode-library__head"><div><p class="eyebrow">{e(A['available'])}</p>
-      <h2>{len(tracks)} {e(A['available']).lower()}</h2></div><p>{e(A['more'])}</p></div>
+      <h2>{e(A['choose'])}</h2></div><p>{e(A['more'])}</p></div>
     <ol>{''.join(cards)}</ol>
   </section>
 </article>"""

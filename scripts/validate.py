@@ -137,7 +137,7 @@ def check_edition(cfg: dict, code: str) -> dict:  # noqa: C901
         head = "\n".join(path.read_text(encoding="utf-8").splitlines()[:8])
         line = re.search(r"^\*\*(?:Version|Versi\u00f3n|Edition|Edici\u00f3n)[^*]*\*\*$",
                          head, re.M)
-        declared = re.search(r"\b\d+\.\d+\b", line.group(0)) if line else None
+        declared = re.search(r"\b\d+\.\d+(?:\.\d+)?\b", line.group(0)) if line else None
         if declared and declared.group(0) != L["version"]:
             say("error", f'[{code}] {path.name} declares version '
                          f'{declared.group(0)}, the edition is {L["version"]}')
@@ -205,6 +205,12 @@ def main() -> int:
     args = ap.parse_args()
 
     cfg = yaml.safe_load((ROOT / "site.yaml").read_text(encoding="utf-8"))
+
+    nested = ROOT / "reality-map"
+    if (nested / "site.yaml").is_file():
+        say("error", "a complete repository is nested at reality-map/. Remove "
+                     "the duplicate tree before publishing")
+
     editions = {code: check_edition(cfg, code) for code in ("en", "es")}
 
     # the two editions are the same atlas and must carry the same record
