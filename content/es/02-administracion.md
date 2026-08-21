@@ -3,7 +3,7 @@
 ## Puerto Rico, Guam, Nueva Caledonia y Guayana Francesa
 
 **Por Arturo Sánchez Pineda**  
-**20 de agosto de 2026**
+**22 de agosto de 2026**
 
 Los imperios no sobreviven únicamente mediante soldados. Sobreviven convirtiendo los resultados de la conquista en categorías jurídicas, presupuestos, elecciones, instalaciones militares y rutinas administrativas. Una vez completada esa transformación, el vínculo puede describirse en presente sin mencionar la fuerza que lo originó.
 

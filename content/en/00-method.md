@@ -3,7 +3,7 @@
 ## How to Understand States by What They Do, Not What They Declare
 
 **By Arturo Sánchez Pineda**  
-**20 August 2026**
+**22 August 2026**
 
 ## Author’s position
 

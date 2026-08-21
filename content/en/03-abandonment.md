@@ -3,7 +3,7 @@
 ## Afghanistan, Iraq, Syria and What Their Aftermath Warns Venezuela
 
 **By Arturo Sánchez Pineda**  
-**20 August 2026**
+**22 August 2026**
 
 Foreign military intervention is commonly narrated from the viewpoint of the intervening power. The debate begins with its threat perception, follows its troops and ends when its government declares withdrawal or success. For civilians in the target state, that chronology is false. The loss of relatives, institutions, homes, education and economic security continues long after the intervening power has revised its objectives.
 

@@ -3,7 +3,7 @@
 ## Europe and Switzerland’s Gaza Double Standard—and the Lebanon Enforcement Ceiling
 
 **By Arturo Sánchez Pineda**  
-**20 August 2026**
+**22 August 2026**
 
 *The first case study in **The Civilian Geopolitical Reality Map**—a framework for understanding states through their observed conduct, capabilities and interests rather than through their declarations alone.*
 

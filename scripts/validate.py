@@ -38,6 +38,29 @@ def check_edition(cfg: dict, code: str) -> dict:  # noqa: C901
     src = ROOT / "content" / (L["dir"] or "en")
     order = cfg["site"]["match_order"]
 
+    audio_sources = []
+    for configured in [L["method"]] + L["studies"]:
+        episode = configured.get("audio", {})
+        if not episode:
+            continue
+        missing = [key for key in ("src", "title", "duration", "description")
+                   if not episode.get(key)]
+        if missing:
+            say("error", f'[{code}] audio for "{configured["slug"]}" is missing '
+                         + ", ".join(missing))
+            continue
+        audio_src = episode["src"]
+        if audio_src in audio_sources:
+            say("error", f'[{code}] audio source is assigned twice: "{audio_src}"')
+        audio_sources.append(audio_src)
+        audio_path = ROOT / audio_src
+        if not audio_path.is_file():
+            say("error", f'[{code}] audio episode is missing: "{audio_src}"')
+        elif audio_path.stat().st_size < 1024:
+            say("error", f'[{code}] audio episode is unexpectedly small: "{audio_src}"')
+    if not audio_sources:
+        say("error", f"[{code}] the audio edition has no available episodes")
+
     _, sections, _, problems = build.parse_ledger(
         src / L["ledger"]["file"], L["evidence_classes"], order)
     for severity, message in problems:

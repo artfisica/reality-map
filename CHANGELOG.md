@@ -4,6 +4,41 @@ Editions are dated and versioned together. When a court rules, a policy changes
 or new primary evidence appears, the ledger row is updated first and the change
 is recorded here.
 
+## 0.6 — 22 August 2026
+
+- Corrected the audio model introduced in 0.5: the recordings are long-form
+  companions to particular studies, not generic narrations of the entire atlas.
+- Added `/listen/` and `/es/escuchar/` as the single bilingual listening desk,
+  with a shared player, sequential playback, per-episode resume positions,
+  article links and direct downloads.
+- Assigned *How superpowers export their deadliest costs* and *Cómo las
+  potencias exportan su costo humano* to Case Study VI.
+- Added the 40:20 Spanish Case Study I episode, *La impunidad de los Estados
+  ante la ley*.
+- Replaced the repeated whole-site player with an audio-library invitation on
+  each homepage and an episode player only where that study has a recording.
+- Optimized the new 77.9 MB source recording to a 20.4 MB mono AAC web asset
+  without cutting its content.
+- Extended validation to check each study-level episode independently and
+  added the listening pages to navigation, alternate-language links and the
+  sitemap.
+
+## 0.5 — 21 August 2026
+
+- Added a complete English and Spanish audio companion to the home page, method
+  and every study, so a reader can listen while moving through the written
+  record.
+- Added cross-page playback-position recovery in the browser, separately
+  versioned for each language; no playback information leaves the device.
+- Encoded the supplied recordings as locally hosted, mono AAC files optimized
+  for spoken voice, reducing their combined size from about 98 MB to about
+  26 MB without cutting their content.
+- Added explicit interface language stating that the audio is a conversational
+  guide and that the written studies and claim ledger remain authoritative.
+- Added Open Graph audio metadata, accessible fallback/download links, responsive
+  player styling, reduced-motion behavior and print exclusion.
+- Extended strict validation to reject a missing or empty configured recording.
+
 ## 0.4 — 20 August 2026
 
 - Added Case Study VI in English and Spanish: debt, humanitarian abandonment,

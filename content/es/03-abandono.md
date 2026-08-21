@@ -3,7 +3,7 @@
 ## Afganistán, Irak, Siria y lo que su posguerra advierte a Venezuela
 
 **Por Arturo Sánchez Pineda**  
-**20 de agosto de 2026**
+**22 de agosto de 2026**
 
 Las intervenciones militares extranjeras suelen narrarse desde el punto de vista de la potencia que interviene. El debate comienza con su percepción de amenaza, sigue a sus tropas y termina cuando su gobierno declara retirada o victoria. Para la población civil del Estado atacado, esa cronología es falsa. La pérdida de familiares, instituciones, viviendas, educación y seguridad económica continúa mucho después de que la potencia haya revisado sus objetivos.
 

@@ -3,7 +3,7 @@
 ## Intervención contraria al derecho internacional, autonomía restringida y retiro de la CPI
 
 **Por Arturo Sánchez Pineda**  
-**20 de agosto de 2026**
+**22 de agosto de 2026**
 
 El 3 de enero de 2026, Estados Unidos realizó una intervención militar en Venezuela, atacó instalaciones dentro del territorio, capturó a Nicolás Maduro y Cilia Flores y los trasladó a Estados Unidos. No se trata de una invasión hipotética ni de una predicción. Es un uso documentado de la fuerza cuya falta de legalidad fue expuesta en términos excepcionalmente directos por el [Departamento Federal de Asuntos Exteriores de Suiza](https://www.eda.admin.ch/dam/en/sd-web/uAgalQgitFmZ/20260113-memo-voelkerrechtliche-einschaetzung-usa-venezuela.pdf).
 

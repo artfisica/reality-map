@@ -3,7 +3,7 @@
 ## Puerto Rico, Guam, New Caledonia and French Guiana
 
 **By Arturo Sánchez Pineda**  
-**20 August 2026**
+**22 August 2026**
 
 Empires do not survive only through soldiers. They survive by converting the results of conquest into legal categories, budgets, elections, military installations and administrative routines. Once that conversion occurs, officials can describe the resulting relationship without mentioning the force that created it.
 

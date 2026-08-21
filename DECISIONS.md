@@ -5,7 +5,7 @@ files they affect.
 
 ## 1. The content licence
 
-Version 0.4 reserves all rights in `LICENSE-CONTENT`. A later release may adopt
+Version 0.6 reserves all rights in `LICENSE-CONTENT`. A later release may adopt
 one of these alternatives:
 
 - **CC BY 4.0.** Anyone may republish, translate or adapt, including
@@ -31,5 +31,5 @@ edition.
 
 ## 3. Release tagging
 
-Tag version 0.4 after deployment so a citation resolves to a fixed state of the
+Tag version 0.6 after deployment so a citation resolves to a fixed state of the
 record rather than to whatever `main` happens to say.

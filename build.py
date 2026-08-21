@@ -90,6 +90,7 @@ class Doc:
     ledger_sections: list = field(default_factory=list)
     url: str = ""
     depth: int = 1
+    audio: dict = field(default_factory=dict)
 
     @property
     def minutes(self) -> int:
@@ -449,6 +450,7 @@ def chrome(L: dict, alt: dict, prefix: str, active: str, alt_url: str) -> str:
     items = [("method", L["method"]["label"], f'{base}{L["method"]["slug"]}/')]
     for s in L["studies"]:
         items.append((s["slug"], s["numeral"], f'{base}{L["studies_dir"]}/{s["slug"]}/'))
+    items.append(("listen", L["audio"]["label"], f'{base}{L["audio"]["slug"]}/'))
     items.append(("map", L["map"]["label"], f'{base}{L["map"]["slug"]}/'))
     items.append(("ledger", L["ledger"]["label"], f'{base}{L["ledger"]["slug"]}/'))
 
@@ -472,7 +474,7 @@ def chrome(L: dict, alt: dict, prefix: str, active: str, alt_url: str) -> str:
 
 def shell(L: dict, alt: dict, *, title: str, description: str, depth: int, body: str,
           active: str = "", page: str = "", alt_url: str = "", path: str = "",
-          alt_path: str = "") -> str:
+          alt_path: str = "", audio_src: str = "") -> str:
     prefix = "../" * depth
     ui = L["ui"]
     lang_base = prefix + (L["dir"] + "/" if L["dir"] else "")
@@ -480,6 +482,9 @@ def shell(L: dict, alt: dict, *, title: str, description: str, depth: int, body:
     site_base = L["base_url"].rstrip("/")
     canonical = f'{site_base}/{path.lstrip("/")}'
     alt_abs = f'{site_base}/{alt_path.lstrip("/")}'
+    audio_meta = (f'<meta property="og:audio" content="{site_base}/{e(audio_src)}">\n'
+                  f'<meta property="og:audio:type" content="audio/mp4">') \
+        if audio_src else ""
 
     full = title if title == L["title"] else f'{title} \u00b7 {L["short"]}'
     return f"""<!DOCTYPE html>
@@ -497,6 +502,7 @@ def shell(L: dict, alt: dict, *, title: str, description: str, depth: int, body:
 <meta property="og:site_name" content="{e(L['title'])}">
 <meta property="og:locale" content="{L['code']}">
 <meta property="og:image" content="{site_base}/assets/social.png">
+{audio_meta}
 <meta name="twitter:card" content="summary_large_image">
 <meta name="color-scheme" content="light dark">
 <link rel="canonical" href="{canonical}">
@@ -526,6 +532,134 @@ def shell(L: dict, alt: dict, *, title: str, description: str, depth: int, body:
 <script src="{prefix}assets/atlas.js" defer></script>
 </body>
 </html>"""
+
+
+def render_audio(L: dict, prefix: str, variant: str, episode: dict,
+                 key_suffix: str) -> str:
+    """One study episode with cross-page resume state."""
+    A, ui = L["audio"], L["ui"]
+    E = episode
+    src = prefix + E["src"]
+    key = f'rm-audio-{L["code"]}-{key_suffix}-v{L["version"]}'
+    bars = "".join("<span></span>" for _ in range(7))
+    return f"""<section class="audio-companion audio-companion--{e(variant)}"
+  data-audio-companion data-audio-key="{e(key)}"
+  data-resume="{e(A['resume'])}" data-ready="{e(A['ready'])}"
+  data-complete="{e(A['complete'])}">
+  <div class="audio-companion__signal" aria-hidden="true">{bars}</div>
+  <div class="audio-companion__copy">
+    <p class="eyebrow">{e(A['eyebrow'])} <span>{e(E['duration'])}</span></p>
+    <h2>{e(E['title'])}</h2>
+    <p>{e(E['description'])}</p>
+  </div>
+  <div class="audio-companion__player">
+    <audio controls preload="metadata" data-audio>
+      <source src="{e(src)}" type="audio/mp4">
+      {e(t(ui, 'audio_fallback'))}
+    </audio>
+    <div class="audio-companion__actions">
+      <span data-audio-status aria-live="polite">{e(A['ready'])}</span>
+      <a href="{e(src)}" download>{e(A['download'])} <span aria-hidden="true">&#8595;</span></a>
+    </div>
+  </div>
+  <p class="audio-companion__note">{e(A['note'])}</p>
+</section>"""
+
+
+def render_audio_callout(L: dict, available: int) -> str:
+    """A compact home-page entrance to the listening desk."""
+    A = L["audio"]
+    bars = "".join("<span></span>" for _ in range(7))
+    return f"""<section class="listen-callout">
+  <div class="listen-callout__signal" aria-hidden="true">{bars}</div>
+  <div class="listen-callout__copy">
+    <p class="eyebrow">{e(A['eyebrow'])}</p>
+    <h2>{e(A['title'])}</h2>
+    <p>{e(A['library_note'])}</p>
+  </div>
+  <p class="listen-callout__count"><strong>{available}</strong><span>{e(A['available'])}</span></p>
+  <a class="cta" href="{e(A['slug'])}/">{e(A['library_link'])}
+    <span aria-hidden="true">&#8250;</span></a>
+</section>"""
+
+
+def render_listen(L, alt, tracks, alt_url, path, alt_path):
+    """Render one language's central, sequential long-form audio library."""
+    A, ui = L["audio"], L["ui"]
+    depth = 2 if L["dir"] else 1
+    prefix = "../" * depth
+    base = prefix + (L["dir"] + "/" if L["dir"] else "")
+    if not tracks:
+        raise ValueError(f'[{L["code"]}] the audio library has no episodes')
+
+    cards = []
+    for index, doc in enumerate(tracks):
+        E = doc.audio
+        src = prefix + E["src"]
+        article = f'{base}{L["studies_dir"]}/{doc.slug}/'
+        key = f'rm-audio-{L["code"]}-{doc.slug}-v{L["version"]}'
+        kind = f'{t(ui, "case_study")} {doc.numeral}'
+        cards.append(f"""<li class="episode-card{' is-current' if index == 0 else ''}">
+  <button type="button" data-episode data-src="{e(src)}" data-key="{e(key)}"
+    data-title="{e(E['title'])}" data-kind="{e(kind)}"
+    data-duration="{e(E['duration'])}" data-article="{e(article)}"
+    aria-current="{'true' if index == 0 else 'false'}">
+    <span class="episode-card__num">{e(doc.numeral)}</span>
+    <span class="episode-card__main"><span>{e(kind)} · {e(E['duration'])}</span>
+      <strong>{e(E['title'])}</strong><small>{e(doc.title)}</small></span>
+    <span class="episode-card__play">{e(A['play'])} &#8250;</span>
+  </button>
+  <div class="episode-card__links"><a href="{e(article)}" target="_blank" rel="noopener">
+      {e(A['open_article'])}</a><a href="{e(src)}" download>{e(A['download'])}</a></div>
+</li>""")
+
+    first = tracks[0]
+    E = first.audio
+    first_src = prefix + E["src"]
+    first_article = f'{base}{L["studies_dir"]}/{first.slug}/'
+    first_kind = f'{t(ui, "case_study")} {first.numeral}'
+    first_key = f'rm-audio-{L["code"]}-{first.slug}-v{L["version"]}'
+    bars = "".join("<span></span>" for _ in range(11))
+    body = f"""
+<article class="listenpage" data-audio-library data-audio-key="{e(first_key)}"
+  data-resume="{e(A['resume'])}" data-ready="{e(A['ready'])}"
+  data-complete="{e(A['complete'])}">
+  <header class="doc__head listenpage__head">
+    <p class="eyebrow">{e(A['eyebrow'])}</p>
+    <h1 class="doc__title">{e(A['title'])}</h1>
+    <p class="doc__subtitle">{e(A['subtitle'])}</p>
+    <p class="lede">{e(A['description'])}</p>
+  </header>
+  <section class="listen-deck">
+    <div class="listen-deck__wave" aria-hidden="true">{bars}</div>
+    <div class="listen-deck__now">
+      <p class="eyebrow">{e(A['queue'])}</p>
+      <p data-library-kind>{e(first_kind)} · {e(E['duration'])}</p>
+      <h2 data-library-title>{e(E['title'])}</h2>
+    </div>
+    <div class="listen-deck__player">
+      <audio controls preload="metadata" data-library-audio>
+        <source src="{e(first_src)}" type="audio/mp4">
+        {e(t(ui, 'audio_fallback'))}
+      </audio>
+      <div class="listen-deck__actions">
+        <span data-library-status aria-live="polite">{e(A['ready'])}</span>
+        <a data-library-article href="{e(first_article)}" target="_blank" rel="noopener">
+          {e(A['open_article'])} &#8599;</a>
+        <a data-library-download href="{e(first_src)}" download>{e(A['download'])} &#8595;</a>
+      </div>
+    </div>
+    <p class="listen-deck__note">{e(A['autoplay'])} {e(A['note'])}</p>
+  </section>
+  <section class="episode-library">
+    <div class="episode-library__head"><div><p class="eyebrow">{e(A['available'])}</p>
+      <h2>{len(tracks)} {e(A['available']).lower()}</h2></div><p>{e(A['more'])}</p></div>
+    <ol>{''.join(cards)}</ol>
+  </section>
+</article>"""
+    return shell(L, alt, title=A["title"], description=A["description"], depth=depth,
+                 body=body, active="listen", page="page-listen", alt_url=alt_url,
+                 path=path, alt_path=alt_path, audio_src=E["src"])
 
 
 def render_map(L, alt, geo, alt_url, path, alt_path):
@@ -659,6 +793,8 @@ def render_home(L, alt, method, studies, sections, claims, standfirst, alt_url, 
   <p class="eyebrow">{e(t(ui, 'position_label'))}</p>
   <div class="position__text">{standfirst}</div>
 </section>
+
+{render_audio_callout(L, sum(1 for d in [method] + studies if d.audio))}
 
 <section class="key">
   <div class="key__head">
@@ -911,6 +1047,7 @@ def render_doc(L, alt, doc, claims, kind, prev, nxt, alt_url, alt_path):
     {method_note}
     {stand}
   </header>
+  {render_audio(L, prefix, "document", doc.audio, doc.slug) if doc.audio else ''}
   {issuers(doc, ui)}
   {evidence}
   {method_map}
@@ -924,7 +1061,8 @@ def render_doc(L, alt, doc, claims, kind, prev, nxt, alt_url, alt_path):
     return shell(L, alt, title=doc.title, description=doc.subtitle or L["description"],
                  depth=doc.depth, body=body,
                  active="method" if kind == "method" else doc.slug,
-                 page="page-doc", alt_url=alt_url, path=doc.url, alt_path=alt_path)
+                 page="page-doc", alt_url=alt_url, path=doc.url, alt_path=alt_path,
+                 audio_src=doc.audio.get("src", ""))
 
 
 def render_ledger(L, alt, intro, sections, outro, claims, section_study, alt_url,
@@ -1033,11 +1171,13 @@ def build_lang(cfg, code: str) -> dict:
     depth_base = 1 if L["dir"] else 0
     method = parse_doc(src / L["method"]["file"], L["method"]["slug"],
                        depth_base + 1, f'{base}{L["method"]["slug"]}/')
+    method.audio = L["method"].get("audio", {})
     studies = []
     for s in L["studies"]:
         d = parse_doc(src / s["file"], s["slug"], depth_base + 2,
                       f'{base}{L["studies_dir"]}/{s["slug"]}/')
         d.numeral, d.ledger_sections = s["numeral"], s.get("ledger_sections", [])
+        d.audio = s.get("audio", {})
         d.title = re.sub(r"^(Case Study|Estudio de caso)\s+[IVXLC]+\s*[:\u2014.-]\s*",
                          "", d.title)
         studies.append(d)
@@ -1084,6 +1224,13 @@ def build_lang(cfg, code: str) -> dict:
               render_doc(L, alt, doc, claims, "study", order[i - 1], order[i + 1],
                          alt_for(doc.depth, f'{abase}{alt["studies_dir"]}/{aslug}/'),
                          f'{abase}{alt["studies_dir"]}/{aslug}/'))
+    tracks = [d for d in [method] + studies if d.audio]
+    adepth = depth_base + 1
+    write(OUT / base / L["audio"]["slug"] / "index.html",
+          render_listen(L, alt, tracks,
+                        alt_for(adepth, f'{abase}{alt["audio"]["slug"]}/'),
+                        f'{base}{L["audio"]["slug"]}/',
+                        f'{abase}{alt["audio"]["slug"]}/'))
     geo = json.loads((ASSETS / "map.json").read_text(encoding="utf-8"))
     mdepth = depth_base + 1
     write(OUT / base / L["map"]["slug"] / "index.html",
@@ -1101,6 +1248,7 @@ def build_lang(cfg, code: str) -> dict:
 
     return {"lang": code, "problems": problems, "documents": [
         {"slug": d.slug, "title": d.title, "url": d.url, "words": d.words,
+         "audio": d.audio or None,
          "sources": [{"n": s.n, "issuer": s.issuer, "url": s.url} for s in d.sources]}
         for d in [method] + studies],
         "claims": [{"id": c.cid, "semantic_id": c.semantic, "ref": c.ref,
@@ -1108,7 +1256,7 @@ def build_lang(cfg, code: str) -> dict:
                     "classification": c.classification, "claim": c.claim_text,
                     "source": c.source_url} for c in claims],
         "urls": [base or ""] + [u for u, _ in order]
-                + [f'{base}{L["map"]["slug"]}/']}
+                + [f'{base}{L["audio"]["slug"]}/', f'{base}{L["map"]["slug"]}/']}
 
 
 def main() -> int:

@@ -3,7 +3,7 @@
 ## El doble rasero de Europa y Suiza en Gaza y el límite de su respuesta en Líbano
 
 **Por Arturo Sánchez Pineda**  
-**20 de agosto de 2026**
+**22 de agosto de 2026**
 
 *Primer estudio de caso del **Mapa civil de la realidad geopolítica**, un marco para entender a los Estados mediante su conducta, sus capacidades y sus intereses observables, y no únicamente mediante sus declaraciones.*
 

@@ -3,7 +3,7 @@
 ## El mar como laboratorio de una fuerza sin control efectivo
 
 **Por Arturo Sánchez Pineda**  
-**20 de agosto de 2026**
+**22 de agosto de 2026**
 
 Desde el 2 de septiembre de 2025, fuerzas estadounidenses destruyeron deliberadamente pequeñas embarcaciones en el Caribe y el Pacífico oriental y mataron a las personas que estaban a bordo. No fueron interdicciones ordinarias de la Guardia Costera seguidas de arresto y proceso penal. Los [informes oficiales de supervisión de Estados Unidos](https://media.defense.gov/2026/May/21/2003935694/-1/-1/1/OSS_Q2_MAR2026_FINAL_508.PDF) permiten establecer que, hasta el 30 de junio de 2026, al menos 64 embarcaciones habían sido atacadas y al menos 212 personas habían muerto o se presumían muertas.
 

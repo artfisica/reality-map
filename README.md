@@ -3,6 +3,12 @@
 A bilingual static site for the manual, the six case studies and the claim and
 source ledger. English at the root, Spanish under `/es/`.
 
+The audio edition lives at `/listen/` and `/es/escuchar/`. It collects every
+available long-form study episode in one sequential player, while each recorded
+study carries the same episode on its own page. Playback positions remain on
+the reader's device. Recordings are stored locally under `assets/audio/`; the
+written studies and ledger remain the authoritative record.
+
 The markdown in `content/` is the record. Everything the site displays about
 evidence classes, claim counts and cross references is derived from that
 markdown at build time, so the published apparatus cannot drift from the text.
@@ -34,6 +40,25 @@ to GitHub Pages. Enable it once under **Settings > Pages > Build and deployment
 Numerals, reading times, source counts, the evidence bar, the mosaic, the
 linked graphic method map, the geographic map, the ledger filters and the
 series navigation are all computed.
+
+## Audio companion
+
+Configure the listening-page interface under `audio` in `site.yaml`. Assign an
+episode to the corresponding method or study with its own nested `audio` block:
+`src`, `title`, `duration` and `description`. The build derives both the central
+playlist and the article player from that single assignment. Strict validation
+rejects missing metadata, duplicate assignments and missing or empty files.
+
+The native player uses `preload="metadata"`, so opening a page does not download
+the complete episode. A small progressive-enhancement script stores playback
+time locally under a versioned language-and-study key. The listening desk moves
+to the next available episode automatically and opens written studies in a new
+tab so the current recording is not interrupted.
+
+The mono AAC files are optimized for spoken voice and GitHub Pages. Replace an
+episode only with a complete recording using the same filename, or update that
+study's `audio.src`. Bump the edition version when a recording changes so
+readers do not resume at a stale timestamp.
 
 ## Checks
 
@@ -110,8 +135,8 @@ imposes on the prose.
 
 ## Privacy
 
-No analytics, no trackers, no third party requests. Fonts are served from this
-domain.
+No analytics, no trackers, no third party requests. Fonts and audio are served
+from this domain. Playback position is stored only in the reader's browser.
 
 ## Authorship and AI assistance
 

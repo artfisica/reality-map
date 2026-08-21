@@ -3,7 +3,7 @@
 ## Unlawful Intervention, Constrained Autonomy and Withdrawal from the ICC
 
 **By Arturo Sánchez Pineda**  
-**20 August 2026**
+**22 August 2026**
 
 On 3 January 2026, the United States carried out a military intervention in Venezuela, struck sites in Venezuelan territory, captured Nicolás Maduro and Cilia Flores, and transferred them to the United States. This is not a hypothetical invasion or a prediction. It is a documented use of force whose unlawfulness was set out in unusually direct terms by the Swiss Federal Department of Foreign Affairs.
 

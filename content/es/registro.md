@@ -3,7 +3,7 @@
 ## Mapa civil de la realidad geopolítica
 
 **Autor: Arturo Sánchez Pineda**  
-**Edición: 20 de agosto de 2026**
+**Edición: 22 de agosto de 2026**
 
 Este registro constituye el control probatorio del manual y los estudios de caso. «Redacción admisible» identifica el lenguaje respaldado por la fuente citada. «Evitar» señala afirmaciones más amplias que la evidencia o formulaciones que confunden categorías jurídicas diferentes. El registro debe actualizarse cuando un tribunal decida, una política cambie o aparezca nueva evidencia primaria.
 

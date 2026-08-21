@@ -56,6 +56,156 @@
     targets.forEach(function (t) { io.observe(t); });
   }
 
+  /* --- audio companion: keep the listener's place between reading pages -- */
+
+  var companion = document.querySelector('[data-audio-companion]');
+  if (companion) {
+    var audio = companion.querySelector('[data-audio]');
+    var audioStatus = companion.querySelector('[data-audio-status]');
+    var audioKey = companion.dataset.audioKey;
+    var lastStoredSecond = -1;
+
+    function clock(seconds) {
+      var whole = Math.max(0, Math.floor(seconds));
+      var minutes = Math.floor(whole / 60);
+      var remainder = String(whole % 60);
+      return minutes + ':' + (remainder.length < 2 ? '0' : '') + remainder;
+    }
+
+    function savedPosition() {
+      try { return Number(localStorage.getItem(audioKey)) || 0; }
+      catch (e) { return 0; }
+    }
+
+    function storePosition() {
+      if (!audio || !audioKey || !Number.isFinite(audio.currentTime)) return;
+      var second = Math.floor(audio.currentTime);
+      if (second === lastStoredSecond) return;
+      lastStoredSecond = second;
+      try { localStorage.setItem(audioKey, String(audio.currentTime)); } catch (e) {}
+    }
+
+    if (audio) {
+      audio.addEventListener('loadedmetadata', function () {
+        var saved = savedPosition();
+        if (saved > 5 && saved < audio.duration - 5) {
+          audio.currentTime = saved;
+          if (audioStatus) {
+            audioStatus.textContent = companion.dataset.resume.replace('{time}', clock(saved));
+          }
+        }
+      });
+      audio.addEventListener('play', function () { companion.dataset.playing = 'true'; });
+      audio.addEventListener('pause', function () {
+        companion.dataset.playing = 'false';
+        storePosition();
+      });
+      audio.addEventListener('timeupdate', storePosition);
+      audio.addEventListener('ended', function () {
+        companion.dataset.playing = 'false';
+        try { localStorage.removeItem(audioKey); } catch (e) {}
+        if (audioStatus) audioStatus.textContent = companion.dataset.complete;
+      });
+      window.addEventListener('pagehide', storePosition);
+    }
+  }
+
+  /* --- audio library: one desk, sequential study episodes --------------- */
+
+  var library = document.querySelector('[data-audio-library]');
+  if (library) {
+    var libraryAudio = library.querySelector('[data-library-audio]');
+    var episodeButtons = Array.prototype.slice.call(library.querySelectorAll('[data-episode]'));
+    var libraryTitle = library.querySelector('[data-library-title]');
+    var libraryKind = library.querySelector('[data-library-kind]');
+    var libraryStatus = library.querySelector('[data-library-status]');
+    var libraryArticle = library.querySelector('[data-library-article]');
+    var libraryDownload = library.querySelector('[data-library-download]');
+    var selected = 0;
+    var libraryLastSecond = -1;
+    var playWhenReady = false;
+
+    function libraryClock(seconds) {
+      var whole = Math.max(0, Math.floor(seconds));
+      var minutes = Math.floor(whole / 60);
+      var remainder = String(whole % 60);
+      return minutes + ':' + (remainder.length < 2 ? '0' : '') + remainder;
+    }
+
+    function librarySaved() {
+      try { return Number(localStorage.getItem(library.dataset.audioKey)) || 0; }
+      catch (e) { return 0; }
+    }
+
+    function storeLibraryPosition() {
+      if (!libraryAudio || !Number.isFinite(libraryAudio.currentTime)) return;
+      var second = Math.floor(libraryAudio.currentTime);
+      if (second === libraryLastSecond) return;
+      libraryLastSecond = second;
+      try { localStorage.setItem(library.dataset.audioKey, String(libraryAudio.currentTime)); }
+      catch (e) {}
+    }
+
+    function chooseEpisode(index, shouldPlay) {
+      var button = episodeButtons[index];
+      if (!button || !libraryAudio) return;
+      storeLibraryPosition();
+      selected = index;
+      libraryLastSecond = -1;
+      playWhenReady = shouldPlay;
+      library.dataset.audioKey = button.dataset.key;
+      libraryAudio.src = button.dataset.src;
+      libraryAudio.load();
+      if (libraryTitle) libraryTitle.textContent = button.dataset.title;
+      if (libraryKind) {
+        libraryKind.textContent = button.dataset.kind + ' · ' + button.dataset.duration;
+      }
+      if (libraryArticle) libraryArticle.href = button.dataset.article;
+      if (libraryDownload) libraryDownload.href = button.dataset.src;
+      if (libraryStatus) libraryStatus.textContent = library.dataset.ready;
+      episodeButtons.forEach(function (item, itemIndex) {
+        item.setAttribute('aria-current', itemIndex === index ? 'true' : 'false');
+        var card = item.closest('.episode-card');
+        if (card) card.classList.toggle('is-current', itemIndex === index);
+      });
+    }
+
+    if (libraryAudio && episodeButtons.length) {
+      libraryAudio.addEventListener('loadedmetadata', function () {
+        var saved = librarySaved();
+        if (saved > 5 && saved < libraryAudio.duration - 5) {
+          libraryAudio.currentTime = saved;
+          if (libraryStatus) {
+            libraryStatus.textContent = library.dataset.resume
+              .replace('{time}', libraryClock(saved));
+          }
+        }
+        if (playWhenReady) {
+          playWhenReady = false;
+          libraryAudio.play().catch(function () {});
+        }
+      });
+      libraryAudio.addEventListener('play', function () { library.dataset.playing = 'true'; });
+      libraryAudio.addEventListener('pause', function () {
+        library.dataset.playing = 'false';
+        storeLibraryPosition();
+      });
+      libraryAudio.addEventListener('timeupdate', storeLibraryPosition);
+      libraryAudio.addEventListener('ended', function () {
+        try { localStorage.removeItem(library.dataset.audioKey); } catch (e) {}
+        if (selected + 1 < episodeButtons.length) chooseEpisode(selected + 1, true);
+        else {
+          library.dataset.playing = 'false';
+          if (libraryStatus) libraryStatus.textContent = library.dataset.complete;
+        }
+      });
+      episodeButtons.forEach(function (button, index) {
+        button.addEventListener('click', function () { chooseEpisode(index, true); });
+      });
+      window.addEventListener('pagehide', storeLibraryPosition);
+    }
+  }
+
   /* --- ledger: search and evidence-class filters ------------------------- */
 
   var controls = document.querySelector('[data-controls]');

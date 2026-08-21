@@ -54,12 +54,38 @@ en:
   title_lines: ["The Civilian", "Geopolitical", "Reality Map"]
   short: Reality Map
   tagline: How to understand states by what they do, not what they declare
-  edition: 20 August 2026
-  version: "0.4"
+  edition: 22 August 2026
+  version: "0.6"
   description: >-
     A civilian framework for reading state conduct through instruments,
     dependencies and costs, with every factual claim classified and traced to a
     primary or authoritative source.
+
+  audio:
+    slug: listen
+    label: Listen
+    eyebrow: The audio edition
+    title: Listen to the studies
+    subtitle: Long-form companions to the written record
+    description: >-
+      One listening desk for the complete collection. Start an episode, leave
+      the screen alone and continue through the available studies from here.
+    available: Available episodes
+    queue: Now queued
+    open_article: Open the written study
+    library_link: Open the audio edition
+    library_note: Long-form episodes, collected in one place.
+    more: More study episodes will appear here as the audio edition grows.
+    autoplay: The next available episode starts automatically.
+    play: Play episode
+    download: Download audio
+    ready: Your position is saved on this device.
+    resume: "Ready to continue at {time}."
+    complete: Audio complete. You can replay it at any time.
+    note: >-
+      These are long-form audio companions, not substitutes for the sources or
+      claim classifications. The written studies and ledger remain the
+      authoritative record.
 
   method:
     file: 00-method.md
@@ -79,8 +105,15 @@ en:
        ledger_sections: ["Caribbean and Pacific maritime killings"]}
     - {file: 05-venezuela.md,     slug: venezuela,     numeral: V,
        ledger_sections: ["Venezuela, sovereignty and the ICC"]}
-    - {file: 06-externalisation.md, slug: externalisation, numeral: VI,
-       ledger_sections: ["Debt, humanitarian aid and resource control"]}
+    - file: 06-externalisation.md
+      slug: externalisation
+      numeral: VI
+      ledger_sections: ["Debt, humanitarian aid and resource control"]
+      audio:
+        src: assets/audio/study-06-en.m4a
+        title: How superpowers export their deadliest costs
+        duration: "24:07"
+        description: A long-form audio companion to Case Study VI.
 
   map:
     slug: map
@@ -231,6 +264,7 @@ en:
     position_label: Author's position
     method_disclosure: "Method, sources and a statement on AI assistance:"
     method_disclosure_link: see the manual
+    audio_fallback: Your browser cannot play this audio. Download the recording instead.
     key_h: Every claim carries its evidence class
     key_lede: >-
       A rule on paper is not an enforcement mechanism, and an accusation is not
@@ -284,12 +318,38 @@ es:
   title_lines: ["Mapa civil", "de la realidad", "geopolítica"]
   short: Mapa civil
   tagline: Cómo entender a los Estados por lo que hacen, no por lo que declaran
-  edition: 20 de agosto de 2026
-  version: "0.4"
+  edition: 22 de agosto de 2026
+  version: "0.6"
   description: >-
     Un marco civil para leer la conducta de los Estados a través de sus
     instrumentos, dependencias y costos, con cada afirmación clasificada y
     trazada hasta una fuente primaria o autorizada.
+
+  audio:
+    slug: escuchar
+    label: Escuchar
+    eyebrow: La edición en audio
+    title: Escucha los estudios
+    subtitle: Compañeros de largo formato del expediente escrito
+    description: >-
+      Un solo lugar para escuchar la colección. Inicia un episodio, deja la
+      pantalla a un lado y continúa desde aquí por los estudios disponibles.
+    available: Episodios disponibles
+    queue: En reproducción
+    open_article: Abrir el estudio escrito
+    library_link: Abrir la edición en audio
+    library_note: Episodios de largo formato, reunidos en un solo lugar.
+    more: Los demás estudios aparecerán aquí a medida que crezca la edición en audio.
+    autoplay: El siguiente episodio disponible comienza automáticamente.
+    play: Reproducir episodio
+    download: Descargar audio
+    ready: Tu posición se guarda en este dispositivo.
+    resume: "Listo para continuar en {time}."
+    complete: Audio terminado. Puedes volver a escucharlo cuando quieras.
+    note: >-
+      Estos son compañeros de audio de largo formato, no sustitutos de las
+      fuentes ni de la clasificación de afirmaciones. Los estudios escritos y
+      el registro mantienen el control probatorio.
 
   method:
     file: 00-metodo.md
@@ -299,8 +359,15 @@ es:
 
   studies_dir: estudios
   studies:
-    - {file: 01-adversarios.md,   slug: adversarios,   numeral: I,
-       ledger_sections: ["Gaza, Israel, Europa y Suiza", "Líbano"]}
+    - file: 01-adversarios.md
+      slug: adversarios
+      numeral: I
+      ledger_sections: ["Gaza, Israel, Europa y Suiza", "Líbano"]
+      audio:
+        src: assets/audio/study-01-es.m4a
+        title: La impunidad de los Estados ante la ley
+        duration: "40:20"
+        description: Un compañero de audio de largo formato del Estudio de caso I.
     - {file: 02-administracion.md, slug: administracion, numeral: II,
        ledger_sections: ["Administración territorial y continuidad colonial"]}
     - {file: 03-abandono.md,      slug: abandono,      numeral: III,
@@ -309,8 +376,15 @@ es:
        ledger_sections: ["Ejecuciones marítimas en el Caribe y el Pacífico"]}
     - {file: 05-venezuela.md,     slug: venezuela,     numeral: V,
        ledger_sections: ["Venezuela, soberanía y CPI"]}
-    - {file: 06-externalizacion.md, slug: externalizacion, numeral: VI,
-       ledger_sections: ["Deuda, ayuda humanitaria y control de recursos"]}
+    - file: 06-externalizacion.md
+      slug: externalizacion
+      numeral: VI
+      ledger_sections: ["Deuda, ayuda humanitaria y control de recursos"]
+      audio:
+        src: assets/audio/study-06-es.m4a
+        title: Cómo las potencias exportan su costo humano
+        duration: "26:38"
+        description: Un compañero de audio de largo formato del Estudio de caso VI.
 
   map:
     slug: mapa
@@ -460,6 +534,7 @@ es:
     position_label: Posición del autor
     method_disclosure: "Método, fuentes y declaración sobre la asistencia de inteligencia artificial:"
     method_disclosure_link: consulte el manual
+    audio_fallback: Tu navegador no puede reproducir este audio. Descarga la grabación.
     key_h: Cada afirmación lleva su clase de evidencia
     key_lede: >-
       Una regla escrita no es un mecanismo de aplicación, y una acusación no es

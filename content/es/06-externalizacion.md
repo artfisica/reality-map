@@ -3,7 +3,7 @@
 ## Cómo la austeridad selectiva exporta la muerte y convierte recursos ajenos en instrumentos de poder
 
 **Por Arturo Sánchez Pineda**  
-**20 de agosto de 2026**
+**22 de agosto de 2026**
 
 *El sexto estudio de caso del **Mapa civil de la realidad geopolítica**: un marco para distinguir hechos fiscales, proyecciones de mortalidad, deberes jurídicos y la selección política de quién es obligado a absorber los costos de un Estado.*
 

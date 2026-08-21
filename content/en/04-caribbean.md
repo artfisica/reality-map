@@ -3,7 +3,7 @@
 ## The Sea as a Laboratory for Unaccountable Force
 
 **By Arturo Sánchez Pineda**  
-**20 August 2026**
+**22 August 2026**
 
 Beginning on 2 September 2025, United States forces deliberately destroyed small vessels in the Caribbean and eastern Pacific and killed the people on board. These were not ordinary Coast Guard interdictions followed by arrest and criminal process. Official US oversight reports state that at least 64 vessels were struck and at least 212 people were killed or presumed dead through 30 June 2026.
 
