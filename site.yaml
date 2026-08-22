@@ -95,6 +95,14 @@ en:
     slug: method
     label: Method
     standfirst_from: "Author's position"
+    audio:
+      src: assets/audio/method-en.m4a
+      title: How powerful states bypass international law
+      duration: "18:09"
+      description: >-
+        A long-form audio companion to the manual: how the framework reads
+        state conduct, and why a rule on paper is not an enforcement
+        mechanism.
 
   studies_dir: studies
   studies:

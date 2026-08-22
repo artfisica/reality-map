@@ -60,6 +60,29 @@ episode only with a complete recording using the same filename, or update that
 study's `audio.src`. Bump the edition version when a recording changes so
 readers do not resume at a stale timestamp.
 
+## The audio edition
+
+Episodes are verbatim readings of the written documents. The written page is
+the transcript and the authoritative record; the audio is a companion.
+
+```bash
+python scripts/make_reading_text.py          # markdown -> verbatim reading scripts
+python scripts/encode_audio.py raw/x.m4a --out study-02-en
+python scripts/encode_audio.py --check       # audit size, bitrate, channels
+```
+
+`make_reading_text.py` writes `audio/scripts/<lang>/<name>.txt`, gitignored
+because it is regenerated from the prose. It keeps every spoken word, drops
+markdown that only exists for the eye, reads tables as labelled rows, and
+replaces the source list with one sentence pointing at the written page.
+
+`encode_audio.py` normalises any recording to the house spec: mono AAC,
+40 kbps, 32 kHz, loudness normalised to -16 LUFS, with `+faststart` so playback
+begins before the download finishes. It then prints the `site.yaml` entry to
+paste, with the duration already measured. Paste it under the document's
+`method:` or `studies:` entry; `validate.py` fails the build if the file is
+missing or assigned twice.
+
 ## Checks
 
 ```bash

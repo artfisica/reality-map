@@ -606,9 +606,10 @@ def render_listen(L, alt, tracks, alt_url, path, alt_path):
     for index, doc in enumerate(tracks):
         E = doc.audio
         src = prefix + E["src"]
-        article = f'{base}{L["studies_dir"]}/{doc.slug}/'
+        article = prefix + doc.url
         key = f'rm-audio-{L["code"]}-{doc.slug}-v{L["version"]}'
-        kind = f'{t(ui, "case_study")} {doc.numeral}'
+        kind = (f'{t(ui, "case_study")} {doc.numeral}' if doc.numeral
+                else t(ui, "the_method"))
         cards.append(f"""<li class="episode-card{' is-current' if index == 0 else ''}">
   <button type="button" data-episode data-src="{e(src)}" data-key="{e(key)}"
     data-title="{e(E['title'])}" data-kind="{e(kind)}"
@@ -629,8 +630,9 @@ def render_listen(L, alt, tracks, alt_url, path, alt_path):
     first = tracks[0]
     E = first.audio
     first_src = prefix + E["src"]
-    first_article = f'{base}{L["studies_dir"]}/{first.slug}/'
-    first_kind = f'{t(ui, "case_study")} {first.numeral}'
+    first_article = prefix + first.url
+    first_kind = (f'{t(ui, "case_study")} {first.numeral}' if first.numeral
+                  else t(ui, "the_method"))
     first_key = f'rm-audio-{L["code"]}-{first.slug}-v{L["version"]}'
     bars = "".join("<span></span>" for _ in range(13))
     body = f"""

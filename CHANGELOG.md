@@ -18,6 +18,13 @@ is recorded here.
 - Removed the accidentally committed nested copy of the 0.4 repository and
   made validation reject any future nested repository copy.
 
+- Added the manual's audio episode, the first English entry in the audio
+  edition.
+- Fixed the listening desk assuming every episode belongs to a case study: the
+  manual's episode linked to a page that does not exist, and was labelled as a
+  case study.
+- Added `scripts/make_reading_text.py` and `scripts/encode_audio.py`.
+
 ## 0.6 — 22 August 2026
 
 - Corrected the audio model introduced in 0.5: the recordings are long-form
