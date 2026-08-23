@@ -55,7 +55,7 @@ en:
   short: Reality Map
   tagline: How to understand states by what they do, not what they declare
   edition: 23 August 2026
-  version: "0.6.2"
+  version: "0.6.3"
   description: >-
     A civilian framework for reading state conduct through instruments,
     dependencies and costs, with every factual claim classified and traced to a
@@ -325,7 +325,7 @@ es:
   short: Mapa civil
   tagline: Cómo entender a los Estados por lo que hacen, no por lo que declaran
   edition: 23 de agosto de 2026
-  version: "0.6.2"
+  version: "0.6.3"
   description: >-
     Un marco civil para leer la conducta de los Estados a través de sus
     instrumentos, dependencias y costos, con cada afirmación clasificada y
@@ -338,9 +338,9 @@ es:
     title: Escucha el Mapa civil
     subtitle: Una conversación general sobre el proyecto completo
     description: >-
-      Escucha aquí el podcast general disponible actualmente. Está en inglés y
-      no constituye la lectura de un artículo individual. Las grabaciones de
-      cada texto, en inglés y español, se añadirán cuando sean producidas.
+      Escucha aquí el podcast general en español disponible actualmente. No
+      constituye la lectura de un artículo individual. Las grabaciones de cada
+      texto, en inglés y español, se añadirán cuando sean producidas.
     available: Grabación disponible
     episode: Grabación
     episodes: Grabaciones
@@ -368,13 +368,13 @@ es:
     label: Método
     standfirst_from: "Posición del autor"
     audio:
-      src: assets/audio/method-en.m4a
-      title: How powerful states bypass international law
-      duration: "18:10"
+      src: assets/audio/method-es.m4a
+      title: La impunidad de los Estados ante la ley
+      duration: "40:20"
       kind: Podcast del proyecto
       mark: MC
       description: >-
-        Podcast general en inglés sobre el Mapa civil; no es la lectura de un
+        Podcast general en español sobre el Mapa civil; no es la lectura de un
         artículo individual.
 
   studies_dir: estudios

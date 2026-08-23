@@ -3,9 +3,10 @@
 A bilingual static site for the manual, the six case studies and the claim and
 source ledger. English at the root, Spanish under `/es/`.
 
-The audio edition lives at `/listen/` and `/es/escuchar/`. Version 0.6.2
-publishes one English-language, podcast-style overview of the complete project;
-it is linked from both editions and is not presented as the reading of an
+The audio edition lives at `/listen/` and `/es/escuchar/`. Version 0.6.3
+publishes one project-level podcast in each language: the 18:10 English
+recording appears only in the English edition, and the 40:20 Spanish recording
+appears only in the Spanish edition. Neither is presented as the reading of an
 individual article. Playback position remains on the reader's device. The
 written studies and ledger remain the authoritative record.
 
@@ -43,10 +44,10 @@ series navigation are all computed.
 
 ## Audio companion
 
-Configure the listening-page interface under `audio` in `site.yaml`. The one
-current project podcast is assigned under `method.audio` in each language; both
-editions intentionally reference the same file. A future individual reading is
-assigned to its corresponding method or study through a nested `audio` block:
+Configure the listening-page interface under `audio` in `site.yaml`. The
+current project podcast is assigned under `method.audio` in each language, and
+each edition references an audio file in its own language. A future individual
+reading is assigned to its corresponding method or study through a nested `audio` block:
 `src`, `title`, `duration` and `description`. The build derives both the central
 listening page and the document player from that assignment. Strict validation
 rejects missing metadata, duplicate assignments within one edition and missing
@@ -57,16 +58,17 @@ the complete recording. A small progressive-enhancement script stores playback
 time locally under a versioned language-and-document key. Sequential playback
 is already supported for the future individual recordings.
 
-The mono AAC file is optimized for spoken voice and GitHub Pages. Replace a
+The mono AAC files are optimized for spoken voice and GitHub Pages. Replace a
 recording only with a complete file using the same filename, or update its
 `audio.src`. Bump the edition version when a recording changes so readers do
 not resume at a stale timestamp.
 
 ## The audio edition
 
-The current audio is a general podcast about the project, not an audio edition
-of any individual article. Individual English and Spanish readings are planned
-but have not yet been produced or published. Once one exists, it may be
+The current recordings are general podcasts about the project, not audio
+editions of individual articles. The English and Spanish editions never share
+an audio asset. Individual article readings are planned but have not yet been
+produced or published. Once one exists, it may be
 described as a verbatim reading only when generated from that document's current
 edition. The written page and ledger remain the authoritative record whenever a
 recording predates a textual revision.

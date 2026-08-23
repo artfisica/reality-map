@@ -50,6 +50,10 @@ def check_edition(cfg: dict, code: str) -> dict:  # noqa: C901
                          + ", ".join(missing))
             continue
         audio_src = episode["src"]
+        expected_suffix = f"-{code}.m4a"
+        if not audio_src.lower().endswith(expected_suffix):
+            say("error", f'[{code}] audio source must end in "{expected_suffix}" '
+                         f'to prevent cross-language publication: "{audio_src}"')
         if audio_src in audio_sources:
             say("error", f'[{code}] audio source is assigned twice: "{audio_src}"')
         audio_sources.append(audio_src)

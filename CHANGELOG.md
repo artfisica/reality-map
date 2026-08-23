@@ -4,6 +4,16 @@ Editions are dated and versioned together. When a court rules, a policy changes
 or new primary evidence appears, the ledger row is updated first and the change
 is recorded here.
 
+## 0.6.3 — 23 August 2026
+
+- Corrected the language separation in the audio edition: English pages now
+  use only the 18:10 English podcast, while Spanish pages use only the 40:20
+  Spanish podcast, *La impunidad de los Estados ante la ley*.
+- Added strict validation of language suffixes in configured audio sources so
+  an English recording cannot again be published in the Spanish edition, or
+  vice versa.
+- Preserved the complete 0.6.2 ICC sanctions and Marco Rubio credibility audit.
+
 ## 0.6.2 — 23 August 2026
 
 - Documented the 18 August sanctions against ICC President Tomoko Akane and
