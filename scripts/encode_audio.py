@@ -95,7 +95,8 @@ def check() -> int:
         print(f"{path.name:26} {info['size']/1e6:7.1f}M {clock(info['duration']):>8} "
               f"{info['bitrate']//1000:6} {info['channels']:3} {info['rate']/1000:6.1f}"
               + ("   <- re-encode" if off else ""))
-    print(f"\n{len(files)} episodes, {total_size/1e6:.0f} MB, "
+    label = "audio file" if len(files) == 1 else "audio files"
+    print(f"\n{len(files)} {label}, {total_size/1e6:.0f} MB, "
           f"{int(total_time//3600)} h {int(total_time%3600//60)} min")
     if total_size > 300e6:
         print("Over 300 MB in the repository. Consider attaching audio to "

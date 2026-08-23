@@ -608,15 +608,16 @@ def render_listen(L, alt, tracks, alt_url, path, alt_path):
         src = prefix + E["src"]
         article = prefix + doc.url
         key = f'rm-audio-{L["code"]}-{doc.slug}-v{L["version"]}'
-        kind = (f'{t(ui, "case_study")} {doc.numeral}' if doc.numeral
-                else t(ui, "the_method"))
+        mark = E.get("mark", doc.numeral)
+        kind = E.get("kind") or (f'{t(ui, "case_study")} {doc.numeral}'
+                                 if doc.numeral else t(ui, "the_method"))
         cards.append(f"""<li class="episode-card{' is-current' if index == 0 else ''}">
   <button type="button" data-episode data-src="{e(src)}" data-key="{e(key)}"
     data-title="{e(E['title'])}" data-kind="{e(kind)}"
-    data-duration="{e(E['duration'])}" data-number="{e(doc.numeral)}"
+    data-duration="{e(E['duration'])}" data-number="{e(mark)}"
     data-description="{e(E['description'])}" data-article="{e(article)}"
     aria-current="{'true' if index == 0 else 'false'}">
-    <span class="episode-card__num" aria-hidden="true">{e(doc.numeral)}</span>
+    <span class="episode-card__num" aria-hidden="true">{e(mark)}</span>
     <span class="episode-card__main">
       <span class="episode-card__meta">{e(kind)} <i>{e(E['duration'])}</i></span>
       <strong>{e(E['title'])}</strong><small>{e(E['description'])}</small></span>
@@ -631,8 +632,9 @@ def render_listen(L, alt, tracks, alt_url, path, alt_path):
     E = first.audio
     first_src = prefix + E["src"]
     first_article = prefix + first.url
-    first_kind = (f'{t(ui, "case_study")} {first.numeral}' if first.numeral
-                  else t(ui, "the_method"))
+    first_mark = E.get("mark", first.numeral)
+    first_kind = E.get("kind") or (f'{t(ui, "case_study")} {first.numeral}'
+                                   if first.numeral else t(ui, "the_method"))
     first_key = f'rm-audio-{L["code"]}-{first.slug}-v{L["version"]}'
     bars = "".join("<span></span>" for _ in range(13))
     body = f"""
@@ -652,8 +654,8 @@ def render_listen(L, alt, tracks, alt_url, path, alt_path):
   </header>
   <section class="listen-player" aria-labelledby="listen-now-title">
     <div class="listen-player__cover" aria-hidden="true">
-      <span>{e(t(ui, 'case_study'))}</span>
-      <strong data-library-number>{e(first.numeral)}</strong>
+      <span data-library-cover-kind>{e(first_kind)}</span>
+      <strong data-library-number>{e(first_mark)}</strong>
       <div class="listen-player__wave">{bars}</div>
       <small data-library-duration>{e(E['duration'])}</small>
     </div>

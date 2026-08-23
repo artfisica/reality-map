@@ -54,8 +54,8 @@ en:
   title_lines: ["The Civilian", "Geopolitical", "Reality Map"]
   short: Reality Map
   tagline: How to understand states by what they do, not what they declare
-  edition: 22 August 2026
-  version: "0.6.1"
+  edition: 23 August 2026
+  version: "0.6.2"
   description: >-
     A civilian framework for reading state conduct through instruments,
     dependencies and costs, with every factual claim classified and traced to a
@@ -64,31 +64,32 @@ en:
   audio:
     slug: listen
     label: Listen
-    eyebrow: The audio library
-    title: Listen to the studies
-    subtitle: Each study, in its own voice
+    eyebrow: The project podcast
+    title: Listen to the Reality Map
+    subtitle: One general conversation about the complete project
     description: >-
-      Choose a study and listen from here, or use the individual player inside
-      its written article. Your place is saved on this device.
-    available: Available episodes
-    episode: Episode
-    episodes: Episodes
-    choose: Choose an episode
+      Listen to the current podcast-style overview here. It is not a reading of
+      any individual article. Article-by-article recordings in English and
+      Spanish will be added after they are produced.
+    available: Available recording
+    episode: Recording
+    episodes: Recordings
+    choose: Current recording
     queue: Now playing
-    open_article: Open the written study
-    library_link: Open the audio edition
-    library_note: Long-form episodes, collected in one place.
-    more: Each recording belongs to one written study. More will appear here as the audio edition grows.
-    autoplay: When an episode ends, the next available recording begins.
-    play: Play episode
+    open_article: Open the written method
+    library_link: Listen to the project podcast
+    library_note: One general podcast-style introduction to the complete project.
+    more: Individual article readings do not exist yet; they will appear here after they are recorded.
+    autoplay: There is currently one general recording.
+    play: Play recording
     download: Download audio
     ready: Your position is saved on this device.
     resume: "Ready to continue at {time}."
     complete: Audio complete. You can replay it at any time.
     note: >-
-      These are long-form audio companions, not substitutes for the sources or
-      claim classifications. The written studies and ledger remain the
-      authoritative record.
+      This podcast is a general companion, not a reading of an individual
+      article and not a substitute for the sources or claim classifications.
+      The written studies and ledger remain the authoritative record.
 
   method:
     file: 00-method.md
@@ -98,11 +99,12 @@ en:
     audio:
       src: assets/audio/method-en.m4a
       title: How powerful states bypass international law
-      duration: "18:09"
+      duration: "18:10"
+      kind: Project podcast
+      mark: RM
       description: >-
-        A long-form audio companion to the manual: how the framework reads
-        state conduct, and why a rule on paper is not an enforcement
-        mechanism.
+        A general podcast-style introduction to the Reality Map, not an
+        article-by-article reading.
 
   studies_dir: studies
   studies:
@@ -116,15 +118,8 @@ en:
        ledger_sections: ["Caribbean and Pacific maritime killings"]}
     - {file: 05-venezuela.md,     slug: venezuela,     numeral: V,
        ledger_sections: ["Venezuela, sovereignty and the ICC"]}
-    - file: 06-externalisation.md
-      slug: externalisation
-      numeral: VI
-      ledger_sections: ["Debt, humanitarian aid and resource control"]
-      audio:
-        src: assets/audio/study-06-en.m4a
-        title: How superpowers export their deadliest costs
-        duration: "24:07"
-        description: A long-form audio companion to Case Study VI.
+    - {file: 06-externalisation.md, slug: externalisation, numeral: VI,
+       ledger_sections: ["Debt, humanitarian aid and resource control"]}
 
   map:
     slug: map
@@ -329,8 +324,8 @@ es:
   title_lines: ["Mapa civil", "de la realidad", "geopolítica"]
   short: Mapa civil
   tagline: Cómo entender a los Estados por lo que hacen, no por lo que declaran
-  edition: 22 de agosto de 2026
-  version: "0.6.1"
+  edition: 23 de agosto de 2026
+  version: "0.6.2"
   description: >-
     Un marco civil para leer la conducta de los Estados a través de sus
     instrumentos, dependencias y costos, con cada afirmación clasificada y
@@ -339,50 +334,53 @@ es:
   audio:
     slug: escuchar
     label: Escuchar
-    eyebrow: La biblioteca de audio
-    title: Escucha los estudios
-    subtitle: Cada estudio, con su propia voz
+    eyebrow: El podcast del proyecto
+    title: Escucha el Mapa civil
+    subtitle: Una conversación general sobre el proyecto completo
     description: >-
-      Elige un estudio y escúchalo desde aquí, o utiliza el reproductor
-      individual dentro del artículo escrito. Tu posición queda guardada en
-      este dispositivo.
-    available: Episodios disponibles
-    episode: Episodio
-    episodes: Episodios
-    choose: Elige un episodio
+      Escucha aquí el podcast general disponible actualmente. Está en inglés y
+      no constituye la lectura de un artículo individual. Las grabaciones de
+      cada texto, en inglés y español, se añadirán cuando sean producidas.
+    available: Grabación disponible
+    episode: Grabación
+    episodes: Grabaciones
+    choose: Grabación actual
     queue: En reproducción
-    open_article: Abrir el estudio escrito
-    library_link: Abrir la edición en audio
-    library_note: Episodios de largo formato, reunidos en un solo lugar.
-    more: Cada grabación pertenece a un estudio escrito. Los demás aparecerán aquí a medida que crezca la edición en audio.
-    autoplay: Al terminar un episodio, comienza la siguiente grabación disponible.
-    play: Reproducir episodio
+    open_article: Abrir el método escrito
+    library_link: Escuchar el podcast del proyecto
+    library_note: Una introducción general, en formato podcast, al proyecto completo.
+    more: Las lecturas de artículos individuales todavía no existen; aparecerán aquí después de ser grabadas.
+    autoplay: Actualmente existe una sola grabación general.
+    play: Reproducir grabación
     download: Descargar audio
     ready: Tu posición se guarda en este dispositivo.
     resume: "Listo para continuar en {time}."
     complete: Audio terminado. Puedes volver a escucharlo cuando quieras.
     note: >-
-      Estos son compañeros de audio de largo formato, no sustitutos de las
-      fuentes ni de la clasificación de afirmaciones. Los estudios escritos y
-      el registro mantienen el control probatorio.
+      Este podcast es un compañero general, no la lectura de un artículo
+      individual ni un sustituto de las fuentes o de la clasificación de
+      afirmaciones. Los estudios escritos y el registro mantienen el control
+      probatorio.
 
   method:
     file: 00-metodo.md
     slug: metodo
     label: Método
     standfirst_from: "Posición del autor"
+    audio:
+      src: assets/audio/method-en.m4a
+      title: How powerful states bypass international law
+      duration: "18:10"
+      kind: Podcast del proyecto
+      mark: MC
+      description: >-
+        Podcast general en inglés sobre el Mapa civil; no es la lectura de un
+        artículo individual.
 
   studies_dir: estudios
   studies:
-    - file: 01-adversarios.md
-      slug: adversarios
-      numeral: I
-      ledger_sections: ["Gaza, Israel, Europa y Suiza", "Líbano"]
-      audio:
-        src: assets/audio/study-01-es.m4a
-        title: La impunidad de los Estados ante la ley
-        duration: "40:20"
-        description: Un compañero de audio de largo formato del Estudio de caso I.
+    - {file: 01-adversarios.md, slug: adversarios, numeral: I,
+       ledger_sections: ["Gaza, Israel, Europa y Suiza", "Líbano"]}
     - {file: 02-administracion.md, slug: administracion, numeral: II,
        ledger_sections: ["Administración territorial y continuidad colonial"]}
     - {file: 03-abandono.md,      slug: abandono,      numeral: III,
@@ -391,15 +389,8 @@ es:
        ledger_sections: ["Ejecuciones marítimas en el Caribe y el Pacífico"]}
     - {file: 05-venezuela.md,     slug: venezuela,     numeral: V,
        ledger_sections: ["Venezuela, soberanía y CPI"]}
-    - file: 06-externalizacion.md
-      slug: externalizacion
-      numeral: VI
-      ledger_sections: ["Deuda, ayuda humanitaria y control de recursos"]
-      audio:
-        src: assets/audio/study-06-es.m4a
-        title: Cómo las potencias exportan su costo humano
-        duration: "26:38"
-        description: Un compañero de audio de largo formato del Estudio de caso VI.
+    - {file: 06-externalizacion.md, slug: externalizacion, numeral: VI,
+       ledger_sections: ["Deuda, ayuda humanitaria y control de recursos"]}
 
   map:
     slug: mapa

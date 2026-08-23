@@ -3,10 +3,10 @@
 A bilingual static site for the manual, the six case studies and the claim and
 source ledger. English at the root, Spanish under `/es/`.
 
-The audio edition lives at `/listen/` and `/es/escuchar/`. It collects every
-available long-form study episode in one sequential player, while each recorded
-study carries the same episode on its own page. Playback positions remain on
-the reader's device. Recordings are stored locally under `assets/audio/`; the
+The audio edition lives at `/listen/` and `/es/escuchar/`. Version 0.6.2
+publishes one English-language, podcast-style overview of the complete project;
+it is linked from both editions and is not presented as the reading of an
+individual article. Playback position remains on the reader's device. The
 written studies and ledger remain the authoritative record.
 
 The markdown in `content/` is the record. Everything the site displays about
@@ -43,27 +43,33 @@ series navigation are all computed.
 
 ## Audio companion
 
-Configure the listening-page interface under `audio` in `site.yaml`. Assign an
-episode to the corresponding method or study with its own nested `audio` block:
+Configure the listening-page interface under `audio` in `site.yaml`. The one
+current project podcast is assigned under `method.audio` in each language; both
+editions intentionally reference the same file. A future individual reading is
+assigned to its corresponding method or study through a nested `audio` block:
 `src`, `title`, `duration` and `description`. The build derives both the central
-playlist and the article player from that single assignment. Strict validation
-rejects missing metadata, duplicate assignments and missing or empty files.
+listening page and the document player from that assignment. Strict validation
+rejects missing metadata, duplicate assignments within one edition and missing
+or empty files.
 
 The native player uses `preload="metadata"`, so opening a page does not download
-the complete episode. A small progressive-enhancement script stores playback
-time locally under a versioned language-and-study key. The listening desk moves
-to the next available episode automatically and opens written studies in a new
-tab so the current recording is not interrupted.
+the complete recording. A small progressive-enhancement script stores playback
+time locally under a versioned language-and-document key. Sequential playback
+is already supported for the future individual recordings.
 
-The mono AAC files are optimized for spoken voice and GitHub Pages. Replace an
-episode only with a complete recording using the same filename, or update that
-study's `audio.src`. Bump the edition version when a recording changes so
-readers do not resume at a stale timestamp.
+The mono AAC file is optimized for spoken voice and GitHub Pages. Replace a
+recording only with a complete file using the same filename, or update its
+`audio.src`. Bump the edition version when a recording changes so readers do
+not resume at a stale timestamp.
 
 ## The audio edition
 
-Episodes are verbatim readings of the written documents. The written page is
-the transcript and the authoritative record; the audio is a companion.
+The current audio is a general podcast about the project, not an audio edition
+of any individual article. Individual English and Spanish readings are planned
+but have not yet been produced or published. Once one exists, it may be
+described as a verbatim reading only when generated from that document's current
+edition. The written page and ledger remain the authoritative record whenever a
+recording predates a textual revision.
 
 ```bash
 python scripts/make_reading_text.py          # markdown -> verbatim reading scripts

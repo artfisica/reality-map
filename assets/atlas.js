@@ -118,6 +118,7 @@
     var episodeButtons = Array.prototype.slice.call(library.querySelectorAll('[data-episode]'));
     var libraryTitle = library.querySelector('[data-library-title]');
     var libraryKind = library.querySelector('[data-library-kind]');
+    var libraryCoverKind = library.querySelector('[data-library-cover-kind]');
     var libraryNumber = library.querySelector('[data-library-number]');
     var libraryDuration = library.querySelector('[data-library-duration]');
     var libraryDescription = library.querySelector('[data-library-description]');
@@ -163,6 +164,7 @@
       if (libraryKind) {
         libraryKind.textContent = button.dataset.kind + ' · ' + button.dataset.duration;
       }
+      if (libraryCoverKind) libraryCoverKind.textContent = button.dataset.kind;
       if (libraryNumber) libraryNumber.textContent = button.dataset.number;
       if (libraryDuration) libraryDuration.textContent = button.dataset.duration;
       if (libraryDescription) libraryDescription.textContent = button.dataset.description;

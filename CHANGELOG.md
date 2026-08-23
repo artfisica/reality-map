@@ -4,6 +4,30 @@ Editions are dated and versioned together. When a court rules, a policy changes
 or new primary evidence appears, the ledger row is updated first and the change
 is recorded here.
 
+## 0.6.2 — 23 August 2026
+
+- Documented the 18 August sanctions against ICC President Tomoko Akane and
+  Senior Trial Lawyer Abdoulaye Seye, including OFAC's operational measure and
+  the State Department's declared campaign to weaken and dismantle the Court.
+- Separated the treaty rule in Rome Statute article 12, the United States'
+  jurisdictional position, Human Rights Watch's attributed assessment and the
+  European Union's declaratory response.
+- Added a bilingual audit of Marco Rubio's political credibility based on his
+  documented record concerning Donald Trump, immigration reform and election-
+  year Supreme Court appointments.
+- Kept institutional authority, political credibility and unproved personal
+  motive as distinct categories: Rubio's 99–0 confirmation is recorded alongside
+  the later evidentiary comparison of his words and acts.
+- Corrected the audio model before publication: version 0.6.2 exposes one
+  general English-language project podcast in both editions and does not claim
+  that individual article readings already exist.
+- Removed the three case-study audio assignments and files that had been
+  presented as individual episodes (`study-01-es.m4a`, `study-06-en.m4a` and
+  `study-06-es.m4a`). The site remains ready to add the real English and Spanish
+  article readings when they are produced.
+- Synchronised the English and Spanish ledgers at 67 classified claims and
+  dated the complete edition 23 August 2026.
+
 ## 0.6.1 — 22 August 2026
 
 - Rebuilt the bilingual listening pages as a responsive audio library with a

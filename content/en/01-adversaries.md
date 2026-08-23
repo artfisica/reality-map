@@ -3,7 +3,7 @@
 ## Europe and Switzerland’s Gaza Double Standard—and the Lebanon Enforcement Ceiling
 
 **By Arturo Sánchez Pineda**  
-**22 August 2026**
+**23 August 2026**
 
 *The first case study in **The Civilian Geopolitical Reality Map**—a framework for understanding states through their observed conduct, capabilities and interests rather than through their declarations alone.*
 
@@ -35,13 +35,49 @@ In September 2025, the UN Independent International Commission of Inquiry on the
 
 Separately, the International Court of Justice has issued binding provisional measures in *South Africa v. Israel*. The Court ordered Israel to prevent acts falling within the Genocide Convention, prevent and punish direct and public incitement to genocide, preserve evidence, and enable urgently needed humanitarian assistance. In May 2024, it ordered Israel to halt its offensive and other action in Rafah insofar as it could inflict conditions of life capable of bringing about the physical destruction of the Palestinian group in whole or in part.
 
-As of 20 August 2026, however, the ICJ has not issued its final judgment on whether Israel bears state responsibility for genocide. That distinction must be stated honestly. The UN Commission has reached a genocide determination; the final and legally binding ICJ decision on the merits remains pending.
+As of 23 August 2026, however, the ICJ has not issued its final judgment on whether Israel bears state responsibility for genocide. That distinction must be stated honestly. The UN Commission has reached a genocide determination; the final and legally binding ICJ decision on the merits remains pending.
 
 But the absence of a final judgment is not an excuse for inaction. Under the ICJ’s 2007 judgment in *Bosnia and Herzegovina v. Serbia and Montenegro*, the obligation to prevent genocide arises when a state learns, or should normally have learned, of a serious risk that genocide will be committed. It does not begin only after a court confirms that the genocide has already occurred. The measures expected of a state depend on its capacity to influence the actors concerned.
 
 By early 2024, the serious risk was impossible to deny. By 2025, the record included binding ICJ orders, mass killing and displacement, the systematic destruction of civilian infrastructure, severe restrictions on food and medicine, allegations of starvation as a method of warfare, and repeated warnings from UN agencies. Waiting for a final judgment while retaining normal relations was a political choice, not a legal requirement.
 
 The International Criminal Court has also issued arrest warrants for Benjamin Netanyahu and Yoav Gallant. The judges found reasonable grounds to believe that they bore responsibility for alleged war crimes and crimes against humanity, including starvation as a method of warfare, murder, persecution and other inhumane acts. These are warrants, not convictions. Criminal responsibility is individual: it applies to accused officials, not to Israelis or Jewish people collectively. Rejecting collective punishment of Palestinians requires rejecting collective blame in the other direction as well.
+
+## When accountability reaches an ally, attack the court
+
+On 18 August 2026, the [United States designated](https://www.state.gov/releases/office-of-the-spokesperson/2026/08/advancing-the-united-states-campaign-to-address-the-threat-posed-by-the-international-criminal-court/) International Criminal Court President Tomoko Akane and ICC Senior Trial Lawyer Abdoulaye Seye for sanctions under Executive Order 14203. The official State Department statement did not describe this as a limited objection to one procedural act. Secretary of State Marco Rubio placed the designations within a whole-of-government campaign, urged other countries to end their funding and participation, and said that the administration was prepared to **systematically dismantle the ICC** until it could no longer act against American nationals.
+
+The measure was operational, not rhetorical. Placement on the US Specially Designated Nationals list generally blocks property subject to US jurisdiction and prohibits transactions by US persons unless authorised. [OFAC issued a temporary licence](https://ofac.treasury.gov/recent-actions/20260818) permitting the winding down of transactions involving Akane and Seye until 17 September 2026. The sanctions therefore turn disagreement with an international judicial institution into personal financial coercion against its officials.
+
+Washington's stated legal premise also requires precision. The United States argued that the Court had acted against nationals of governments that had not consented to ICC jurisdiction. But [article 12(2) of the Rome Statute](https://legal.un.org/icc/statute/99_corr/2.htm) permits the Court to exercise jurisdiction when the alleged conduct occurred on the territory of a State Party or when the accused is a national of a State Party. Nationality in a non-party state is therefore not, by itself, a jurisdictional veto. Whether the requirements are satisfied in a particular case remains a judicial question; the US formulation presents only one side of that dispute.
+
+[Human Rights Watch characterised](https://www.hrw.org/news/2026/08/19/us-sanctions-icc-president-tomoko-akane) the sanctions as an attempt to shield American and Israeli officials implicated in serious crimes. That is HRW's attributed assessment, not an independently adjudicated motive. The established facts are already severe: the US government named the officials, deployed financial sanctions and declared its intention to induce other states to weaken or leave the Court.
+
+The [European Union responded on 19 August](https://www.eeas.europa.eu/eeas/international-criminal-court-statement-high-representative-us-sanctions-against-president-and-senior_en) by reiterating its support for the ICC and stating that sanctions against the Court and its personnel undermine its work. The cited statement announced no new blocking measure or other operational countermeasure. In this episode, Washington deployed coercion; the EU deployed language. That is the enforcement gradient in its clearest form.
+
+## Credibility audit: Rubio's words against Rubio's acts
+
+I cannot inspect Marco Rubio's conscience or convert personal “honour” into a factual variable. I can compare his public propositions with his later conduct. Nor should political credibility be confused with institutional title: the [Senate confirmed Rubio as Secretary of State](https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00008.htm) by 99 votes to none. His authority to occupy the office is not the disputed fact. The question is what evidentiary weight a civilian should assign to his declarations of principle.
+
+### Trump: danger, endorsement and service
+
+In February 2016, Rubio [called Donald Trump a “con artist”](https://transcripts.cnn.com/show/cnr/date/2016-02-28/segment/03) taking over the Republican Party. He [described Trump as erratic and wholly unprepared](https://www.cbsnews.com/news/marco-rubio-hits-con-artist-donald-trump/) to be president. After Trump became the presumptive nominee, Rubio [said he would support him](https://www.theguardian.com/us-news/2016/may/24/marco-rubio-interview-presidential-nomination-donald-trump), explaining that he had signed a pledge to support the Republican nominee and considered Hillary Clinton worse. Rubio later voted “not guilty” in both Senate impeachment trials, in [2020](https://www.senate.gov/legislative/LIS/roll_call_votes/vote1162/vote_116_2_00033.htm) and [2021](https://www.senate.gov/legislative/LIS/roll_call_votes/vote1171/vote_117_1_00059.htm), and, in January 2025, accepted office as Trump's Secretary of State.
+
+The record does not require pretending that Rubio offered no explanation: he invoked party commitment and comparative preference. It does establish that his own assessment of Trump's unfitness did not operate as a disqualifying principle once Trump controlled the party and the presidency.
+
+### Immigration: authorship, backlash and retreat
+
+Rubio helped draft and [publicly defend](https://abcnews.com/blogs/politics/2013/04/marco-rubio-immigration-bill-doesnt-give-anything-away) the 2013 bipartisan immigration bill, S. 744. It combined enforcement provisions with provisional legal status and a possible path to permanent residence and citizenship; Rubio voted for it when it [passed the Senate 68–32](https://www.senate.gov/legislative/LIS/roll_call_votes/vote1131/vote_113_1_00168.htm). By 2015, after the bill died in the House and became politically damaging among Republican primary voters, he [rejected the comprehensive vehicle](https://www.theguardian.com/us-news/2015/may/17/marco-rubio-comprehensive-immigration-reform) he had helped construct and insisted that enforcement had to be demonstrated before other elements could proceed.
+
+This was not the total abandonment of every form of future legal status, and Rubio described the change as a lesson about political feasibility and public trust. The narrower, defensible conclusion is still material: when the initiative he had championed became a liability, he abandoned its comprehensive design and reordered its central bargain.
+
+### Supreme Court: the election-year rule changes with control
+
+In February 2016, Rubio [supported refusing action](https://www.factcheck.org/2016/02/cruz-rubio-twist-court-precedent/) on an Obama nominee because, he said, a president in the final year of office should not make the lifetime appointment and the next president should fill the vacancy. In October 2020, weeks before another presidential election, Rubio [voted to confirm](https://www.senate.gov/legislative/LIS/roll_call_votes/vote1162/vote_116_2_00224.htm) Donald Trump's nominee Amy Coney Barrett.
+
+The [president's authority to nominate and the Senate's authority to consent](https://constitution.congress.gov/browse/article-2/section-2/clause-2/) were real in 2020. They had also been real in 2016. The operative distinction was political control: in 2016 the presidency and Senate majority were held by opposing parties; in 2020 they were held by the same party. A rule presented to voters as an election-year principle became an exercise of the incumbent majority's power when that majority was his own.
+
+These episodes do not prove a private motive such as ambition, fear or a lack of honour. They establish a repeated public pattern: when an announced rule later constrained Rubio's party position or political trajectory, the rule was narrowed, reordered or abandoned. The pattern is consistent with political opportunism, while the interior motive remains unproved. For a civilian reading his campaign against the ICC, the practical conclusion is exact: **Rubio's invocation of law, sovereignty or principle must be tested against the power it serves and the conduct that follows. It cannot be accepted as a stable commitment merely because he states it forcefully.**
 
 ## The EU documented the violations and then failed to act decisively
 
@@ -190,6 +226,19 @@ I do not claim a position outside this system. In *Miedo*, I included myself amo
 16. UN Interim Force in Lebanon, statement on incidents affecting UNIFIL positions, 11 October 2024: <https://lebanon.un.org/en/281139-un-interim-force-lebanon-unifil-statement-headquarters-and-position-1-31-incidents>
 17. Amnesty International, “Lebanon: Establish international investigation into deadly attacks using exploding portable devices,” 20 September 2024: <https://www.amnesty.org/en/latest/news/2024/09/lebanon-establish-international-investigation-into-deadly-attacks-using-exploding-portable-devices/>
 18. UN High Commissioner for Human Rights, comment on explosions across Lebanon and Syria, 18 September 2024: <https://lebanon.un.org/en/278971-comment-un-high-commissioner-human-rights-volker-t%C3%BCrk-explosions-across-lebanon-and-syria>
+19. US Department of State, “Advancing the United States' Campaign to Address the Threat Posed by the International Criminal Court,” 18 August 2026: <https://www.state.gov/releases/office-of-the-spokesperson/2026/08/advancing-the-united-states-campaign-to-address-the-threat-posed-by-the-international-criminal-court/>
+20. US Department of the Treasury, OFAC, “International Criminal Court-related Designations; Venezuela-related Designation; Issuance of International Criminal Court-related General License,” 18 August 2026: <https://ofac.treasury.gov/recent-actions/20260818>
+21. Rome Statute of the International Criminal Court, article 12: <https://legal.un.org/icc/statute/99_corr/2.htm>
+22. European External Action Service, statement on US sanctions against the ICC President and a Senior Trial Lawyer, 19 August 2026: <https://www.eeas.europa.eu/eeas/international-criminal-court-statement-high-representative-us-sanctions-against-president-and-senior_en>
+23. Human Rights Watch, “US Sanctions 2 More International Criminal Court Officials,” 18 August 2026: <https://www.hrw.org/news/2026/08/18/us-sanctions-2-more-international-criminal-court-officials>; “US Sanctions ICC President Tomoko Akane,” 19 August 2026: <https://www.hrw.org/news/2026/08/19/us-sanctions-icc-president-tomoko-akane>
+24. CNN, transcript of Rubio campaign remarks calling Trump a “con artist,” 28 February 2016: <https://transcripts.cnn.com/show/cnr/date/2016-02-28/segment/03>
+25. CBS News, “Marco Rubio hits ‘con artist’ Donald Trump,” 26 February 2016: <https://www.cbsnews.com/news/marco-rubio-hits-con-artist-donald-trump/>
+26. *The Guardian*, interview recording Rubio's support for the Republican nominee, 24 May 2016: <https://www.theguardian.com/us-news/2016/may/24/marco-rubio-interview-presidential-nomination-donald-trump>
+27. US Senate, final vote in Donald Trump's first impeachment trial, 5 February 2020: <https://www.senate.gov/legislative/LIS/roll_call_votes/vote1162/vote_116_2_00033.htm>; final vote in the second impeachment trial, 13 February 2021: <https://www.senate.gov/legislative/LIS/roll_call_votes/vote1171/vote_117_1_00059.htm>
+28. US Senate, confirmation of Marco Rubio as Secretary of State, 20 January 2025: <https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00008.htm>
+29. US Senate, passage of S. 744, 27 June 2013: <https://www.senate.gov/legislative/LIS/roll_call_votes/vote1131/vote_113_1_00168.htm>; ABC News, Rubio's defence of the bill, 14 April 2013: <https://abcnews.com/blogs/politics/2013/04/marco-rubio-immigration-bill-doesnt-give-anything-away>; *The Guardian*, Rubio's later staged approach, 17 May 2015: <https://www.theguardian.com/us-news/2015/may/17/marco-rubio-comprehensive-immigration-reform>
+30. FactCheck.org, “Cruz, Rubio Twist Court ‘Precedent’,” 16 February 2016: <https://www.factcheck.org/2016/02/cruz-rubio-twist-court-precedent/>; US Senate, confirmation of Amy Coney Barrett, 26 October 2020: <https://www.senate.gov/legislative/LIS/roll_call_votes/vote1162/vote_116_2_00224.htm>
+31. Constitution Annotated, article II, section 2, clause 2, Appointments Clause: <https://constitution.congress.gov/browse/article-2/section-2/clause-2/>
 
 ### Authorial context
 
