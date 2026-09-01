@@ -3,7 +3,7 @@
 ## Unlawful Intervention, Constrained Autonomy and Withdrawal from the ICC
 
 **By Arturo Sánchez Pineda**  
-**23 August 2026**
+**31 August 2026**
 
 On 3 January 2026, the United States carried out a military intervention in Venezuela, struck sites in Venezuelan territory, captured Nicolás Maduro and Cilia Flores, and transferred them to the United States. This is not a hypothetical invasion or a prediction. It is a documented use of force whose unlawfulness was set out in unusually direct terms by the Swiss Federal Department of Foreign Affairs.
 
@@ -81,12 +81,25 @@ The timeline also requires precision. Later management may operate without daily
 
 This evidence strengthens the conclusion of severely constrained autonomy. It does not prove belligerent occupation, US control of every Venezuelan decision or the absence of agency by Delcy Rodríguez, the governing movement or the opposition. “De facto tutelage” can describe the political relationship created by the combined dependencies; the safer legal classifications remain those used in the Swiss memorandum: unlawful intervention, aggression, threat of force and violation of the principle of non-intervention.
 
+## From revenue custody to an announced production stake
+
+On 28 August, Trump and Rodríguez announced a new energy agreement concerning 17 Venezuelan fields with a stated proven potential of 65 billion barrels. Both governments publicised projections of US$100 billion in investment and more than US$209 billion in Venezuelan tax and royalty revenue. Those matching figures establish that an agreement was announced. They do not establish its complete legal or commercial terms: as of 31 August, neither government had published the agreement itself.
+
+The [Associated Press reported](https://apnews.com/article/venezuela-oil-trump-deal-unknown-questions-reserves-c229bc39b6e1a3d5dd16f7f9e67fef3f), on the basis of an unnamed US official, that a new company formed with an unnamed private operator received 100-year development rights and that the United States would obtain 55 per cent of its “effective output,” combining an ownership stake with a right to buy oil at cost. The same official said purchased oil would supply the US Strategic Petroleum Reserve and the military. The [New York Times](https://www.nytimes.com/2026/08/29/world/americas/venezuela-oil-us-takeover.html), citing people familiar with the arrangement, identified the operator as a firm affiliated with Venezuelan businessman Alejandro Betancourt López. These are important attributed reports; without the contract, they cannot be restated as publicly verified clauses.
+
+Rodríguez subsequently gave a different duration: 25 years, not 100. She said Venezuela retained ownership and sovereignty over the resources, set a production objective above 1.5 million barrels per day, described minimum royalties of 16 per cent and an income-tax rate of 34 per cent, and estimated that about US$19 of each barrel sold at the assumed US$65 reference price would enter Venezuela. A state can retain legal title to oil in the ground while another actor acquires extensive operational, purchasing and revenue rights. “Venezuelan ownership” and “US majority control” are therefore not necessarily logical opposites, but the two governments’ incompatible duration claims cannot be reconciled from the published record.
+
+The constitutional baseline is clearer than the contract. Article 12 of the [Venezuelan Constitution](https://www.asambleanacional.gob.ve/storage/documentos/botones/constitucion-nacional-20191205135853.PDF) makes hydrocarbon deposits property of the Republic, in the public domain and inalienable. Article 150 requires National Assembly approval for national public-interest contracts with foreign states, official foreign entities or companies not domiciled in Venezuela. The unpublished instrument may use a corporate structure that changes which rules apply; that is precisely why its text, approvals, operator identity and allocation of control must be public before legality or national benefit can be audited.
+
+The evidentiary update is substantial. US control is no longer confined to Treasury custody of specified revenue. The announced structure reaches production, corporate participation, at-cost purchasing and strategic and military supply. It still does not prove that the United States owns Venezuela’s oil in the ground, controls all national production or has lawfully acquired the rights it claims.
+
 ## What Venezuelan civilians should monitor
 
 The practical indicators are not diplomatic adjectives. They are control points:
 
 - appointments in security, energy, justice and foreign-policy institutions;
-- agreements concerning oil production, marketing, revenue and debt;
+- the complete text, approvals, duration, operator and beneficial owners of every oil agreement;
+- the division of production, purchasing rights, prices, costs, taxes, royalties and revenue;
 - presence or command authority of foreign military or intelligence personnel;
 - conditions attached to sanctions relief, financial access and recognition;
 - arrests, transfers or prosecutions requested by foreign authorities;
@@ -96,7 +109,7 @@ The practical indicators are not diplomatic adjectives. They are control points:
 
 For Venezuelans abroad, criticism of documented state conduct is not extremism. It should nevertheless be organised with evidentiary discipline: preserve primary documents, distinguish legal findings from political judgments, avoid asserting secret control without proof and do not confuse hostility to a government with hostility to a people.
 
-[Case Study VI](../externalisation/) applies that discipline to the next fear: whether US debt creates pressure to take greater value from Venezuelan resources while humanitarian systems are cut. It establishes the resource control already visible in Executive Order 14373, but it does not claim that Venezuelan revenues are paying US debt without transaction evidence. The connection is a risk to audit, not a fact to invent.
+[Case Study VI](../externalisation/) examines a different and now better-supported connection: Washington is presenting claimed control over Venezuelan oil as a promise of lower US fuel prices and strategic supply while the Iran war keeps energy costs elevated before the November elections. There is still no transaction evidence that Venezuelan revenue is paying US federal debt. That limit remains true, but it is no longer the principal meaning of the oil record.
 
 ## Conclusion
 
@@ -105,6 +118,8 @@ The central fact is not that the United States might invade Venezuela. It did us
 The central political question is what sovereignty means after that act. Venezuela remains formally sovereign, but its government operates beneath a demonstrated threat of renewed force. Its ICC withdrawal is attributable to Venezuela and aligned with its own pre-existing interest in escaping scrutiny. It is also aligned with the Trump administration’s campaign against the Court and was completed under coercive conditions created by that administration.
 
 The proper classification is neither normal sovereign choice nor proven foreign command. It is **formal decision under constrained autonomy**.
+
+The oil announcement gives that abstraction a measurable structure. Washington claims majority control, at-cost access and strategic supply; Caracas claims continuing ownership and a 25-year development bargain; neither has published the document capable of resolving their conflicting descriptions. Sovereignty cannot be audited through slogans from either capital. It must be tested against the contract, the approvals, the cash flows and who can say no.
 
 I write this as a Venezuelan who has opposed the abuses of Venezuelan rulers and who also rejects the proposition that a foreign military may decide our political future. Those positions are not contradictory. They are the minimum conditions of a universal rule: no government acquires immunity through anti-imperial rhetoric, and no great power acquires a right of intervention by correctly identifying another government’s crimes.
 
@@ -122,6 +137,11 @@ I write this as a Venezuelan who has opposed the abuses of Venezuelan rulers and
 8. White House, Executive Order 14373, *Safeguarding Venezuelan Oil Revenue for the Good of the American and Venezuelan People*, 9 January 2026: <https://www.whitehouse.gov/presidential-actions/2026/01/safeguarding-venezuelan-oil-revenue-for-the-good-of-the-american-and-venezuelan-people/>
 9. US Department of State, remarks by Marco Rubio and Pete Hegseth concerning Venezuela, January 2026: <https://www.state.gov/releases/office-of-the-spokesperson/2026/01/secretary-of-state-marco-rubio-and-secretary-of-war-pete-hegseth-remarks-to-the-press>
 10. Ángel Bermúdez, “Todos necesitan a Trump: cómo EE.UU. tutela los intereses opuestos de gobierno y oposición en Venezuela,” BBC News Mundo, 10 August 2026: <https://www.bbc.com/mundo/articles/ce8l6xj85ppo>
+11. Aamer Madhani and Regina Garcia Cano, “Trump says US has entered deal with Venezuela to take control of 65 billion barrels of oil reserves,” Associated Press, 28 August 2026: <https://apnews.com/article/eb0ed5a1e99602c21a7f690c3368020e>
+12. Collin Binkley and Juan Pablo Arráez, “What we know about Trump’s deal giving US access to vast oil reserves in Venezuela,” Associated Press, 30 August 2026: <https://apnews.com/article/venezuela-oil-trump-deal-unknown-questions-reserves-c229bc39b6e1a3d5dd16f7f9e67fef3f>
+13. Rebecca F. Elliott and Simon Romero, report on Trump’s announced agreement for majority US control over part of Venezuela’s oil reserves, *New York Times*, 29 August 2026: <https://www.nytimes.com/2026/08/29/world/americas/venezuela-oil-us-takeover.html>
+14. Ángel González, “El acuerdo petrolero con Trump tendrá 25 años de vigencia: presidenta venezolana,” *La Jornada*, 29 August 2026: <https://www.jornada.com.mx/noticia/2026/08/29/mundo/delcy-rodriguez-defiende-acuerdo-petrolero-con-eu-venezuela-conserva-la-soberania-sobre-sus-recursos>
+15. Venezuela, *Constitution of the Bolivarian Republic of Venezuela*, Articles 12 and 150: <https://www.asambleanacional.gob.ve/storage/documentos/botones/constitucion-nacional-20191205135853.PDF>
 
 ### Authorial context
 

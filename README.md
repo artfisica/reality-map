@@ -3,7 +3,7 @@
 A bilingual static site for the manual, the six case studies and the claim and
 source ledger. English at the root, Spanish under `/es/`.
 
-The audio edition lives at `/listen/` and `/es/escuchar/`. Version 0.6.3
+The audio edition lives at `/listen/` and `/es/escuchar/`. Version 0.7.0
 publishes one project-level podcast in each language: the 18:10 English
 recording appears only in the English edition, and the 40:20 Spanish recording
 appears only in the Spanish edition. Neither is presented as the reading of an

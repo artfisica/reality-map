@@ -3,7 +3,7 @@
 ## Europe and Switzerland’s Gaza Double Standard—and the Lebanon Enforcement Ceiling
 
 **By Arturo Sánchez Pineda**  
-**23 August 2026**
+**31 August 2026**
 
 *The first case study in **The Civilian Geopolitical Reality Map**—a framework for understanding states through their observed conduct, capabilities and interests rather than through their declarations alone.*
 
@@ -35,7 +35,7 @@ In September 2025, the UN Independent International Commission of Inquiry on the
 
 Separately, the International Court of Justice has issued binding provisional measures in *South Africa v. Israel*. The Court ordered Israel to prevent acts falling within the Genocide Convention, prevent and punish direct and public incitement to genocide, preserve evidence, and enable urgently needed humanitarian assistance. In May 2024, it ordered Israel to halt its offensive and other action in Rafah insofar as it could inflict conditions of life capable of bringing about the physical destruction of the Palestinian group in whole or in part.
 
-As of 23 August 2026, however, the ICJ has not issued its final judgment on whether Israel bears state responsibility for genocide. That distinction must be stated honestly. The UN Commission has reached a genocide determination; the final and legally binding ICJ decision on the merits remains pending.
+As of 31 August 2026, however, the ICJ has not issued its final judgment on whether Israel bears state responsibility for genocide. That distinction must be stated honestly. The UN Commission has reached a genocide determination; the final and legally binding ICJ decision on the merits remains pending.
 
 But the absence of a final judgment is not an excuse for inaction. Under the ICJ’s 2007 judgment in *Bosnia and Herzegovina v. Serbia and Montenegro*, the obligation to prevent genocide arises when a state learns, or should normally have learned, of a serious risk that genocide will be committed. It does not begin only after a court confirms that the genocide has already occurred. The measures expected of a state depend on its capacity to influence the actors concerned.
 

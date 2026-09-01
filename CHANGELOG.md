@@ -4,6 +4,30 @@ Editions are dated and versioned together. When a court rules, a policy changes
 or new primary evidence appears, the ledger row is updated first and the change
 is recorded here.
 
+## 0.7.0 — 31 August 2026
+
+- Added the announced US–Venezuela oil arrangement to Studies V and VI in both
+  languages: 17 fields, a stated potential of 65 billion barrels, projected
+  investment and Venezuelan public revenue, and the unpublished terms AP
+  attributed to a US official.
+- Kept ownership, control and rhetoric separate. The record now distinguishes
+  Venezuela's 25-year sovereignty account from the attributed US account of
+  100-year rights, 55 per cent effective output, at-cost purchases and supply
+  for the Strategic Petroleum Reserve and military.
+- Made the missing contract an evidentiary finding rather than filling its gaps:
+  exact rights, operator ownership, constitutional approvals, investment duties
+  and the conflicting duration claims remain unresolved.
+- Reframed the Study VI conclusion around the use the public record now
+  supports: claimed control over Venezuelan oil is being sold as domestic
+  energy security and lower gasoline prices during the Iran war and before the
+  November elections. The unsupported debt-payment claim remains only as a
+  secondary evidentiary boundary.
+- Added EIA fuel-price data, the IEA record of the Hormuz supply disruption and
+  separately attributed CFR assessments of the failed quick-victory timetable,
+  strategic setback and political pressure to reduce oil prices.
+- Expanded the bilingual ledger from 67 to 75 matched claims and dated the
+  complete edition 31 August 2026.
+
 ## 0.6.3 — 23 August 2026
 
 - Corrected the language separation in the audio edition: English pages now

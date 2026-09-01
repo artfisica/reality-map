@@ -3,7 +3,7 @@
 ## Intervención contraria al derecho internacional, autonomía restringida y retiro de la CPI
 
 **Por Arturo Sánchez Pineda**  
-**23 de agosto de 2026**
+**31 de agosto de 2026**
 
 El 3 de enero de 2026, Estados Unidos realizó una intervención militar en Venezuela, atacó instalaciones dentro del territorio, capturó a Nicolás Maduro y Cilia Flores y los trasladó a Estados Unidos. No se trata de una invasión hipotética ni de una predicción. Es un uso documentado de la fuerza cuya falta de legalidad fue expuesta en términos excepcionalmente directos por el [Departamento Federal de Asuntos Exteriores de Suiza](https://www.eda.admin.ch/dam/en/sd-web/uAgalQgitFmZ/20260113-memo-voelkerrechtliche-einschaetzung-usa-venezuela.pdf).
 
@@ -81,12 +81,25 @@ También exige una corrección temporal. La gestión posterior puede operar sin 
 
 Esta evidencia fortalece la conclusión de autonomía gravemente restringida. No demuestra ocupación beligerante, control estadounidense de cada decisión venezolana ni inexistencia de agencia propia en Delcy Rodríguez, el chavismo o la oposición. «Tutela de facto» puede utilizarse como descripción política del conjunto de dependencias; para la clasificación jurídica continúan siendo más seguros los términos del memorando suizo: intervención contraria al derecho internacional, agresión, amenaza de fuerza y violación del principio de no intervención.
 
+## De la custodia de ingresos a una participación productiva anunciada
+
+El 28 de agosto, Trump y Rodríguez anunciaron un nuevo acuerdo energético sobre 17 campos venezolanos con un potencial probado declarado de 65 mil millones de barriles. Ambos gobiernos difundieron proyecciones de US$100 mil millones de inversión y más de US$209 mil millones en impuestos y regalías para Venezuela. Esas cifras coincidentes demuestran que el acuerdo fue anunciado. No establecen todos sus términos jurídicos o comerciales: al 31 de agosto, ninguno de los dos gobiernos había publicado el acuerdo.
+
+Associated Press [informó](https://apnews.com/article/venezuela-oil-trump-deal-unknown-questions-reserves-c229bc39b6e1a3d5dd16f7f9e67fef3f), basándose en un funcionario estadounidense anónimo, que una nueva compañía constituida con un operador privado no identificado recibió derechos de desarrollo por 100 años y que Estados Unidos obtendría 55 % de su «producción efectiva», mediante una combinación de participación accionaria y derecho a comprar petróleo a precio de costo. Según la misma fuente, el crudo adquirido abastecería la Reserva Estratégica de Petróleo y las fuerzas armadas estadounidenses. El [*New York Times*](https://www.nytimes.com/2026/08/29/world/americas/venezuela-oil-us-takeover.html), citando a personas familiarizadas con el arreglo, identificó al operador como una empresa vinculada con el empresario venezolano Alejandro Betancourt López. Son reportes atribuidos importantes; sin el contrato, no pueden repetirse como cláusulas públicamente verificadas.
+
+Rodríguez dio después una duración diferente: 25 años, no 100. Afirmó que Venezuela conserva la propiedad y soberanía sobre los recursos, fijó una meta superior a 1,5 millones de barriles diarios, describió regalías mínimas de 16 % y una tasa de impuesto sobre la renta de 34 %, y estimó que unos US$19 de cada barril vendido al precio referencial supuesto de US$65 ingresarían al país. Un Estado puede conservar la titularidad jurídica del petróleo bajo tierra mientras otro actor adquiere amplios derechos operativos, de compra e ingresos. «Propiedad venezolana» y «control mayoritario estadounidense» no son, por tanto, necesariamente opuestos lógicos; pero las duraciones incompatibles anunciadas por los dos gobiernos no pueden conciliarse con el expediente publicado.
+
+La base constitucional es más clara que el contrato. El artículo 12 de la [Constitución venezolana](https://www.asambleanacional.gob.ve/storage/documentos/botones/constitucion-nacional-20191205135853.PDF) declara los yacimientos de hidrocarburos propiedad de la República, bienes del dominio público e inalienables. El artículo 150 exige aprobación de la Asamblea Nacional para contratos de interés público nacional celebrados con Estados o entidades oficiales extranjeras o con sociedades no domiciliadas en Venezuela. El instrumento no publicado puede utilizar una estructura societaria que altere las reglas aplicables; precisamente por eso deben conocerse su texto, sus aprobaciones, el operador y la distribución del control antes de auditar su legalidad o beneficio nacional.
+
+La actualización probatoria es sustancial. El control estadounidense ya no se limita a la custodia en el Tesoro de determinados ingresos. La estructura anunciada alcanza producción, participación societaria, compra a precio de costo y abastecimiento estratégico y militar. Todavía no demuestra que Estados Unidos sea propietario del petróleo venezolano bajo tierra, controle toda la producción nacional o haya adquirido legalmente los derechos que afirma.
+
 ## Lo que la población venezolana debe observar
 
 Los indicadores prácticos no son los adjetivos diplomáticos. Son puntos de control:
 
 - nombramientos en seguridad, energía, justicia y política exterior;
-- acuerdos sobre producción, comercialización, ingresos petroleros y deuda;
+- el texto completo, las aprobaciones, la duración, el operador y los beneficiarios reales de cada acuerdo petrolero;
+- la distribución de la producción, derechos de compra, precios, costos, impuestos, regalías e ingresos;
 - presencia o mando de personal militar y de inteligencia extranjero;
 - condiciones impuestas para aliviar sanciones, permitir acceso financiero u otorgar reconocimiento;
 - arrestos, traslados o procesos solicitados por autoridades extranjeras;
@@ -96,7 +109,7 @@ Los indicadores prácticos no son los adjetivos diplomáticos. Son puntos de con
 
 Para los venezolanos en el exterior, criticar conductas estatales documentadas no es extremismo. La crítica debe organizarse con disciplina probatoria: conservar documentos primarios, distinguir conclusiones jurídicas de juicios políticos, no afirmar un control secreto sin pruebas y no confundir hostilidad contra un gobierno con hostilidad contra un pueblo.
 
-El [Estudio de caso VI](../externalizacion/) aplica esa disciplina al temor siguiente: si la deuda estadounidense crea presión para extraer mayor valor de los recursos venezolanos mientras son recortados los sistemas humanitarios. Establece el control de recursos ya visible en la Orden Ejecutiva 14373, pero no afirma que ingresos venezolanos estén pagando deuda estadounidense sin evidencia de transacciones. La conexión es un riesgo que debe auditarse, no un hecho que debamos inventar.
+El [Estudio de caso VI](../externalizacion/) examina una conexión diferente y ahora mejor sustentada: Washington presenta su pretendido control sobre el petróleo venezolano como promesa de menores precios estadounidenses y abastecimiento estratégico mientras la guerra con Irán mantiene elevados los costos energéticos antes de las elecciones de noviembre. Sigue sin existir evidencia transaccional de que los ingresos venezolanos estén pagando deuda federal estadounidense. Ese límite continúa siendo cierto, pero ya no es el significado principal del expediente petrolero.
 
 ## Conclusión
 
@@ -105,6 +118,8 @@ El hecho central no es que Estados Unidos pueda invadir Venezuela. Utilizó fuer
 La pregunta política central es qué significa la soberanía después de ese acto. Venezuela sigue siendo formalmente soberana, pero su gobierno actúa bajo una amenaza demostrada de nueva fuerza. El retiro de la CPI es atribuible a Venezuela y coincide con el interés previo de sus autoridades por escapar del escrutinio. Coincide también con la campaña de la administración Trump contra la Corte y fue completado bajo condiciones coercitivas creadas por esa administración.
 
 La clasificación correcta no es elección soberana normal ni mando extranjero probado. Es **decisión formal bajo autonomía restringida**.
+
+El anuncio petrolero proporciona una estructura medible a esa abstracción. Washington afirma control mayoritario, acceso a precio de costo y abastecimiento estratégico; Caracas afirma propiedad continuada y un acuerdo de desarrollo de 25 años; ninguno publicó el documento capaz de resolver sus descripciones incompatibles. La soberanía no puede auditarse mediante consignas de ninguna de las dos capitales. Debe comprobarse en el contrato, las aprobaciones, los flujos de dinero y quién puede decir que no.
 
 Escribo esto como venezolano que se ha opuesto a los abusos de los gobernantes venezolanos y que también rechaza la idea de que una fuerza extranjera pueda decidir nuestro futuro político. No son posiciones contradictorias. Son las condiciones mínimas de una regla universal: ningún gobierno obtiene inmunidad mediante retórica antiimperialista y ninguna gran potencia obtiene un derecho de intervención por identificar correctamente los crímenes de otro gobierno.
 
@@ -122,6 +137,11 @@ Escribo esto como venezolano que se ha opuesto a los abusos de los gobernantes v
 8. Casa Blanca, Orden Ejecutiva 14373, *Safeguarding Venezuelan Oil Revenue for the Good of the American and Venezuelan People*, 9 de enero de 2026: <https://www.whitehouse.gov/presidential-actions/2026/01/safeguarding-venezuelan-oil-revenue-for-the-good-of-the-american-and-venezuelan-people/>
 9. Departamento de Estado de Estados Unidos, declaraciones de Marco Rubio y Pete Hegseth sobre Venezuela, enero de 2026: <https://www.state.gov/releases/office-of-the-spokesperson/2026/01/secretary-of-state-marco-rubio-and-secretary-of-war-pete-hegseth-remarks-to-the-press>
 10. Ángel Bermúdez, «Todos necesitan a Trump: cómo EE.UU. tutela los intereses opuestos de gobierno y oposición en Venezuela», BBC News Mundo, 10 de agosto de 2026: <https://www.bbc.com/mundo/articles/ce8l6xj85ppo>
+11. Aamer Madhani y Regina Garcia Cano, «Trump says US has entered deal with Venezuela to take control of 65 billion barrels of oil reserves», Associated Press, 28 de agosto de 2026: <https://apnews.com/article/eb0ed5a1e99602c21a7f690c3368020e>
+12. Collin Binkley y Juan Pablo Arráez, «What we know about Trump’s deal giving US access to vast oil reserves in Venezuela», Associated Press, 30 de agosto de 2026: <https://apnews.com/article/venezuela-oil-trump-deal-unknown-questions-reserves-c229bc39b6e1a3d5dd16f7f9e67fef3f>
+13. Rebecca F. Elliott y Simon Romero, reportaje sobre el acuerdo anunciado por Trump para el control mayoritario estadounidense de parte de las reservas venezolanas, *New York Times*, 29 de agosto de 2026: <https://www.nytimes.com/2026/08/29/world/americas/venezuela-oil-us-takeover.html>
+14. Ángel González, «El acuerdo petrolero con Trump tendrá 25 años de vigencia: presidenta venezolana», *La Jornada*, 29 de agosto de 2026: <https://www.jornada.com.mx/noticia/2026/08/29/mundo/delcy-rodriguez-defiende-acuerdo-petrolero-con-eu-venezuela-conserva-la-soberania-sobre-sus-recursos>
+15. Venezuela, *Constitución de la República Bolivariana de Venezuela*, artículos 12 y 150: <https://www.asambleanacional.gob.ve/storage/documentos/botones/constitucion-nacional-20191205135853.PDF>
 
 ### Contexto autoral
 
