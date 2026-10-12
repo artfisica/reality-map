@@ -4,6 +4,35 @@ Editions are dated and versioned together. When a court rules, a policy changes
 or new primary evidence appears, the ledger row is updated first and the change
 is recorded here.
 
+## 0.8.0 — 11 October 2026
+
+- Replaced the initial anonymous-source description of the oil arrangement with
+  the White House's named NABEP structure: 35 per cent US equity, at-cost
+  purchasing, first refusal, board controls and the official 100-year claim.
+- Added the published National Assembly support resolution, while preserving the
+  distinction between a public political endorsement and the still-unpublished
+  PDVSA–NABEP contract, field instruments and renewal clause.
+- Added OFAC General License 52C, the separate Chevron, Eni, GE Vernova and
+  Continental announcements, failed congressional subpoena vote, partial
+  document production and missing KPMG audits.
+- Kept the 25- versus 100-year duration conflict unresolved: the former rests on
+  an attributed statement by PDVSA's president; the latter remains an official
+  White House claim rather than a publicly inspectable contractual clause.
+- Added the Canelón transfer with accusation/conviction discipline, the FBI's
+  later “at sea” account, Venezuela's nationality-based non-extradition rule and
+  the still-missing maritime jurisdictional facts.
+- Updated the ICC analysis after the 9 October designation of the Court itself.
+  The edition identifies a prospective territorial-jurisdiction gap after
+  Venezuela's withdrawal takes effect without claiming present blanket immunity
+  or an unproved intention to commit future atrocities.
+- Added the Iraq comparison: Iraqi-owned oil receipts have remained in a New
+  York Fed account through an architecture originating in 2003, creating a
+  durable US financial chokepoint without transferring formal ownership.
+- Added the reported but uncompleted proposal to move Venezuelan central-bank
+  gold from London to New York, and classified it as attributed reporting.
+- Expanded the bilingual ledger from 75 to 88 matched semantic claims and dated
+  the complete edition 11 October 2026.
+
 ## 0.7.0 — 31 August 2026
 
 - Added the announced US–Venezuela oil arrangement to Studies V and VI in both

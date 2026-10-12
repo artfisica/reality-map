@@ -3,7 +3,7 @@
 ## Afghanistan, Iraq, Syria and What Their Aftermath Warns Venezuela
 
 **By Arturo Sánchez Pineda**  
-**31 August 2026**
+**11 October 2026**
 
 Foreign military intervention is commonly narrated from the viewpoint of the intervening power. The debate begins with its threat perception, follows its troops and ends when its government declares withdrawal or success. For civilians in the target state, that chronology is false. The loss of relatives, institutions, homes, education and economic security continues long after the intervening power has revised its objectives.
 
@@ -24,6 +24,10 @@ The 2003 US-led invasion overthrew Saddam Hussein rapidly. The British Iraq Inqu
 Those findings matter because they come from an official inquiry by a principal coalition state. They establish that the catastrophe cannot be explained merely as an unforeseeable failure after a sound decision. The coalition entered without adequately preparing for the society and institutions that would exist after regime collapse.
 
 The invasion and occupation were followed by state breakdown, insurgency, sectarian violence, torture, mass displacement and the later rise of ISIS. Iraq retained a state, elections and significant public institutions; “only destruction” would therefore be inaccurate. The defensible judgment is that the intervention failed to deliver the stable and secure democratic order invoked to justify it, while Iraqi civilians absorbed consequences radically disproportionate to those borne by the states that invaded.
+
+The financial architecture also survived the occupation. Security Council Resolution 1483 directed oil-export proceeds into the Development Fund for Iraq. [US Treasury described it in 2003](https://home.treasury.gov/news/press-releases/js452) as an account of the Central Bank of Iraq while the US-led Coalition Provisional Authority administered the proceeds; [GAO later recorded](https://www.gao.gov/assets/a203616.html) Iraqi government deposits in that fund at the Federal Reserve Bank of New York. On 30 September 2026, [Reuters reported](https://www.straitstimes.com/world/middle-east/explainer-how-the-us-controls-iraqs-oil-revenues) that the successor Central Bank of Iraq account remains at the New York Fed, that oil provides about 90 per cent of Iraq's state budget, and that US controls over dollar access continue to give Washington extraordinary leverage.
+
+Two periods must not be collapsed. During occupation, the Coalition Provisional Authority exercised direct administrative control. Today the funds are Iraqi central-bank property held in US financial infrastructure; custody is not ownership, and the arrangement also protects revenues, supports dollar access and stabilises payments. But continuity of location plus US compliance power creates a durable chokepoint. The accurate twenty-three-year comparison with Venezuela is therefore not “the United States owns both countries' oil.” It is that military intervention was followed by a US-based revenue architecture through which Washington retained leverage long after the initial operation. Venezuela's Executive Order 14373 is more explicit about the US secretary of state's disbursement authority, while Iraq's present account is formally owned by the Central Bank of Iraq.
 
 ## Afghanistan: two decades of goals without a workable theory
 
@@ -90,6 +94,10 @@ That sentence is analytical, but it is also personal. In *Dolor*, I wrote that i
 4. UNHCR, Afghanistan: <https://www.unhcr.org/where-we-work/countries/afghanistan>
 5. UN Secretary-General, statement on Syria, 13 March 2025: <https://www.un.org/sg/en/content/sg/statements/2025-03-13/secretary-generals-statement-syria-scroll-down-for-arabic>
 6. Swiss Federal Department of Foreign Affairs, *Legal assessment of the US military intervention in Venezuela of 3 January 2026*, 13 January 2026: <https://www.eda.admin.ch/dam/en/sd-web/uAgalQgitFmZ/20260113-memo-voelkerrechtliche-einschaetzung-usa-venezuela.pdf>
+7. UN Security Council, Resolution 1483, 22 May 2003: <https://digitallibrary.un.org/record/495555>
+8. US Department of the Treasury, “Reconstruction in Iraq: Economic and Financial Issues,” 11 June 2003: <https://home.treasury.gov/news/press-releases/js452>
+9. US Government Accountability Office, *Iraq: Key Issues for Congressional Oversight*, GAO-09-294SP, March 2009: <https://www.gao.gov/assets/a203616.html>
+10. Reuters, “Explainer—How the US controls Iraq’s oil revenues,” 30 September 2026, republished by *The Straits Times*: <https://www.straitstimes.com/world/middle-east/explainer-how-the-us-controls-iraqs-oil-revenues>
 
 ### Authorial context
 

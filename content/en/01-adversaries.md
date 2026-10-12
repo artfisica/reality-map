@@ -3,7 +3,7 @@
 ## Europe and Switzerland’s Gaza Double Standard—and the Lebanon Enforcement Ceiling
 
 **By Arturo Sánchez Pineda**  
-**31 August 2026**
+**11 October 2026**
 
 *The first case study in **The Civilian Geopolitical Reality Map**—a framework for understanding states through their observed conduct, capabilities and interests rather than through their declarations alone.*
 
@@ -35,7 +35,7 @@ In September 2025, the UN Independent International Commission of Inquiry on the
 
 Separately, the International Court of Justice has issued binding provisional measures in *South Africa v. Israel*. The Court ordered Israel to prevent acts falling within the Genocide Convention, prevent and punish direct and public incitement to genocide, preserve evidence, and enable urgently needed humanitarian assistance. In May 2024, it ordered Israel to halt its offensive and other action in Rafah insofar as it could inflict conditions of life capable of bringing about the physical destruction of the Palestinian group in whole or in part.
 
-As of 31 August 2026, however, the ICJ has not issued its final judgment on whether Israel bears state responsibility for genocide. That distinction must be stated honestly. The UN Commission has reached a genocide determination; the final and legally binding ICJ decision on the merits remains pending.
+As of 11 October 2026, however, the ICJ has not issued its final judgment on whether Israel bears state responsibility for genocide. That distinction must be stated honestly. The UN Commission has reached a genocide determination; the final and legally binding ICJ decision on the merits remains pending.
 
 But the absence of a final judgment is not an excuse for inaction. Under the ICJ’s 2007 judgment in *Bosnia and Herzegovina v. Serbia and Montenegro*, the obligation to prevent genocide arises when a state learns, or should normally have learned, of a serious risk that genocide will be committed. It does not begin only after a court confirms that the genocide has already occurred. The measures expected of a state depend on its capacity to influence the actors concerned.
 
@@ -54,6 +54,10 @@ Washington's stated legal premise also requires precision. The United States arg
 [Human Rights Watch characterised](https://www.hrw.org/news/2026/08/19/us-sanctions-icc-president-tomoko-akane) the sanctions as an attempt to shield American and Israeli officials implicated in serious crimes. That is HRW's attributed assessment, not an independently adjudicated motive. The established facts are already severe: the US government named the officials, deployed financial sanctions and declared its intention to induce other states to weaken or leave the Court.
 
 The [European Union responded on 19 August](https://www.eeas.europa.eu/eeas/international-criminal-court-statement-high-representative-us-sanctions-against-president-and-senior_en) by reiterating its support for the ICC and stating that sanctions against the Court and its personnel undermine its work. The cited statement announced no new blocking measure or other operational countermeasure. In this episode, Washington deployed coercion; the EU deployed language. That is the enforcement gradient in its clearest form.
+
+On 9 October, the campaign crossed an institutional threshold. [OFAC placed the International Criminal Court itself on the Specially Designated Nationals list](https://ofac.treasury.gov/recent-actions/20261009), while issuing only narrow general licences for specified transactions, telecommunications and enterprise software, pension payments and certain detainee-related activity. Rubio stated that the purpose was to ban transactions with the Court, cut off its resources and cripple its operation, and threatened to dismantle it “brick by brick” unless its reach over Americans ended. The [ICC rejected the measure](https://www.icc-cpi.int/news/icc-strongly-rejects-us-sanctions-against-institution) as an attack on an independent institution created by 125 States Parties.
+
+This does not prove that US officials intend to commit future atrocities. It does prove that the government is deliberately reducing the practical capacity of the institution that could investigate alleged genocide, crimes against humanity or war crimes when a territorial or nationality basis exists. In a [DW News interview](https://www.youtube.com/watch?v=bgAAemIMHtk), legal scholar Michael Lynk explained that a national of a non-party state may still fall within the Court's territorial jurisdiction for alleged conduct in a State Party, subject to admissibility and complementarity. That explanation is expert analysis, not an official ruling. The primary evidence is Washington's own stated objective and OFAC's economic measure against the Court as an institution.
 
 ## Credibility audit: Rubio's words against Rubio's acts
 
@@ -239,6 +243,10 @@ I do not claim a position outside this system. In *Miedo*, I included myself amo
 29. US Senate, passage of S. 744, 27 June 2013: <https://www.senate.gov/legislative/LIS/roll_call_votes/vote1131/vote_113_1_00168.htm>; ABC News, Rubio's defence of the bill, 14 April 2013: <https://abcnews.com/blogs/politics/2013/04/marco-rubio-immigration-bill-doesnt-give-anything-away>; *The Guardian*, Rubio's later staged approach, 17 May 2015: <https://www.theguardian.com/us-news/2015/may/17/marco-rubio-comprehensive-immigration-reform>
 30. FactCheck.org, “Cruz, Rubio Twist Court ‘Precedent’,” 16 February 2016: <https://www.factcheck.org/2016/02/cruz-rubio-twist-court-precedent/>; US Senate, confirmation of Amy Coney Barrett, 26 October 2020: <https://www.senate.gov/legislative/LIS/roll_call_votes/vote1162/vote_116_2_00224.htm>
 31. Constitution Annotated, article II, section 2, clause 2, Appointments Clause: <https://constitution.congress.gov/browse/article-2/section-2/clause-2/>
+32. US Department of the Treasury, OFAC, “International Criminal Court-related Designation; Issuance of International Criminal Court-related General Licenses,” 9 October 2026: <https://ofac.treasury.gov/recent-actions/20261009>
+33. US Department of State, “Imposing Sanctions on the International Criminal Court,” 9 October 2026: <https://www.state.gov/releases/office-of-the-spokesman/2026/10/imposing-sanctions-on-the-international-criminal-court/>
+34. International Criminal Court, “The ICC strongly rejects US sanctions against the institution,” 9 October 2026: <https://www.icc-cpi.int/news/icc-strongly-rejects-us-sanctions-against-institution>
+35. DW News, “What’s behind the US attempt to shut down the International Criminal Court,” interview with Michael Lynk, 10 October 2026: <https://www.youtube.com/watch?v=bgAAemIMHtk>
 
 ### Authorial context
 

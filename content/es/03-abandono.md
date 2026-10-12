@@ -3,7 +3,7 @@
 ## Afganistán, Irak, Siria y lo que su posguerra advierte a Venezuela
 
 **Por Arturo Sánchez Pineda**  
-**31 de agosto de 2026**
+**11 de octubre de 2026**
 
 Las intervenciones militares extranjeras suelen narrarse desde el punto de vista de la potencia que interviene. El debate comienza con su percepción de amenaza, sigue a sus tropas y termina cuando su gobierno declara retirada o victoria. Para la población civil del Estado atacado, esa cronología es falsa. La pérdida de familiares, instituciones, viviendas, educación y seguridad económica continúa mucho después de que la potencia haya revisado sus objetivos.
 
@@ -24,6 +24,10 @@ La invasión de 2003 encabezada por Estados Unidos derrocó rápidamente a Sadda
 Esas conclusiones importan porque proceden de una investigación oficial realizada por uno de los principales Estados de la coalición. Demuestran que la catástrofe no puede explicarse solamente como un fracaso imprevisible posterior a una decisión sólida. La coalición entró sin prepararse adecuadamente para la sociedad y las instituciones que existirían después del colapso del régimen.
 
 La invasión y la ocupación fueron seguidas por descomposición estatal, insurgencia, violencia sectaria, tortura, desplazamiento masivo y el posterior ascenso de ISIS. Irak conservó un Estado, elecciones e instituciones públicas significativas; decir que quedó «solo destrucción» sería inexacto. La conclusión defendible es que la intervención no produjo el orden democrático, estable y seguro invocado para justificarla, mientras la población iraquí absorbió consecuencias radicalmente desproporcionadas frente a las soportadas por los Estados invasores. A finales de 2025, [ACNUR todavía registraba más de un millón de personas desplazadas internamente](https://www.unhcr.org/emergencies/iraq-situation).
+
+La arquitectura financiera también sobrevivió a la ocupación. La Resolución 1483 del Consejo de Seguridad ordenó depositar los ingresos por exportaciones petroleras en el Fondo de Desarrollo para Irak. El [Tesoro estadounidense lo describió en 2003](https://home.treasury.gov/news/press-releases/js452) como una cuenta del Banco Central de Irak mientras la Autoridad Provisional de la Coalición, encabezada por Estados Unidos, administraba los recursos; la [GAO documentó después](https://www.gao.gov/assets/a203616.html) depósitos del gobierno iraquí en ese fondo en el Banco de la Reserva Federal de Nueva York. El 30 de septiembre de 2026, [Reuters informó](https://www.straitstimes.com/world/middle-east/explainer-how-the-us-controls-iraqs-oil-revenues) que la cuenta sucesora del Banco Central de Irak continúa en la Reserva Federal de Nueva York, que el petróleo aporta alrededor de 90 % del presupuesto estatal iraquí y que los controles estadounidenses sobre el acceso a dólares siguen concediendo a Washington una influencia extraordinaria.
+
+No deben confundirse dos períodos. Durante la ocupación, la Autoridad Provisional ejerció control administrativo directo. Hoy los fondos son propiedad del banco central iraquí y se mantienen en infraestructura financiera estadounidense; custodia no equivale a propiedad, y el arreglo también protege ingresos, facilita acceso a dólares y estabiliza pagos. Pero la continuidad del lugar de custodia y el poder estadounidense de cumplimiento crean un punto de estrangulamiento duradero. La comparación exacta de veintitrés años con Venezuela no es «Estados Unidos posee el petróleo de ambos países». Es que a una intervención militar siguió una arquitectura de ingresos radicada en Estados Unidos mediante la cual Washington conservó influencia mucho después de la operación inicial. La Orden Ejecutiva 14373 venezolana es más explícita sobre la autoridad de desembolso del secretario de Estado estadounidense; la cuenta iraquí actual pertenece formalmente al Banco Central de Irak.
 
 ## Afganistán: veinte años de objetivos sin una teoría operativa
 
@@ -90,6 +94,10 @@ La frase es analítica, pero también personal. En *Dolor* escribí que se me ha
 4. ACNUR, Afganistán: <https://www.unhcr.org/where-we-work/countries/afghanistan>
 5. Secretario General de la ONU, declaración sobre Siria, 13 de marzo de 2025: <https://www.un.org/sg/en/content/sg/statements/2025-03-13/secretary-generals-statement-syria-scroll-down-for-arabic>
 6. Departamento Federal de Asuntos Exteriores de Suiza, evaluación jurídica sobre Venezuela, 13 de enero de 2026: <https://www.eda.admin.ch/dam/en/sd-web/uAgalQgitFmZ/20260113-memo-voelkerrechtliche-einschaetzung-usa-venezuela.pdf>
+7. Consejo de Seguridad de la ONU, Resolución 1483, 22 de mayo de 2003: <https://digitallibrary.un.org/record/495555>
+8. Departamento del Tesoro de Estados Unidos, «Reconstruction in Iraq: Economic and Financial Issues», 11 de junio de 2003: <https://home.treasury.gov/news/press-releases/js452>
+9. Oficina de Rendición de Cuentas del Gobierno de Estados Unidos, *Iraq: Key Issues for Congressional Oversight*, GAO-09-294SP, marzo de 2009: <https://www.gao.gov/assets/a203616.html>
+10. Reuters, «Explainer—How the US controls Iraq’s oil revenues», 30 de septiembre de 2026, reproducido por *The Straits Times*: <https://www.straitstimes.com/world/middle-east/explainer-how-the-us-controls-iraqs-oil-revenues>
 
 ### Contexto autoral
 

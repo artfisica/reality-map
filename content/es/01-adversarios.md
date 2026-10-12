@@ -3,7 +3,7 @@
 ## El doble rasero de Europa y Suiza en Gaza y el límite de su respuesta en Líbano
 
 **Por Arturo Sánchez Pineda**  
-**31 de agosto de 2026**
+**11 de octubre de 2026**
 
 *Primer estudio de caso del **Mapa civil de la realidad geopolítica**, un marco para entender a los Estados mediante su conducta, sus capacidades y sus intereses observables, y no únicamente mediante sus declaraciones.*
 
@@ -35,7 +35,7 @@ En septiembre de 2025, la [Comisión Internacional Independiente de Investigaci�
 
 Por separado, la [Corte Internacional de Justicia](https://www.icj-cij.org/case/192) ha dictado medidas provisionales vinculantes en *Sudáfrica contra Israel*. Ordenó a Israel prevenir actos comprendidos en la Convención sobre el Genocidio, impedir y castigar la incitación directa y pública, preservar pruebas y permitir asistencia humanitaria urgente. En mayo de 2024 ordenó detener la ofensiva y otras acciones en Rafah en la medida en que pudieran imponer condiciones de vida capaces de producir la destrucción física total o parcial del grupo palestino.
 
-Hasta el 31 de agosto de 2026, la CIJ no ha dictado sentencia definitiva sobre la responsabilidad estatal de Israel por genocidio. La distinción debe expresarse con honestidad: la Comisión de Investigación de la ONU alcanzó una conclusión de genocidio; la decisión final y jurídicamente vinculante de la CIJ sobre el fondo continúa pendiente.
+Hasta el 11 de octubre de 2026, la CIJ no ha dictado sentencia definitiva sobre la responsabilidad estatal de Israel por genocidio. La distinción debe expresarse con honestidad: la Comisión de Investigación de la ONU alcanzó una conclusión de genocidio; la decisión final y jurídicamente vinculante de la CIJ sobre el fondo continúa pendiente.
 
 La ausencia de una sentencia definitiva no justifica la inacción. En su [fallo de 2007 en *Bosnia y Herzegovina contra Serbia y Montenegro*](https://www.icj-cij.org/index.php/node/103898), la CIJ estableció que el deber de prevenir surge cuando un Estado conoce, o normalmente debió conocer, un riesgo grave de genocidio. No comienza después de que un tribunal confirme que el genocidio ya ocurrió. Las medidas exigibles dependen de la capacidad de influencia de cada Estado.
 
@@ -54,6 +54,10 @@ La premisa jurídica de Washington también exige precisión. Estados Unidos sos
 [Human Rights Watch caracterizó](https://www.hrw.org/news/2026/08/19/us-sanctions-icc-president-tomoko-akane) las sanciones como un intento de proteger de la justicia a funcionarios estadounidenses e israelíes implicados en crímenes graves. Esa es una evaluación atribuida a HRW, no una motivación establecida judicialmente. Los hechos comprobados ya son graves: el gobierno estadounidense identificó a los funcionarios, desplegó sanciones financieras y declaró su intención de inducir a otros Estados a debilitar o abandonar la Corte.
 
 La [Unión Europea respondió el 19 de agosto](https://www.eeas.europa.eu/eeas/international-criminal-court-statement-high-representative-us-sanctions-against-president-and-senior_en) reiterando su apoyo a la CPI y afirmando que las sanciones contra la Corte y su personal socavan su labor. La declaración citada no anunció una nueva medida de bloqueo ni otra contramedida operativa. En este episodio, Washington desplegó coerción; la UE desplegó lenguaje. Es la escala de respuesta estatal en su forma más clara.
+
+El 9 de octubre, la campaña cruzó un umbral institucional. [OFAC incluyó a la propia Corte Penal Internacional en la lista de Nacionales Especialmente Designados](https://ofac.treasury.gov/recent-actions/20261009) y emitió únicamente licencias generales estrechas para ciertas transacciones, telecomunicaciones y software empresarial, pensiones y determinadas actividades relacionadas con detenidos. Rubio declaró que el propósito era prohibir transacciones con la Corte, cortarle recursos y paralizar su funcionamiento, y amenazó con desmantelarla «ladrillo por ladrillo» si no terminaba su alcance sobre estadounidenses. La [CPI rechazó la medida](https://www.icc-cpi.int/news/icc-strongly-rejects-us-sanctions-against-institution) como un ataque contra una institución independiente creada por 125 Estados Partes.
+
+Esto no demuestra que funcionarios estadounidenses tengan la intención de cometer atrocidades futuras. Sí demuestra que el gobierno reduce deliberadamente la capacidad práctica de la institución que podría investigar presuntos genocidio, crímenes de lesa humanidad o crímenes de guerra cuando exista una base territorial o de nacionalidad. En una [entrevista de DW News](https://www.youtube.com/watch?v=bgAAemIMHtk), el jurista Michael Lynk explicó que un nacional de un Estado no parte todavía puede quedar bajo la competencia territorial de la Corte por hechos presuntamente cometidos en un Estado Parte, sujeto a admisibilidad y complementariedad. Esa explicación es análisis experto, no sentencia oficial. La evidencia primaria es el objetivo declarado por Washington y la medida económica de OFAC contra la Corte como institución.
 
 ## Auditoría de credibilidad: las palabras de Rubio frente a sus actos
 
@@ -237,6 +241,10 @@ No pretendo observar este sistema desde afuera. En *Miedo* me incluí entre quie
 29. Senado de Estados Unidos, aprobación de S. 744, 27 de junio de 2013: <https://www.senate.gov/legislative/LIS/roll_call_votes/vote1131/vote_113_1_00168.htm>; ABC News, defensa del proyecto por Rubio, 14 de abril de 2013: <https://abcnews.com/blogs/politics/2013/04/marco-rubio-immigration-bill-doesnt-give-anything-away>; *The Guardian*, cambio posterior hacia una estrategia por etapas, 17 de mayo de 2015: <https://www.theguardian.com/us-news/2015/may/17/marco-rubio-comprehensive-immigration-reform>
 30. FactCheck.org, «Cruz, Rubio Twist Court “Precedent”», 16 de febrero de 2016: <https://www.factcheck.org/2016/02/cruz-rubio-twist-court-precedent/>; Senado de Estados Unidos, confirmación de Amy Coney Barrett, 26 de octubre de 2020: <https://www.senate.gov/legislative/LIS/roll_call_votes/vote1162/vote_116_2_00224.htm>
 31. Constitución anotada del Congreso, artículo II, sección 2, cláusula 2, cláusula de nombramientos: <https://constitution.congress.gov/browse/article-2/section-2/clause-2/>
+32. Departamento del Tesoro de Estados Unidos, OFAC, «International Criminal Court-related Designation; Issuance of International Criminal Court-related General Licenses», 9 de octubre de 2026: <https://ofac.treasury.gov/recent-actions/20261009>
+33. Departamento de Estado de Estados Unidos, «Imposing Sanctions on the International Criminal Court», 9 de octubre de 2026: <https://www.state.gov/releases/office-of-the-spokesman/2026/10/imposing-sanctions-on-the-international-criminal-court/>
+34. Corte Penal Internacional, «The ICC strongly rejects US sanctions against the institution», 9 de octubre de 2026: <https://www.icc-cpi.int/news/icc-strongly-rejects-us-sanctions-against-institution>
+35. DW News, «What’s behind the US attempt to shut down the International Criminal Court», entrevista con Michael Lynk, 10 de octubre de 2026: <https://www.youtube.com/watch?v=bgAAemIMHtk>
 
 ### Contexto autoral
 

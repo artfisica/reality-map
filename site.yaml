@@ -54,8 +54,8 @@ en:
   title_lines: ["The Civilian", "Geopolitical", "Reality Map"]
   short: Reality Map
   tagline: How to understand states by what they do, not what they declare
-  edition: 31 August 2026
-  version: "0.7.0"
+  edition: 11 October 2026
+  version: "0.8.0"
   description: >-
     A civilian framework for reading state conduct through instruments,
     dependencies and costs, with every factual claim classified and traced to a
@@ -324,8 +324,8 @@ es:
   title_lines: ["Mapa civil", "de la realidad", "geopolítica"]
   short: Mapa civil
   tagline: Cómo entender a los Estados por lo que hacen, no por lo que declaran
-  edition: 31 de agosto de 2026
-  version: "0.7.0"
+  edition: 11 de octubre de 2026
+  version: "0.8.0"
   description: >-
     Un marco civil para leer la conducta de los Estados a través de sus
     instrumentos, dependencias y costos, con cada afirmación clasificada y
