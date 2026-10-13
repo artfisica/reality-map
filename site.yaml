@@ -8,6 +8,12 @@ site:
   default_lang: en
   author: Arturo Sánchez Pineda
   author_url: "https://www.linkedin.com/in/arturo-sanchez-pineda/"
+  repo_url: "https://github.com/artfisica/reality-map"
+
+  # Bumped whenever atlas.css or atlas.js change without a new edition of the
+  # record, so browsers and GitHub Pages fetch the new interface while the
+  # edition version, the citations and the release tag stay untouched.
+  interface_version: "2026-10-13"
 
   # Classification matching runs in this order, most specific first. It is
   # deliberately not the display order: "Historical synthesis supported by UN
@@ -311,6 +317,66 @@ en:
     ai_anchor: authorship-and-ai-assistance
     mode_dark: Dark
     mode_light: Light
+    feed: Subscribe to changes
+    search_nav: Search
+
+  # Strings for the progressive-enhancement layer in assets/atlas.js. Every
+  # feature they describe is optional: with JavaScript off the text, the
+  # ledger and every source link still work.
+  interactive:
+    search_h: Search the atlas
+    search_hint: "Documents, sections and {n} claims. Press Ctrl K from any page."
+    search_placeholder: "Type a word, a place, a court…"
+    search_empty: Nothing matches that search.
+    search_documents: Documents
+    search_sections: Sections
+    search_claims: Claims
+    search_close: Close
+    search_open_ledger: Open the ledger
+    copy_link: Copy link
+    copied: Link copied
+    copy_citation: Copy citation
+    citation_copied: Citation copied
+    citation: "{author}, “{title}”, {site}, edition {edition} (v{version}), {url}"
+    claim_citation: "{author}, {site}, claim {ref} ({id}), edition {edition} (v{version}), {url}"
+    share: Share…
+    share_h: Pass this study on
+    share_lede: >-
+      Every link resolves to this edition of the record. Cite the version you
+      consulted; corrections are part of the method.
+    share_email: Email
+    share_bluesky: Bluesky
+    share_linkedin: LinkedIn
+    share_x: X
+    progress_label: Reading progress
+    continue_h: Continue reading
+    continue_pct: "{pct}% read"
+    continue_dismiss: Dismiss
+    new_edition: "The record has been revised. You last read edition {old}; this is {new}."
+    new_edition_link: See what changed
+    dismiss: Dismiss
+    trainer_eyebrow: Learn the six
+    trainer_h: Can you tell a finding from a position?
+    trainer_lede: >-
+      The whole method rests on reading the standing of a claim before
+      repeating it. Here is a claim from the ledger with its colour hidden.
+      What kind of evidence stands behind it?
+    trainer_start: Show me a claim
+    trainer_next: Another claim
+    trainer_right: Right.
+    trainer_wrong: Not quite.
+    trainer_was: "The ledger classifies it as"
+    trainer_score: "{right} of {total} so far"
+    trainer_open: Open this claim in the ledger
+    trainer_source: Open the source
+    trainer_note: >-
+      This is practice, not a test of the record. The classification is the
+      one the ledger assigns and can be read there at any time.
+    keys_prev: Previous document
+    keys_next: Next document
+    keys_search: Search the atlas
+    keys_ledger: Focus the ledger search
+    keys_h: Keyboard
 
 # --------------------------------------------------------------------------
 # Spanish edition, served from /es/
@@ -581,3 +647,62 @@ es:
     ai_anchor: responsabilidad-autoral-y-asistencia-de-inteligencia-artificial
     mode_dark: Oscuro
     mode_light: Claro
+    feed: Suscribirse a los cambios
+    search_nav: Buscar
+
+  # Cadenas de la capa de mejora progresiva en assets/atlas.js. Sin JavaScript
+  # el texto, el registro y todos los enlaces a las fuentes siguen funcionando.
+  interactive:
+    search_h: Buscar en el atlas
+    search_hint: "Documentos, secciones y {n} afirmaciones. Pulse Ctrl K desde cualquier página."
+    search_placeholder: "Escriba una palabra, un lugar, un tribunal…"
+    search_empty: Ninguna entrada coincide con esa búsqueda.
+    search_documents: Documentos
+    search_sections: Secciones
+    search_claims: Afirmaciones
+    search_close: Cerrar
+    search_open_ledger: Abrir el registro
+    copy_link: Copiar enlace
+    copied: Enlace copiado
+    copy_citation: Copiar cita
+    citation_copied: Cita copiada
+    citation: "{author}, «{title}», {site}, edición {edition} (v{version}), {url}"
+    claim_citation: "{author}, {site}, afirmación {ref} ({id}), edición {edition} (v{version}), {url}"
+    share: Compartir…
+    share_h: Haga circular este estudio
+    share_lede: >-
+      Cada enlace resuelve a esta edición del registro. Cite la versión que
+      consultó; las correcciones forman parte del método.
+    share_email: Correo
+    share_bluesky: Bluesky
+    share_linkedin: LinkedIn
+    share_x: X
+    progress_label: Progreso de lectura
+    continue_h: Continuar la lectura
+    continue_pct: "{pct}% leído"
+    continue_dismiss: Descartar
+    new_edition: "El registro ha sido revisado. Usted leyó por última vez la edición {old}; esta es la {new}."
+    new_edition_link: Ver qué cambió
+    dismiss: Descartar
+    trainer_eyebrow: Aprenda las seis
+    trainer_h: ¿Sabe distinguir una conclusión de una posición?
+    trainer_lede: >-
+      Todo el método descansa en leer el respaldo de una afirmación antes de
+      repetirla. Aquí hay una afirmación del registro con su color oculto.
+      ¿Qué tipo de evidencia la sostiene?
+    trainer_start: Mostrar una afirmación
+    trainer_next: Otra afirmación
+    trainer_right: Correcto.
+    trainer_wrong: No exactamente.
+    trainer_was: "El registro la clasifica como"
+    trainer_score: "{right} de {total} hasta ahora"
+    trainer_open: Abrir esta afirmación en el registro
+    trainer_source: Abrir la fuente
+    trainer_note: >-
+      Esto es práctica, no una prueba del registro. La clasificación es la que
+      asigna el registro y puede leerse allí en cualquier momento.
+    keys_prev: Documento anterior
+    keys_next: Documento siguiente
+    keys_search: Buscar en el atlas
+    keys_ledger: Ir a la búsqueda del registro
+    keys_h: Teclado

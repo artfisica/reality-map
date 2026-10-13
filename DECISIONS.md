@@ -46,3 +46,39 @@ is an individual reading of the method or of a case study.
 Individual article readings in English and Spanish remain planned work. They
 must not be advertised, attached to an article or described as verbatim until
 the corresponding complete recording has been produced from the current text.
+
+## 5. Interface changes between editions
+
+The edition version belongs to the record: it is what a citation resolves to
+and what the content files declare in their heads, which `validate.py` checks.
+Changes that touch only `assets/atlas.css` and `assets/atlas.js` are therefore
+versioned separately through `site.interface_version`, which the build appends
+to the asset URLs for cache busting. An interface-only release may be published
+without a new edition version or tag; its changelog section is headed
+`Interface YYYY-MM-DD`, matching `interface_version`, and that heading is its
+permanent id in `feed.xml`. A release that changes the record bumps the
+edition version as before and may update `interface_version` as well. A
+section headed `Unreleased` is a draft and is excluded from the feed, so an
+id never changes once published.
+
+## 6. What the interactive layer may and may not do
+
+Every control added in October 2026 is progressive enhancement over complete
+pages. The constraints it must keep:
+
+- No third-party request. The share links are plain intents that request
+  nothing until the reader chooses a destination; the search index is this
+  site's own `atlas.json`.
+- No state leaves the browser. Reading position, the last document and the
+  edition last seen live in `localStorage` under versioned keys, like the audio
+  position before them.
+- Colour still means evidence class only. The trainer hides the colour until
+  the reader has answered, then shows the ledger's classification; the
+  interface itself is ink on paper.
+- The trainer never grades the record. It shows the ledger's own
+  classification and note; a disagreement is a reason to read the ledger row,
+  not a score.
+- A browser-side read-aloud (SpeechSynthesis) was considered and not added:
+  decision 4 says a recording may be described as a reading only when
+  produced from the current text, and a synthetic voice over the live page
+  would need its own wording in both editions before it is offered.

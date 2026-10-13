@@ -22,3 +22,10 @@ jobs:
         run: python scripts/validate.py --strict
       - name: Check every internal link resolves
         run: python scripts/check_links.py
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - name: Exercise the interface layer against the built pages
+        run: npm run test:interface

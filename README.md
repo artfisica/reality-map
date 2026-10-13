@@ -91,6 +91,43 @@ paste, with the duration already measured. Paste it under the document's
 `method:` or `studies:` entry; `validate.py` fails the build if the file is
 missing or assigned twice.
 
+## The interactive layer
+
+`assets/atlas.js` enhances pages that are already complete. With JavaScript off
+the text, the ledger and every source link work; nothing loads from a third
+party and nothing leaves the reader's browser. What it adds:
+
+- **Search the atlas** — the Search button, `Ctrl K` (`⌘ K`) or `/` on any
+  page except the ledger, where `/` focuses the ledger search. Indexes
+  documents, section headings and claims of the current edition from
+  `atlas.json`, fetched from this domain when first opened.
+- **Learn the six** on the cover — a random ledger claim with its colour
+  hidden; choose a class, then read the ledger's classification and note.
+- **Reading progress** — a thin rule at the top of each document and a
+  *Continue reading* card on the cover that returns to where the reader
+  stopped. The page never scrolls on its own.
+- **Pass this study on** — copy link, copy citation (edition and version
+  included), native share, and plain intent links for email, Bluesky, LinkedIn
+  and X. The ledger adds the same per claim.
+- **Shareable ledger views** — `/ledger/?q=icc&class=court,record` restores
+  the search and filters; `/ledger/#class=finding` still works.
+- **Mosaic cards, linked map pins, a revised-record notice** for readers who
+  return after the edition changed, and `←` `→` to step through the series.
+- **`feed.xml`** — an Atom feed of `CHANGELOG.md`, linked from every page.
+  Dates come from the release headings, so the build is reproducible; the
+  deploy workflow builds twice and compares.
+
+Interface strings live under `interactive` for each language in `site.yaml`
+and are passed to the script through a JSON block in the page, so there is no
+second request for them. Bump `site.interface_version` whenever `atlas.css` or
+`atlas.js` change without a new edition; the build appends it to the asset
+URLs.
+
+```bash
+npm ci
+npm run test:interface     # jsdom smoke test of every enhancement, after build.py
+```
+
 ## Checks
 
 ```bash

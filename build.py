@@ -23,7 +23,7 @@ import sys
 from dataclasses import dataclass, field
 from datetime import date
 from pathlib import Path
-from urllib.parse import urlsplit
+from urllib.parse import quote, urlsplit
 
 try:
     import markdown
@@ -465,6 +465,8 @@ def chrome(L: dict, alt: dict, prefix: str, active: str, alt_url: str) -> str:
   <a class="nav__home{' is-active' if active == 'home' else ''}" href="{base}">
     <span class="nav__mark" aria-hidden="true"></span><span>{e(L['short'])}</span></a>
   <div class="nav__links">{links}</div>
+  <button class="nav__search" type="button" data-search-open hidden
+    aria-keyshortcuts="Control+K Meta+K">{e(t(ui, 'search_nav'))}<kbd aria-hidden="true">K</kbd></button>
   <a class="nav__lang" href="{alt_url}" lang="{alt['code']}" hreflang="{alt['code']}">{e(alt['label'])}</a>
   <button class="nav__mode" type="button" data-mode-toggle
     data-dark="{e(t(ui, 'mode_dark'))}" data-light="{e(t(ui, 'mode_light'))}"
@@ -474,10 +476,27 @@ def chrome(L: dict, alt: dict, prefix: str, active: str, alt_url: str) -> str:
 
 def shell(L: dict, alt: dict, *, title: str, description: str, depth: int, body: str,
           active: str = "", page: str = "", alt_url: str = "", path: str = "",
-          alt_path: str = "", audio_src: str = "") -> str:
+          alt_path: str = "", audio_src: str = "", doc_key: str = "",
+          doc_title: str = "") -> str:
     prefix = "../" * depth
     ui = L["ui"]
     lang_base = prefix + (L["dir"] + "/" if L["dir"] else "")
+    # Everything atlas.js needs to enhance a page without a second request:
+    # interface strings, the evidence classes and where the shared assets live.
+    # The page stays complete without it.
+    config = {
+        "lang": L["code"], "version": L["version"], "edition": L["edition"],
+        "interface": L["interface_version"], "root": prefix,
+        "home": lang_base, "ledger": f'{lang_base}{L["ledger"]["slug"]}/',
+        "atlas": f"{prefix}atlas.json", "canonical": f'{L["base_url"].rstrip("/")}/{path.lstrip("/")}',
+        "changelog": f'{L["repo_url"]}/blob/main/CHANGELOG.md',
+        "site": L["title"], "short": L["short"], "author": L.get("author", ""),
+        "doc": doc_key, "title": doc_title or title,
+        "strings": L.get("interactive", {}),
+        "classes": [{"id": c["id"], "name": c["name"], "full": c["full"], "note": c["note"]}
+                    for c in L["evidence_classes"]],
+    }
+    config_json = json.dumps(config, ensure_ascii=False).replace("</", "<\\/")
     ai_href = f'{lang_base}{L["method"]["slug"]}/#{t(ui, "ai_anchor")}'
     site_base = L["base_url"].rstrip("/")
     canonical = f'{site_base}/{path.lstrip("/")}'
@@ -509,11 +528,12 @@ def shell(L: dict, alt: dict, *, title: str, description: str, depth: int, body:
 <link rel="alternate" hreflang="{L['code']}" href="{canonical}">
 <link rel="alternate" hreflang="{alt['code']}" href="{alt_abs}">
 <link rel="alternate" hreflang="x-default" href="{site_base}/">
-<link rel="stylesheet" href="{prefix}assets/atlas.css?v={e(L['version'])}">
+<link rel="stylesheet" href="{prefix}assets/atlas.css?v={e(L['assets_v'])}">
 <link rel="icon" href="{prefix}assets/mark.svg" type="image/svg+xml">
+<link rel="alternate" type="application/atom+xml" title="{e(L['short'])}" href="{prefix}feed.xml">
 <script>(function(){{try{{var m=localStorage.getItem('rm-mode');if(m)document.documentElement.dataset.mode=m;}}catch(e){{}}}})();</script>
 </head>
-<body class="{page}">
+<body class="{page}"{f' data-doc="{e(doc_key)}"' if doc_key else ''}>
 <a class="skip" href="#main">{e(t(ui, 'skip'))}</a>
 {chrome(L, alt, prefix, active, alt_url)}
 <main id="main">
@@ -525,11 +545,14 @@ def shell(L: dict, alt: dict, *, title: str, description: str, depth: int, body:
       <p class="foot__meta">{e(L['edition'])} \u00b7 v{e(L['version'])}</p></div>
     <div><p class="foot__meta">{author_sentence(L, t(ui, 'foot_1'))}</p>
       <p class="foot__meta">{e(t(ui, 'foot_2'))}</p>
-      <p class="foot__meta"><a class="foot__link" href="{ai_href}">{e(t(ui, 'foot_ai'))}</a></p></div>
+      <p class="foot__meta"><a class="foot__link" href="{ai_href}">{e(t(ui, 'foot_ai'))}</a></p>
+      <p class="foot__meta"><a class="foot__link" href="{prefix}feed.xml" type="application/atom+xml">{e(t(ui, 'feed'))}</a>
+        \u00b7 <a class="foot__link" href="{e(L['repo_url'])}" rel="noopener">GitHub</a></p></div>
   </div>
   <p class="foot__rule">&copy; {date.today().year} {author_link(L)}</p>
 </footer>
-<script src="{prefix}assets/atlas.js?v={e(L['version'])}" defer></script>
+<script type="application/json" id="rm-config">{config_json}</script>
+<script src="{prefix}assets/atlas.js?v={e(L['assets_v'])}" defer></script>
 </body>
 </html>"""
 
@@ -722,7 +745,8 @@ def render_map(L, alt, geo, alt_url, path, alt_path):
         label = f'{place["numeral"]} \u00b7 {place["name"]}'
         pins.append(
             f'<a class="map-pin" href="{href}" aria-label="{e(label)}" '
-            f'data-label="{e(place["name"])}" style="--map-x:{px:.3f}%;'
+            f'data-label="{e(place["name"])}" data-status="{e(place["status"])}" '
+            f'data-numeral="{e(place["numeral"])}" style="--map-x:{px:.3f}%;'
             f'--map-y:{py:.3f}%;--map-dx:{dx}px;--map-dy:{dy}px">'
             f'<span aria-hidden="true">{e(place["numeral"])}</span></a>')
         groups.setdefault(place["numeral"], []).append(place)
@@ -732,7 +756,7 @@ def render_map(L, alt, geo, alt_url, path, alt_path):
             f'<li class="place"><span class="place__n">{e(p["name"])}</span>'
             f'<span class="place__s">{e(p["status"])}</span></li>' for p in places)
         rows.append(
-            f'<div class="legend__group">'
+            f'<div class="legend__group" data-numeral="{e(numeral)}">'
             f'<a class="legend__study" href="{base}{L["studies_dir"]}/{by_numeral[numeral]}/">'
             f'<span class="legend__num">{e(numeral)}</span>'
             f'<span>{e(t(ui, "case_study"))} {e(numeral)}</span></a>'
@@ -822,6 +846,8 @@ def render_home(L, alt, method, studies, sections, claims, standfirst, alt_url, 
   </div>
 </header>
 
+<section class="continue" data-continue hidden></section>
+
 <section class="position">
   <p class="eyebrow">{e(t(ui, 'position_label'))}</p>
   <div class="position__text">{standfirst}</div>
@@ -839,6 +865,8 @@ def render_home(L, alt, method, studies, sections, claims, standfirst, alt_url, 
   <a class="cta" href="{L['ledger']['slug']}/">{e(t(ui, 'open_ledger'))}
     <span aria-hidden="true">&#8250;</span></a>
 </section>
+
+{trainer_html(L)}
 
 <section class="register">
   <div class="register__head">
@@ -865,6 +893,41 @@ def render_home(L, alt, method, studies, sections, claims, standfirst, alt_url, 
     return shell(L, alt, title=L["title"], description=L["description"], depth=depth,
                  body=body, active="home", page="page-home", alt_url=alt_url,
                  path=path, alt_path=alt_path)
+
+
+def trainer_html(L: dict) -> str:
+    """Active recall on the six classes. Hidden until atlas.js has the ledger
+    index; the classification shown is always the one the ledger assigns."""
+    S, classes = L.get("interactive", {}), L["evidence_classes"]
+    choices = "".join(
+        f'<button class="trainer__choice" type="button" data-choice="{c["id"]}">'
+        f'<span class="trainer__swatch stamp--{c["id"]}" aria-hidden="true"></span>'
+        f'<span class="trainer__name">{e(c["name"])}</span>'
+        f'<span class="trainer__full">{e(c["full"])}</span></button>' for c in classes)
+    return f"""<section class="trainer" data-trainer hidden>
+  <div class="trainer__head">
+    <p class="eyebrow">{e(S.get('trainer_eyebrow', ''))}</p>
+    <h2 class="h-lg">{e(S.get('trainer_h', ''))}</h2>
+    <p class="lede">{e(S.get('trainer_lede', ''))}</p>
+  </div>
+  <div class="trainer__card">
+    <p class="trainer__ref" data-trainer-ref aria-live="polite"></p>
+    <p class="trainer__claim" data-trainer-claim></p>
+    <div class="trainer__choices" data-trainer-choices>{choices}</div>
+    <div class="trainer__result" data-trainer-result hidden>
+      <p class="trainer__verdict" data-trainer-verdict></p>
+      <p class="trainer__answer"><span>{e(S.get('trainer_was', ''))}</span> <span data-trainer-answer></span></p>
+      <p class="trainer__note" data-trainer-note></p>
+      <p class="trainer__links"><a data-trainer-open href="#">{e(S.get('trainer_open', ''))} <span aria-hidden="true">&#8250;</span></a>
+        <a data-trainer-source href="#" target="_blank" rel="noopener noreferrer" hidden>{e(S.get('trainer_source', ''))} <span aria-hidden="true">&#8250;</span></a></p>
+    </div>
+    <div class="trainer__foot">
+      <button class="cta cta--btn" type="button" data-trainer-next>{e(S.get('trainer_start', ''))}</button>
+      <p class="trainer__score" data-trainer-score aria-live="polite"></p>
+    </div>
+  </div>
+  <p class="note">{e(S.get('trainer_note', ''))}</p>
+</section>"""
 
 
 def render_method_map(L: dict) -> str:
@@ -1089,13 +1152,36 @@ def render_doc(L, alt, doc, claims, kind, prev, nxt, alt_url, alt_path):
     <div class="prose">{doc.body_html}</div>
   </div>
   {sources_html(doc, ui)}
+  {share_html(L, doc)}
   {series}
 </article>"""
     return shell(L, alt, title=doc.title, description=doc.subtitle or L["description"],
                  depth=doc.depth, body=body,
                  active="method" if kind == "method" else doc.slug,
                  page="page-doc", alt_url=alt_url, path=doc.url, alt_path=alt_path,
-                 audio_src=doc.audio.get("src", ""))
+                 audio_src=doc.audio.get("src", ""),
+                 doc_key=f'{L["code"]}:{doc.slug}', doc_title=doc.title)
+
+
+def share_html(L: dict, doc) -> str:
+    """Hand the study on. Plain intent links: nothing loads from a third
+    party until the reader chooses a destination. atlas.js adds copy, native
+    share and a citation button in front of these."""
+    S = L.get("interactive", {})
+    url = f'{L["base_url"].rstrip("/")}/{doc.url}'
+    text = f'{doc.title} \u2014 {L["short"]}'
+    q = quote(f"{text} {url}")
+    return f"""<aside class="share" data-share aria-label="{e(S.get('share_h', 'Share'))}">
+  <div class="share__head"><p class="eyebrow">{e(S.get('share_h', ''))}</p>
+    <p class="share__lede">{e(S.get('share_lede', ''))}</p></div>
+  <div class="share__row" data-share-row>
+    <a class="share__btn" href="mailto:?subject={quote(text)}&amp;body={q}">{e(S.get('share_email', 'Email'))}</a>
+    <a class="share__btn" href="https://bsky.app/intent/compose?text={q}" rel="noopener noreferrer" target="_blank">{e(S.get('share_bluesky', 'Bluesky'))}</a>
+    <a class="share__btn" href="https://www.linkedin.com/sharing/share-offsite/?url={quote(url)}" rel="noopener noreferrer" target="_blank">{e(S.get('share_linkedin', 'LinkedIn'))}</a>
+    <a class="share__btn" href="https://x.com/intent/post?text={quote(text)}&amp;url={quote(url)}" rel="noopener noreferrer" target="_blank">{e(S.get('share_x', 'X'))}</a>
+  </div>
+  <p class="share__status" data-share-status aria-live="polite"></p>
+</aside>"""
 
 
 def render_ledger(L, alt, intro, sections, outro, claims, section_study, alt_url,
@@ -1120,12 +1206,15 @@ def render_ledger(L, alt, intro, sections, outro, claims, section_study, alt_url
     for sec in sections:
         rows = []
         for c in sec["claims"]:
+            # The source cell is itself a markdown link; strip its anchor so the
+            # row does not nest <a> inside <a>, which browsers silently split.
+            label = re.sub(r"</?a\b[^>]*>", "", c.source_html)
             src = (f'<a class="claim__source" target="_blank" rel="noopener noreferrer" '
-                   f'href="{e(c.source_url)}">{c.source_html} '
+                   f'href="{e(c.source_url)}">{label} '
                    f'<span aria-hidden="true">&#8250;</span></a>' if c.source_url
                    else f'<span class="claim__source">{c.source_html}</span>')
-            rows.append(f"""<li class="claim" id="{c.cid}" data-class="{c.class_id}"
-     data-text="{e((c.claim_text + ' ' + c.classification).lower())}">
+            rows.append(f"""<li class="claim" id="{c.cid}" data-class="{c.class_id}" data-ref="{c.ref}"
+     data-text="{e((c.claim_text + ' ' + c.classification + ' ' + c.cid).lower())}">
   <div class="claim__top"><a class="claim__ref" href="#{c.cid}"
       title="{e(c.cid)}">{c.ref}</a>
     <p class="claim__text">{c.claim_html}</p></div>
@@ -1195,6 +1284,9 @@ def build_lang(cfg, code: str) -> dict:
     L["author"] = cfg["site"]["author"]
     L["author_url"] = cfg["site"].get("author_url", "")
     L["base_url"] = cfg["site"]["base_url"]
+    L["repo_url"] = cfg["site"].get("repo_url", "")
+    L["interface_version"] = str(cfg["site"].get("interface_version", ""))
+    L["assets_v"] = L["version"] + ("-" + L["interface_version"] if L["interface_version"] else "")
     alt = dict(cfg[L["other"]])
     base = (L["dir"] + "/") if L["dir"] else ""
     abase = (alt["dir"] + "/") if alt["dir"] else ""
@@ -1279,17 +1371,93 @@ def build_lang(cfg, code: str) -> dict:
                         f'{base}{L["ledger"]["slug"]}/',
                         f'{abase}{alt["ledger"]["slug"]}/'))
 
+    def headings(tokens, depth=0):
+        out = []
+        for tok in tokens:
+            if tok["level"] >= 2:
+                out.append({"id": tok["id"], "text": re.sub(r"<[^>]+>", "", tok["name"]),
+                            "level": tok["level"]})
+            out += headings(tok.get("children", []), depth + 1)
+        return out
+
     return {"lang": code, "problems": problems, "documents": [
         {"slug": d.slug, "title": d.title, "url": d.url, "words": d.words,
-         "audio": d.audio or None,
+         "kind": "method" if d is method else "study", "numeral": d.numeral or "",
+         "audio": d.audio or None, "headings": headings(d.toc),
          "sources": [{"n": s.n, "issuer": s.issuer, "url": s.url} for s in d.sources]}
         for d in [method] + studies],
+        "ledger": f'{base}{L["ledger"]["slug"]}/',
         "claims": [{"id": c.cid, "semantic_id": c.semantic, "ref": c.ref,
-                    "file": c.section, "class": c.class_id,
+                    "file": c.section, "section": c.section_slug, "class": c.class_id,
                     "classification": c.classification, "claim": c.claim_text,
                     "source": c.source_url} for c in claims],
         "urls": [base or ""] + [u for u, _ in order]
                 + [f'{base}{L["audio"]["slug"]}/', f'{base}{L["map"]["slug"]}/']}
+
+
+def render_feed(cfg: dict, base: str) -> str:
+    """An Atom feed of CHANGELOG.md, so a reader can follow corrections
+    without a tracker on either side. One entry per release heading.
+
+    Reproducible by construction: every timestamp comes from the date written
+    in a heading, never from the clock, and every id is a tag: URI derived
+    from the heading, so rebuilding the site does not make the feed look
+    newly updated and a reader's client does not see old entries as new.
+    """
+    from datetime import datetime, timezone
+    text = (ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
+    parts = re.split(r"^## +", text, flags=re.M)[1:]
+    host = urlsplit(base).netloc
+    tag_path = urlsplit(base).path.strip("/") or "atlas"
+    months = {m: i for i, m in enumerate(
+        ["january", "february", "march", "april", "may", "june", "july",
+         "august", "september", "october", "november", "december"], start=1)}
+
+    def heading_date(head: str):
+        m = re.search(r"(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})", head)
+        if not m or m.group(2).lower() not in months:
+            return None
+        return datetime(int(m.group(3)), months[m.group(2).lower()], int(m.group(1)),
+                        tzinfo=timezone.utc)
+
+    # A heading without a date (a draft section) inherits the date of the
+    # release beneath it, so a draft never claims to be newer than it is.
+    headed = []
+    for part in parts:
+        head, _, body = part.partition("\n")
+        headed.append((head.strip(), body, heading_date(head)))
+    for i in range(len(headed) - 1, -1, -1):
+        if headed[i][2] is None:
+            later = [h[2] for h in headed[i + 1:] if h[2]]
+            headed[i] = (headed[i][0], headed[i][1], later[0] if later else None)
+
+    entries, latest = [], ""
+    for head, body, when in headed:
+        version = head.split("\u2014")[0].strip()
+        # Only a release has a permanent identifier: an edition number or an
+        # interface date. A draft section ("Unreleased") would change its id
+        # on release and show twice in a reader, so it is left out.
+        if when is None or not re.fullmatch(r"\d+(\.\d+)+|[Ii]nterface \d{4}-\d{2}-\d{2}", version):
+            continue
+        iso = when.isoformat().replace("+00:00", "Z")
+        slug = re.sub(r"[^a-z0-9.]+", "-", version.lower()).strip("-")
+        entry_id = f"tag:{host},{when.year}:{tag_path}/changelog/{slug}"
+        latest = max(latest, iso)
+        html = make_md().convert(body.strip())
+        entries.append(
+            f"  <entry>\n    <title>{e(cfg['en']['short'])} {e(head)}</title>\n"
+            f"    <id>{e(entry_id)}</id>\n"
+            f"    <link href=\"{base}/\"/>\n    <updated>{iso}</updated>\n"
+            f"    <content type=\"html\">{e(html)}</content>\n  </entry>")
+    return (
+        '<?xml version="1.0" encoding="utf-8"?>\n'
+        '<feed xmlns="http://www.w3.org/2005/Atom">\n'
+        f"  <title>{e(cfg['en']['title'])}</title>\n"
+        f"  <subtitle>{e(cfg['en']['tagline'])}</subtitle>\n"
+        f'  <link href="{base}/"/>\n  <link rel="self" href="{base}/feed.xml"/>\n'
+        f"  <id>tag:{e(host)},2026:{e(tag_path)}/changelog</id>\n  <updated>{latest}</updated>\n"
+        f"  <author><name>{e(cfg['site']['author'])}</name></author>\n"
+        + "\n".join(entries) + "\n</feed>\n")
 
 
 def main() -> int:
@@ -1322,6 +1490,7 @@ def main() -> int:
     write(OUT / "atlas.json", json.dumps(data, indent=2, ensure_ascii=False))
 
     base = cfg["site"]["base_url"].rstrip("/")
+    write(OUT / "feed.xml", render_feed(cfg, base))
     write(OUT / "sitemap.xml",
           '<?xml version="1.0" encoding="UTF-8"?>\n'
           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'

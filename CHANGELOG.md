@@ -4,6 +4,59 @@ Editions are dated and versioned together. When a court rules, a policy changes
 or new primary evidence appears, the ledger row is updated first and the change
 is recorded here.
 
+## Interface 2026-10-13 — 13 October 2026
+
+An interface release, named by `site.interface_version`. The record is unchanged: 88 matched claims, edition 11 October 2026, tag
+`v0.8.0`. This release only changes how the published pages can be read, shared
+and searched. Every addition is progressive enhancement; with JavaScript off the
+text, the ledger and every source link still work as before. Nothing is loaded
+from a third party and nothing leaves the reader's browser.
+
+- Added a site-wide search (the **Search** button, `Ctrl K` or `/`) over
+  documents, section headings and all claims in the reader's edition, built
+  from `atlas.json` and fetched from this domain only when opened.
+- Added **Learn the six** to the cover: a ledger claim shown with its colour
+  hidden, the six classes to choose from, and the ledger's own classification
+  and note revealed afterwards. Practice, not a test of the record.
+- Added a reading-progress rule to every document and a *Continue reading*
+  card on the cover that returns to the last document and position. The page
+  itself never scrolls the reader without being asked. State is kept in the
+  browser under a versioned key, as the audio position is.
+- Added *Pass this study on* to every document: copy the link, copy a citation
+  that names the edition and version, native share where the device offers it,
+  and plain intent links for email, Bluesky, LinkedIn and X that request
+  nothing until the reader chooses one.
+- The ledger keeps the current search and filters in the URL
+  (`/ledger/?q=icc&class=court`), so a view can be handed to someone else, and
+  every claim row gains *Copy link*, *Copy citation* and native share.
+- Hovering or focusing a mosaic tile on the cover shows the claim, its
+  reference and its evidence class in a card instead of a browser tooltip.
+- On the map, a pin and its legend entry highlight each other, and the pin
+  label now carries the status the record supports.
+- A reader returning after the edition has changed sees a one-line notice
+  naming the edition they last read and this one, with a link to this file.
+- Added `feed.xml`, an Atom feed generated from this changelog, so corrections
+  can be followed without a tracker on either side; linked from every page.
+  Every timestamp comes from the date in a release heading and every entry id
+  is a stable `tag:` URI, so rebuilding the site cannot make the feed look
+  newly updated; the deploy workflow builds twice and fails if the feed
+  differs.
+- `atlas.json` now lists each document's section headings and each claim's
+  ledger section.
+- Fixed the ledger source link, which nested one anchor inside another.
+- Added `site.interface_version`, used to version `atlas.css` and `atlas.js`
+  so the interface can change between editions without moving the edition
+  version, the citations or the release tag. An interface release is headed
+  `Interface YYYY-MM-DD` here; that heading is its permanent feed identifier.
+  Sections headed `Unreleased` never enter the feed.
+- Added `scripts/test_interface.mjs`, a jsdom smoke test that exercises every
+  enhancement against the built pages in both editions. Both workflows run it
+  after the link check, so a push to `main` cannot deploy an interface the
+  test has not passed.
+- The search dialog exposes its state to assistive technology: the input is a
+  combobox and the highlighted result is announced through
+  `aria-activedescendant`.
+
 ## 0.8.0 — 11 October 2026
 
 - Replaced the initial anonymous-source description of the oil arrangement with

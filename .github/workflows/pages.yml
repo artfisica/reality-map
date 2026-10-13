@@ -8,6 +8,9 @@ on:
       - 'assets/**'
       - 'build.py'
       - 'site.yaml'
+      - 'CHANGELOG.md'
+      - 'package.json'
+      - 'package-lock.json'
       - 'requirements.txt'
       - 'scripts/**'
       - '.github/workflows/pages.yml'
@@ -44,6 +47,22 @@ jobs:
 
       - name: Check every internal link resolves
         run: python scripts/check_links.py
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - run: npm ci
+
+      - name: Exercise the interface layer against the built pages
+        run: npm run test:interface
+
+      - name: Check the feed is reproducible
+        run: |
+          cp docs/feed.xml /tmp/feed.first.xml
+          python build.py
+          cmp /tmp/feed.first.xml docs/feed.xml
 
       - uses: actions/configure-pages@v5
 
