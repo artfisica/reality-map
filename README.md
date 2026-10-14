@@ -3,7 +3,7 @@
 A bilingual static site for the manual, the six case studies and the claim and
 source ledger. English at the root, Spanish under `/es/`.
 
-The audio edition lives at `/listen/` and `/es/escuchar/`. Version 0.8.0
+The audio edition lives at `/listen/` and `/es/escuchar/`. Version 0.9.0
 publishes one project-level podcast in each language: the 18:10 English
 recording appears only in the English edition, and the 40:20 Spanish recording
 appears only in the Spanish edition. Neither is presented as the reading of an
@@ -97,6 +97,10 @@ missing or assigned twice.
 the text, the ledger and every source link work; nothing loads from a third
 party and nothing leaves the reader's browser. What it adds:
 
+- **Trace the evidence** on the cover — two question-led, step-by-step paths
+  through the Canelón/Pulido transfer record and the Venezuelan oil-control
+  record. Claim text, class, source and permitted wording come from stable
+  ledger ids. With JavaScript off, the complete ordered paths remain visible.
 - **Search the atlas** — the Search button, `Ctrl K` (`⌘ K`) or `/` on any
   page except the ledger, where `/` focuses the ledger search. Indexes
   documents, section headings and claims of the current edition from

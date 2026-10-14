@@ -13,7 +13,7 @@ site:
   # Bumped whenever atlas.css or atlas.js change without a new edition of the
   # record, so browsers and GitHub Pages fetch the new interface while the
   # edition version, the citations and the release tag stay untouched.
-  interface_version: "2026-10-13"
+  interface_version: "2026-10-14"
 
   # Classification matching runs in this order, most specific first. It is
   # deliberately not the display order: "Historical synthesis supported by UN
@@ -60,8 +60,8 @@ en:
   title_lines: ["The Civilian", "Geopolitical", "Reality Map"]
   short: Reality Map
   tagline: How to understand states by what they do, not what they declare
-  edition: 11 October 2026
-  version: "0.8.0"
+  edition: 14 October 2026
+  version: "0.9.0"
   description: >-
     A civilian framework for reading state conduct through instruments,
     dependencies and costs, with every factual claim classified and traced to a
@@ -320,6 +320,76 @@ en:
     feed: Subscribe to changes
     search_nav: Search
 
+  evidence_paths:
+    eyebrow: Trace the evidence
+    title: Watch the conclusion change
+    lede: >-
+      Start with a question, then move through the record in the order the
+      evidence appeared. Every step comes directly from a classified ledger
+      claim; the final step is only as strong as its label.
+    step: "Step {current} of {total}"
+    previous: Previous step
+    next: Next step
+    ledger: Open the ledger claim
+    source: Source record
+    permitted: What the evidence permits
+    paths:
+      - id: transfers
+        title: Was Canelón extradited—or transferred another way?
+        summary: >-
+          Begin with the US court record, then see how Pulido changes an
+          isolated maritime mystery into a possible repeated channel.
+        steps:
+          - claim: VEN-CANELON-US-CUSTODY
+            date: 2 October 2026
+            turn: A Venezuelan reaches a US court. The accusation is not a conviction.
+          - claim: VEN-CANELON-MARITIME-UNKNOWN
+            date: October 2026
+            turn: The FBI supplies a maritime location, but not the jurisdictional facts.
+          - claim: VEN-CANELON-NONEXTRADITION
+            date: Governing law
+            turn: Article 69 makes Venezuelan custody and delivery the decisive missing facts.
+          - claim: VEN-PULIDO-US-CUSTODY
+            date: 13 October 2026
+            turn: A second defendant appears in Florida after unnamed international coordination.
+          - claim: VEN-PULIDO-TRANSFER-ATTRIBUTED
+            date: 13 October 2026
+            turn: Reporting places Pulido in Venezuelan imprisonment until his transfer.
+          - claim: VEN-TRANSFER-CHANNEL-INFERENCE
+            date: Current assessment
+            turn: Repetition strengthens the channel hypothesis without proving a shared route.
+      - id: oil-control
+        title: Who controls Venezuelan oil?
+        summary: >-
+          Follow the record from a headline agreement to published official
+          claims, implementation, institutional challenge and the clauses
+          that remain hidden.
+        steps:
+          - claim: VEN-OIL-DEAL-ANNOUNCEMENT-20260828
+            date: 28 August 2026
+            turn: Two governments announce scale and projected benefits, not the operative clauses.
+          - claim: VEN-OIL-NABEP-OFFICIAL-TERMS
+            date: 31 August 2026
+            turn: Washington names the company and claims equity, purchase and governance rights.
+          - claim: VEN-OIL-GAZETTE-SUPPORT
+            date: 1 September 2026
+            turn: Parliament publishes its political support, but not the bargain it supports.
+          - claim: VEN-OIL-25-100-UNRESOLVED
+            date: 7 September 2026
+            turn: The 25- and 100-year descriptions cannot both be read as the same vested term.
+          - claim: VEN-OIL-GL52C
+            date: 14 September 2026
+            turn: Implementation advances through sanctions law without revealing the contract.
+          - claim: VEN-OIL-SENATE-AUTHORITY-CHALLENGE
+            date: 30 September 2026
+            turn: Senior senators formally question the US statutory authority; no court has ruled.
+          - claim: VEN-OIL-OVERSIGHT-GAP
+            date: 2 October 2026
+            turn: Congress receives one document, but the public still cannot inspect it.
+          - claim: VEN-OIL-DEAL-DISCLOSURE-GAP
+            date: 14 October 2026
+            turn: The controlling instruments still set the boundary of what can honestly be claimed.
+
   # Strings for the progressive-enhancement layer in assets/atlas.js. Every
   # feature they describe is optional: with JavaScript off the text, the
   # ledger and every source link still work.
@@ -390,8 +460,8 @@ es:
   title_lines: ["Mapa civil", "de la realidad", "geopolítica"]
   short: Mapa civil
   tagline: Cómo entender a los Estados por lo que hacen, no por lo que declaran
-  edition: 11 de octubre de 2026
-  version: "0.8.0"
+  edition: 14 de octubre de 2026
+  version: "0.9.0"
   description: >-
     Un marco civil para leer la conducta de los Estados a través de sus
     instrumentos, dependencias y costos, con cada afirmación clasificada y
@@ -649,6 +719,76 @@ es:
     mode_light: Claro
     feed: Suscribirse a los cambios
     search_nav: Buscar
+
+  evidence_paths:
+    eyebrow: Siga la evidencia
+    title: Observe cómo cambia la conclusión
+    lede: >-
+      Comience con una pregunta y recorra el expediente en el orden en que
+      apareció la evidencia. Cada paso procede directamente de una afirmación
+      clasificada; el paso final solo es tan fuerte como su etiqueta.
+    step: "Paso {current} de {total}"
+    previous: Paso anterior
+    next: Paso siguiente
+    ledger: Abrir la afirmación en el registro
+    source: Fuente del expediente
+    permitted: Lo que la evidencia permite
+    paths:
+      - id: transfers
+        title: ¿Canelón fue extraditado o trasladado por otra vía?
+        summary: >-
+          Parta del expediente judicial estadounidense y observe cómo Pulido
+          convierte un misterio marítimo aislado en un posible canal repetido.
+        steps:
+          - claim: VEN-CANELON-US-CUSTODY
+            date: 2 de octubre de 2026
+            turn: Un venezolano llega a un tribunal estadounidense. La acusación no es condena.
+          - claim: VEN-CANELON-MARITIME-UNKNOWN
+            date: Octubre de 2026
+            turn: El FBI aporta un lugar marítimo, pero no los hechos jurisdiccionales.
+          - claim: VEN-CANELON-NONEXTRADITION
+            date: Derecho aplicable
+            turn: El artículo 69 convierte custodia y entrega venezolanas en los hechos decisivos ausentes.
+          - claim: VEN-PULIDO-US-CUSTODY
+            date: 13 de octubre de 2026
+            turn: Un segundo acusado aparece en Florida tras coordinación internacional no identificada.
+          - claim: VEN-PULIDO-TRANSFER-ATTRIBUTED
+            date: 13 de octubre de 2026
+            turn: Los reportes sitúan a Pulido preso en Venezuela hasta su traslado.
+          - claim: VEN-TRANSFER-CHANNEL-INFERENCE
+            date: Evaluación actual
+            turn: La repetición fortalece la hipótesis del canal sin probar una ruta compartida.
+      - id: oil-control
+        title: ¿Quién controla el petróleo venezolano?
+        summary: >-
+          Siga el expediente desde un anuncio general hasta afirmaciones
+          oficiales publicadas, ejecución, impugnación institucional y las
+          cláusulas que siguen ocultas.
+        steps:
+          - claim: VEN-OIL-DEAL-ANNOUNCEMENT-20260828
+            date: 28 de agosto de 2026
+            turn: Dos gobiernos anuncian escala y beneficios proyectados, no las cláusulas operativas.
+          - claim: VEN-OIL-NABEP-OFFICIAL-TERMS
+            date: 31 de agosto de 2026
+            turn: Washington identifica la empresa y afirma derechos accionariales, de compra y gobernanza.
+          - claim: VEN-OIL-GAZETTE-SUPPORT
+            date: 1 de septiembre de 2026
+            turn: El Parlamento publica su respaldo político, pero no el acuerdo que respalda.
+          - claim: VEN-OIL-25-100-UNRESOLVED
+            date: 7 de septiembre de 2026
+            turn: Las versiones de 25 y 100 años no pueden leerse como un mismo derecho adquirido.
+          - claim: VEN-OIL-GL52C
+            date: 14 de septiembre de 2026
+            turn: La ejecución avanza mediante sanciones sin revelar el contrato.
+          - claim: VEN-OIL-SENATE-AUTHORITY-CHALLENGE
+            date: 30 de septiembre de 2026
+            turn: Senadores de alto rango cuestionan formalmente la autoridad legal; ningún tribunal ha fallado.
+          - claim: VEN-OIL-OVERSIGHT-GAP
+            date: 2 de octubre de 2026
+            turn: El Congreso recibe un documento, pero la población todavía no puede examinarlo.
+          - claim: VEN-OIL-DEAL-DISCLOSURE-GAP
+            date: 14 de octubre de 2026
+            turn: Los instrumentos determinantes siguen marcando el límite de lo que puede afirmarse honestamente.
 
   # Cadenas de la capa de mejora progresiva en assets/atlas.js. Sin JavaScript
   # el texto, el registro y todos los enlaces a las fuentes siguen funcionando.

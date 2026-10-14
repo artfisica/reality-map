@@ -797,6 +797,77 @@ def render_map(L, alt, geo, alt_url, path, alt_path):
 # --------------------------------------------------------------------------
 
 
+def evidence_paths_html(L: dict, claims: list[Claim]) -> str:
+    """Render question-led trails directly from ledger claims.
+
+    Both trails and every step are complete in the HTML. atlas.js only turns
+    them into a one-step-at-a-time reader; with JavaScript off, the ordered
+    evidence remains visible and every source and ledger link still works.
+    """
+    P = L.get("evidence_paths", {})
+    paths = P.get("paths", [])
+    if not paths:
+        return ""
+    by_claim = {c.cid: c for c in claims}
+    by_class = {c["id"]: c for c in L["evidence_classes"]}
+    tabs, panels = [], []
+    for path_i, path in enumerate(paths):
+        pid = path["id"]
+        tabs.append(
+            f'<button class="paths__tab" id="path-tab-{e(pid)}" type="button" '
+            f'role="tab" aria-controls="path-{e(pid)}" aria-selected="false" '
+            f'data-path-tab="{e(pid)}" hidden>{e(path["title"])}</button>')
+        steps = []
+        for step_i, step in enumerate(path.get("steps", []), 1):
+            cid = step["claim"]
+            if cid not in by_claim:
+                raise ValueError(f'evidence path "{pid}" points to unknown claim {cid}')
+            claim = by_claim[cid]
+            cls = by_class[claim.class_id]
+            source_html = re.sub(r'<a href="(https?://[^"]+)"',
+                                 r'<a class="exlink" target="_blank" rel="noopener noreferrer" href="\1"',
+                                 claim.source_html)
+            source = (f'<div class="path__source"><span>{e(P.get("source", "Source"))}</span>'
+                      f'<div>{source_html}</div></div>')
+            steps.append(f"""<li class="path__step path__step--{e(claim.class_id)}" data-path-step>
+  <div class="path__step-head">
+    <span class="path__date">{e(step.get('date', ''))}</span>
+    <span class="path__ref">{e(claim.ref)}</span>
+    {stamp(cls)}
+  </div>
+  <p class="path__turn">{e(step.get('turn', ''))}</p>
+  <p class="path__claim">{claim.claim_html}</p>
+  <div class="path__permitted"><span>{e(P.get('permitted', 'What the evidence permits'))}</span>
+    <p>{claim.permitted_html}</p></div>
+  {source}
+  <a class="path__ledger" href="{e(L['ledger']['slug'])}/#{e(cid)}">{e(P.get('ledger', 'Open the ledger claim'))} <span aria-hidden="true">&#8250;</span></a>
+</li>""")
+        total = len(steps)
+        status = t(P, "step", current=1, total=total)
+        panels.append(f"""<article class="path" id="path-{e(pid)}" data-path-panel="{e(pid)}"
+  role="tabpanel" aria-labelledby="path-tab-{e(pid)}">
+  <header class="path__head">
+    <h3>{e(path['title'])}</h3>
+    <p>{e(path.get('summary', ''))}</p>
+  </header>
+  <p class="path__status" data-path-status aria-live="polite" hidden>{e(status)}</p>
+  <ol class="path__steps">{''.join(steps)}</ol>
+  <div class="path__nav" data-path-nav hidden>
+    <button type="button" data-path-prev>{e(P.get('previous', 'Previous step'))}</button>
+    <button type="button" data-path-next>{e(P.get('next', 'Next step'))}</button>
+  </div>
+</article>""")
+    return f"""<section class="paths wrap" data-evidence-paths data-step-template="{e(P.get('step', 'Step {current} of {total}'))}">
+  <div class="paths__head">
+    <p class="eyebrow">{e(P.get('eyebrow', ''))}</p>
+    <h2 class="h-lg">{e(P.get('title', ''))}</h2>
+    <p class="lede">{e(P.get('lede', ''))}</p>
+  </div>
+  <div class="paths__tabs" role="tablist" aria-label="{e(P.get('title', ''))}" data-path-tabs hidden>{''.join(tabs)}</div>
+  <div class="paths__panels">{''.join(panels)}</div>
+</section>"""
+
+
 def render_home(L, alt, method, studies, sections, claims, standfirst, alt_url, depth,
                 path, alt_path):
     ui, classes = L["ui"], L["evidence_classes"]
@@ -865,6 +936,8 @@ def render_home(L, alt, method, studies, sections, claims, standfirst, alt_url, 
   <a class="cta" href="{L['ledger']['slug']}/">{e(t(ui, 'open_ledger'))}
     <span aria-hidden="true">&#8250;</span></a>
 </section>
+
+{evidence_paths_html(L, claims)}
 
 {trainer_html(L)}
 

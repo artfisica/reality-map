@@ -929,7 +929,7 @@ a.claim__ref:hover{color:var(--ink);border-bottom-color:var(--ink-3)}
 }
 
 /* ==========================================================================
-   interactive layer (2026-10-13). Everything below styles what atlas.js adds
+   interactive layer (2026-10-14). Everything below styles what atlas.js adds
    or reveals. The rule stands: colour means evidence class and nothing else;
    every control is ink on paper.
    ========================================================================== */
@@ -1034,6 +1034,73 @@ a.claim__ref:hover{color:var(--ink);border-bottom-color:var(--ink-3)}
 .legend__group.is-hot .legend__num,.legend__group.is-hot .legend__study{color:var(--ink)}
 .legend__group.is-hot{background:linear-gradient(90deg,var(--paper-2),transparent 55%)}
 
+/* --- trace the evidence -------------------------------------------------- */
+
+.paths{padding:var(--step) 0;border-bottom:1px solid var(--rule)}
+.paths__head{max-width:62ch}
+.paths__tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:.5rem;margin-top:clamp(2rem,4vw,3rem)}
+.paths__tabs[hidden]{display:none}
+.paths__tab{font-family:var(--serif);font-size:clamp(1rem,2vw,1.2rem);
+  line-height:1.25;text-align:left;color:var(--ink-2);background:var(--paper);
+  border:1px solid var(--rule-2);padding:1rem 1.1rem;cursor:pointer}
+.paths__tab:hover{border-color:var(--ink);color:var(--ink)}
+.paths__tab[aria-selected="true"]{color:var(--ink);border-color:var(--ink);
+  box-shadow:inset 0 -3px 0 var(--ink);background:var(--paper-2)}
+.paths__panels{display:grid;gap:clamp(2.5rem,6vw,4rem);margin-top:2rem}
+.path{border-top:1px solid var(--ink);padding-top:1.25rem}
+.path__head{display:grid;gap:.65rem;max-width:62ch}
+.path__head h3{font-size:clamp(1.45rem,3vw,2.1rem);line-height:1.12;
+  letter-spacing:-.025em}
+.path__head p{color:var(--ink-2);font-size:1rem;line-height:1.55}
+.path__status{margin-top:1.5rem;font-family:var(--mono);font-size:.75rem;
+  color:var(--ink-3);letter-spacing:.04em}
+.path__steps{list-style:none;margin:1.5rem 0 0;padding:0;display:grid;gap:1rem;
+  counter-reset:path-step}
+.path__step{--c:var(--ink-3);counter-increment:path-step;position:relative;
+  display:grid;gap:1rem;padding:clamp(1.1rem,3vw,1.65rem);
+  background:var(--paper-2);border:1px solid var(--rule-2);border-left:4px solid var(--c)}
+.path__step--record{--c:var(--c-record)}
+.path__step--court{--c:var(--c-court)}
+.path__step--finding{--c:var(--c-finding)}
+.path__step--position{--c:var(--c-position)}
+.path__step--inference{--c:var(--c-inference)}
+.path__step--forecast{--c:var(--c-forecast)}
+.path__step::before{content:counter(path-step,decimal-leading-zero);position:absolute;
+  right:1rem;top:.8rem;font-family:var(--mono);font-size:clamp(1.6rem,4vw,2.6rem);
+  color:var(--rule-2);line-height:1}
+.path__step-head{display:flex;flex-wrap:wrap;align-items:center;gap:.45rem .75rem;
+  padding-right:2.8rem}
+.path__date,.path__ref{font-family:var(--mono);font-size:.6875rem;color:var(--ink-3)}
+.path__ref{padding-left:.75rem;border-left:1px solid var(--rule-2)}
+.path__step-head .stamp{margin-left:auto}
+.path__turn{max-width:56ch;font-size:clamp(1.15rem,2.4vw,1.5rem);line-height:1.35;
+  letter-spacing:-.014em;font-weight:560}
+.path__claim{max-width:64ch;color:var(--ink-2);line-height:1.55}
+.path__permitted,.path__source{display:grid;grid-template-columns:minmax(8rem,11rem) 1fr;
+  gap:.4rem 1rem;padding-top:.8rem;border-top:1px solid var(--rule)}
+.path__permitted>span,.path__source>span{font-family:var(--sans);font-weight:600;
+  font-size:.625rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
+.path__permitted p,.path__source div{max-width:60ch;font-size:.875rem;line-height:1.5}
+.path__source a{color:var(--ink);text-underline-offset:.18em}
+.path__ledger{justify-self:start;font-family:var(--sans);font-weight:600;
+  font-size:.6875rem;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-2);
+  text-decoration:none;border-bottom:1px solid var(--rule-2)}
+.path__ledger:hover{color:var(--ink);border-color:var(--ink)}
+.path__nav{display:flex;justify-content:space-between;gap:.75rem;margin-top:1rem}
+.path__nav[hidden]{display:none}
+.path__nav button{font-family:var(--sans);font-weight:600;font-size:.75rem;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--ink);background:transparent;
+  border:1px solid var(--rule-2);padding:.65rem .85rem;cursor:pointer}
+.path__nav button:hover{border-color:var(--ink)}
+.path__nav button[hidden]{display:none}
+.paths.is-enhanced .path[hidden],.paths.is-enhanced .path__step[hidden]{display:none}
+@media (max-width:42rem){
+  .paths__tabs{grid-template-columns:1fr}
+  .path__permitted,.path__source{grid-template-columns:1fr}
+  .path__step-head .stamp{width:100%;margin-left:0;justify-self:start}
+}
+
 /* --- learn the six -------------------------------------------------------- */
 
 .trainer{padding:var(--step) 0;border-bottom:1px solid var(--rule)}
@@ -1116,6 +1183,6 @@ a.claim__ref:hover{color:var(--ink);border-bottom-color:var(--ink-3)}
   font-style:normal;color:var(--ink);background:none}
 
 @media print{
-  .progress,.share,.trainer,.continue,.revised,.nav__search,.palette,.tilecard,
+  .progress,.share,.trainer,.continue,.revised,.nav__search,.palette,.tilecard,.paths__tabs,.path__nav,
   .claim__actions{display:none!important}
 }

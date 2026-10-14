@@ -4,6 +4,35 @@ Editions are dated and versioned together. When a court rules, a policy changes
 or new primary evidence appears, the ledger row is updated first and the change
 is recorded here.
 
+## 0.9.0 — 14 October 2026
+
+- Added the 30 September letter from the ranking Democrats of four Senate
+  committees. It formally challenges the statutory authority for the announced
+  US equity and long-term oil-purchase structure and requests the agreements,
+  but is not described as a congressional or judicial ruling of illegality.
+- Added the 13 October DEA record placing Álvaro Pulido Vargas in US custody
+  after coordination with “international partners,” while preserving the
+  official record's silence on arrest location, route and legal process.
+- Added attributed Bloomberg Línea and *El País* reporting on Pulido's
+  Venezuelan citizenship, prior imprisonment near Caracas and delivery by
+  Venezuelan actors. These details remain attributed reporting rather than an
+  official Venezuelan admission or published surrender order.
+- Revised the Canelón assessment. The combined Canelón and Pulido record now
+  supports investigating an organised opaque transfer channel, but does not
+  prove a common route, who placed Canelón at sea, or a documented mechanism
+  capable of overriding Article 69.
+- Added four matched ledger claims in each language, bringing the record to 92
+  claims per edition.
+- Added **Trace the evidence** to both covers. Two question-led paths—the
+  Canelón/Pulido transfers and control of Venezuelan oil—show, step by step,
+  how later evidence changes the permissible conclusion. Every displayed
+  claim, class, source and wording boundary is derived from a stable ledger id.
+  Without JavaScript, both complete ordered paths remain visible.
+- Extended strict validation to reject missing path claims, repeated steps and
+  any divergence between the English and Spanish evidentiary sequences.
+- Extended the interface test to exercise path selection, step navigation,
+  stable ledger links and the complete no-JavaScript rendering.
+
 ## Interface 2026-10-13 — 13 October 2026
 
 An interface release, named by `site.interface_version`. The record is unchanged: 88 matched claims, edition 11 October 2026, tag

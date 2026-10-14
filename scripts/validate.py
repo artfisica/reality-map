@@ -93,6 +93,36 @@ def check_edition(cfg: dict, code: str) -> dict:  # noqa: C901
                          f'"{seen[c.cid][:48]}" and "{c.claim_text[:48]}"')
         seen[c.cid] = c.claim_text
 
+    # Question-led evidence paths are a presentation of the ledger, never a
+    # second store of claims. Every step must resolve to a stable claim id.
+    paths = L.get("evidence_paths", {}).get("paths", [])
+    path_ids, path_claims = [], []
+    for path in paths:
+        pid = str(path.get("id", "")).strip()
+        if not pid:
+            say("error", f"[{code}] an evidence path has no id")
+            continue
+        if pid in path_ids:
+            say("error", f'[{code}] evidence path id "{pid}" is duplicated')
+        path_ids.append(pid)
+        if not path.get("title") or not path.get("summary"):
+            say("error", f'[{code}] evidence path "{pid}" needs a title and summary')
+        step_ids = []
+        for n, step in enumerate(path.get("steps", []), 1):
+            cid = str(step.get("claim", "")).strip()
+            step_ids.append(cid)
+            if cid not in seen:
+                say("error", f'[{code}] evidence path "{pid}" step {n} points '
+                             f'to unknown claim "{cid}"')
+            if not step.get("date") or not step.get("turn"):
+                say("error", f'[{code}] evidence path "{pid}" step {n} needs '
+                             f'a date label and an evidence turn')
+        if len(step_ids) < 2:
+            say("error", f'[{code}] evidence path "{pid}" needs at least two steps')
+        if len(step_ids) != len(set(step_ids)):
+            say("error", f'[{code}] evidence path "{pid}" repeats a claim id')
+        path_claims.append((pid, step_ids))
+
     # An evidentiary source with no link cannot be checked by a reader, unless
     # it deliberately names several documents rather than one.
     aggregates = [re.compile(p, re.I)
@@ -199,7 +229,7 @@ def check_edition(cfg: dict, code: str) -> dict:  # noqa: C901
                     say("error", f'[{code}] prohibited term "{term}" in '
                                  f"{path.name} line {i}")
 
-    return {"claims": claims, "sections": sections}
+    return {"claims": claims, "sections": sections, "paths": path_claims}
 
 
 def main() -> int:
@@ -233,6 +263,11 @@ def main() -> int:
             say("warn", f"semantic id {i} exists in English but not Spanish")
         for i in sorted(only_es):
             say("warn", f"semantic id {i} exists in Spanish but not English")
+
+    # A translated path may change its prose, never its evidentiary sequence.
+    if editions["en"]["paths"] != editions["es"]["paths"]:
+        say("error", "the English and Spanish evidence paths do not use the "
+                     "same ids and claim sequences")
 
     map_ids = {code: [p["id"] for p in cfg[code].get("map", {}).get("places", [])]
                for code in ("en", "es")}

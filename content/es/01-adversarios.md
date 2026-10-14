@@ -3,7 +3,7 @@
 ## El doble rasero de Europa y Suiza en Gaza y el límite de su respuesta en Líbano
 
 **Por Arturo Sánchez Pineda**  
-**11 de octubre de 2026**
+**14 de octubre de 2026**
 
 *Primer estudio de caso del **Mapa civil de la realidad geopolítica**, un marco para entender a los Estados mediante su conducta, sus capacidades y sus intereses observables, y no únicamente mediante sus declaraciones.*
 
@@ -35,7 +35,7 @@ En septiembre de 2025, la [Comisión Internacional Independiente de Investigaci�
 
 Por separado, la [Corte Internacional de Justicia](https://www.icj-cij.org/case/192) ha dictado medidas provisionales vinculantes en *Sudáfrica contra Israel*. Ordenó a Israel prevenir actos comprendidos en la Convención sobre el Genocidio, impedir y castigar la incitación directa y pública, preservar pruebas y permitir asistencia humanitaria urgente. En mayo de 2024 ordenó detener la ofensiva y otras acciones en Rafah en la medida en que pudieran imponer condiciones de vida capaces de producir la destrucción física total o parcial del grupo palestino.
 
-Hasta el 11 de octubre de 2026, la CIJ no ha dictado sentencia definitiva sobre la responsabilidad estatal de Israel por genocidio. La distinción debe expresarse con honestidad: la Comisión de Investigación de la ONU alcanzó una conclusión de genocidio; la decisión final y jurídicamente vinculante de la CIJ sobre el fondo continúa pendiente.
+Hasta el 14 de octubre de 2026, la CIJ no ha dictado sentencia definitiva sobre la responsabilidad estatal de Israel por genocidio. La distinción debe expresarse con honestidad: la Comisión de Investigación de la ONU alcanzó una conclusión de genocidio; la decisión final y jurídicamente vinculante de la CIJ sobre el fondo continúa pendiente.
 
 La ausencia de una sentencia definitiva no justifica la inacción. En su [fallo de 2007 en *Bosnia y Herzegovina contra Serbia y Montenegro*](https://www.icj-cij.org/index.php/node/103898), la CIJ estableció que el deber de prevenir surge cuando un Estado conoce, o normalmente debió conocer, un riesgo grave de genocidio. No comienza después de que un tribunal confirme que el genocidio ya ocurrió. Las medidas exigibles dependen de la capacidad de influencia de cada Estado.
 

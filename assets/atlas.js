@@ -486,6 +486,81 @@
     });
   })();
 
+  /* --- trace the evidence: question-led paths through ledger claims ------- */
+
+  (function () {
+    var box = document.querySelector('[data-evidence-paths]');
+    if (!box) return;
+    var tablist = box.querySelector('[data-path-tabs]');
+    var tabs = Array.prototype.slice.call(box.querySelectorAll('[data-path-tab]'));
+    var panels = Array.prototype.slice.call(box.querySelectorAll('[data-path-panel]'));
+    if (!tablist || !tabs.length || !panels.length) return;
+    var stepTemplate = box.dataset.stepTemplate || 'Step {current} of {total}';
+
+    function sync(panel) {
+      var steps = Array.prototype.slice.call(panel.querySelectorAll('[data-path-step]'));
+      var index = Number(panel.dataset.pathIndex || 0);
+      if (index < 0) index = 0;
+      if (index >= steps.length) index = Math.max(0, steps.length - 1);
+      panel.dataset.pathIndex = String(index);
+      steps.forEach(function (step, i) { step.hidden = i !== index; });
+      var status = panel.querySelector('[data-path-status]');
+      if (status) {
+        status.hidden = false;
+        status.textContent = fmt(stepTemplate, { current: index + 1, total: steps.length });
+      }
+      var prev = panel.querySelector('[data-path-prev]');
+      var next = panel.querySelector('[data-path-next]');
+      if (prev) prev.hidden = index === 0;
+      if (next) next.hidden = index === steps.length - 1;
+    }
+
+    function select(id, focus) {
+      tabs.forEach(function (tab) {
+        var on = tab.dataset.pathTab === id;
+        tab.setAttribute('aria-selected', on ? 'true' : 'false');
+        tab.tabIndex = on ? 0 : -1;
+        if (on && focus) tab.focus();
+      });
+      panels.forEach(function (panel) {
+        var on = panel.dataset.pathPanel === id;
+        panel.hidden = !on;
+        if (on) sync(panel);
+      });
+    }
+
+    panels.forEach(function (panel) {
+      panel.dataset.pathIndex = '0';
+      var nav = panel.querySelector('[data-path-nav]');
+      var prev = panel.querySelector('[data-path-prev]');
+      var next = panel.querySelector('[data-path-next]');
+      if (nav) nav.hidden = false;
+      if (prev) prev.addEventListener('click', function () {
+        panel.dataset.pathIndex = String(Number(panel.dataset.pathIndex || 0) - 1);
+        sync(panel);
+      });
+      if (next) next.addEventListener('click', function () {
+        panel.dataset.pathIndex = String(Number(panel.dataset.pathIndex || 0) + 1);
+        sync(panel);
+      });
+      sync(panel);
+    });
+    tabs.forEach(function (tab, i) {
+      tab.hidden = false;
+      tab.addEventListener('click', function () { select(tab.dataset.pathTab, false); });
+      tab.addEventListener('keydown', function (ev) {
+        if (ev.key !== 'ArrowLeft' && ev.key !== 'ArrowRight') return;
+        ev.preventDefault();
+        var delta = ev.key === 'ArrowRight' ? 1 : -1;
+        var next = (i + delta + tabs.length) % tabs.length;
+        select(tabs[next].dataset.pathTab, true);
+      });
+    });
+    box.classList.add('is-enhanced');
+    tablist.hidden = false;
+    select(tabs[0].dataset.pathTab, false);
+  })();
+
   /* --- learn the six: a ledger claim with its colour hidden -------------- */
 
   (function () {

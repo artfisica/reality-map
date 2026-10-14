@@ -3,7 +3,7 @@
 ## How Selective Austerity Exports Death and Turns Other People’s Resources into Instruments of Power
 
 **By Arturo Sánchez Pineda**  
-**11 October 2026**
+**14 October 2026**
 
 *The sixth case study in **The Civilian Geopolitical Reality Map**—a framework for distinguishing fiscal facts, mortality forecasts, legal duties and the political selection of who is made to absorb a state’s costs.*
 
