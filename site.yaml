@@ -61,7 +61,7 @@ en:
   short: Reality Map
   tagline: How to understand states by what they do, not what they declare
   edition: 14 October 2026
-  version: "0.9.0"
+  version: "0.10.0"
   description: >-
     A civilian framework for reading state conduct through instruments,
     dependencies and costs, with every factual claim classified and traced to a
@@ -389,6 +389,31 @@ en:
           - claim: VEN-OIL-DEAL-DISCLOSURE-GAP
             date: 14 October 2026
             turn: The controlling instruments still set the boundary of what can honestly be claimed.
+      - id: custody-control
+        title: When does custody become control?
+        summary: >-
+          Compare Iraq's changing legal architecture with Venezuela's explicit
+          disbursement regime, then test whether foreign custody produced
+          observable political leverage without transferring ownership.
+        steps:
+          - claim: IRQ-OIL-NYFED-CUSTODY
+            date: 2003–2026
+            turn: Iraqi oil receipts remain Iraqi property while New York becomes the durable access point.
+          - claim: IRQ-DFI-SUCCESSOR-TRANSITION
+            date: 2011–2014
+            turn: The UN mandate and US immunity regime end, but successor CBI accounts preserve the location.
+          - claim: VEN-EO14373-FUNDS
+            date: 9 January 2026
+            turn: Venezuela's published arrangement goes further by assigning disbursement instructions to the US secretary of state.
+          - claim: IRQ-CASH-LEVERAGE-2026
+            date: April–July 2026
+            turn: A suspension and conditional restart turn structural dependence into demonstrated leverage.
+          - claim: VEN-GOLD-PROPOSED-TRANSFER
+            date: 18 September 2026
+            turn: A reported gold move could extend the pattern, but no completed transfer is documented.
+          - claim: IRQ-VEN-ACCOUNT-COMPARISON
+            date: Current assessment
+            turn: The common mechanism is custody and access, not identical law or US ownership.
 
   # Strings for the progressive-enhancement layer in assets/atlas.js. Every
   # feature they describe is optional: with JavaScript off the text, the
@@ -461,7 +486,7 @@ es:
   short: Mapa civil
   tagline: Cómo entender a los Estados por lo que hacen, no por lo que declaran
   edition: 14 de octubre de 2026
-  version: "0.9.0"
+  version: "0.10.0"
   description: >-
     Un marco civil para leer la conducta de los Estados a través de sus
     instrumentos, dependencias y costos, con cada afirmación clasificada y
@@ -789,6 +814,31 @@ es:
           - claim: VEN-OIL-DEAL-DISCLOSURE-GAP
             date: 14 de octubre de 2026
             turn: Los instrumentos determinantes siguen marcando el límite de lo que puede afirmarse honestamente.
+      - id: custody-control
+        title: ¿Cuándo se convierte la custodia en control?
+        summary: >-
+          Compare la arquitectura jurídica cambiante de Irak con el régimen
+          venezolano explícito de desembolso y compruebe si la custodia externa
+          produjo influencia política observable sin transferir propiedad.
+        steps:
+          - claim: IRQ-OIL-NYFED-CUSTODY
+            date: 2003–2026
+            turn: Los ingresos petroleros siguen siendo propiedad iraquí mientras Nueva York se vuelve el punto duradero de acceso.
+          - claim: IRQ-DFI-SUCCESSOR-TRANSITION
+            date: 2011–2014
+            turn: Terminan el mandato de la ONU y la inmunidad estadounidense, pero las cuentas sucesoras preservan el lugar de custodia.
+          - claim: VEN-EO14373-FUNDS
+            date: 9 de enero de 2026
+            turn: El régimen venezolano publicado va más lejos al asignar instrucciones de desembolso al secretario de Estado estadounidense.
+          - claim: IRQ-CASH-LEVERAGE-2026
+            date: Abril–julio de 2026
+            turn: Una suspensión y reanudación condicionada convierten la dependencia estructural en influencia demostrada.
+          - claim: VEN-GOLD-PROPOSED-TRANSFER
+            date: 18 de septiembre de 2026
+            turn: El traslado reportado del oro podría ampliar el patrón, pero no se documenta una transferencia completada.
+          - claim: IRQ-VEN-ACCOUNT-COMPARISON
+            date: Evaluación actual
+            turn: El mecanismo común es custodia y acceso, no derecho idéntico ni propiedad estadounidense.
 
   # Cadenas de la capa de mejora progresiva en assets/atlas.js. Sin JavaScript
   # el texto, el registro y todos los enlaces a las fuentes siguen funcionando.

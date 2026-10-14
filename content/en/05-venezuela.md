@@ -63,6 +63,14 @@ The distinction matters when interpreting the [DW News discussion](https://www.y
 
 The aggression jurisdiction presents another limitation. The Swiss memorandum explained that the ICC did not have jurisdiction over the alleged US crime of aggression in these circumstances: the United States is not a Rome Statute party, Venezuela had not ratified the Kampala aggression amendments, and a Security Council referral was politically implausible. The result is not that the intervention was lawful. It is that a violation may exist without an available court able to prosecute it.
 
+## A later troop deployment—and the limits of what it proves
+
+The January intervention must be distinguished from the US military deployment after the earthquakes of 24 June. [SOUTHCOM stated](https://www.southcom.mil/News/PressReleases/Article/4528485/release-update-on-southcom-support-to-venezuela-earthquake-relief/) that the interim Venezuelan authorities requested the later assistance. Its public record places US forces at Simón Bolívar International Airport and the Port of La Guaira, and documents Marines, sailors, aircraft and the USS *Fort Lauderdale*. On 2 July, [SOUTHCOM reported](https://www.southcom.mil/News/PressReleases/Article/4532663/release-update-on-southcom-support-to-venezuela-earthquake-relief-july-2/) nearly 2,000 US troops supporting the operation across Venezuela and logistics hubs in Puerto Rico and Curaçao. [Reuters separately reported](https://www.straitstimes.com/world/united-states/us-military-deploys-over-900-personnel-to-venezuela-for-earthquake-response), quoting the SOUTHCOM commander, that more than 900 were inside Venezuela and roughly 800 were at the two Caribbean hubs.
+
+These facts establish a substantial foreign military presence on Venezuelan territory during the relief operation. They do not establish 2,000 occupation troops inside Venezuela, permanent US bases or a non-consensual deployment. Consent to earthquake assistance also cannot retroactively legalise the January attack: consent is specific to the act, purpose and period for which it was given.
+
+The public record also requires caution about duration. On 22 July, the [US Air Force said](https://www.21af.amc.af.mil/News/Article-Display/Article/4552489/contingency-response-element-returns-from-massive-earthquake-relief-operations/) that the 621st Contingency Response Wing had concluded its Venezuela deployment after moving nearly three million pounds of aid. That proves the end of that unit's mission, not the withdrawal of every US military or intelligence element. No comprehensive public order of battle, final withdrawal list or agreement authorising permanent bases has been found. The correct current conclusion is therefore **a documented, requested and apparently temporary relief deployment whose peak footprint was large, not a documented permanent occupation force**.
+
 ## The civilian status map
 
 The Venezuelan state now has at least three simultaneous characteristics:
@@ -195,6 +203,10 @@ I write this as a Venezuelan who has opposed the abuses of Venezuelan rulers and
 36. US Drug Enforcement Administration, “Homeland Security Task Force Arrests Alvaro Pulido Vargas to Face Charges in Florida,” 13 October 2026: <https://www.dea.gov/press-releases/2026/10/13/homeland-security-task-force-arrests-alvaro-pulido-vargas-face-charges>
 37. Bloomberg Línea, “Venezuela envía a otro empresario vinculado a Maduro para enfrentar cargos en EE.UU.,” 13 October 2026: <https://www.bloomberglinea.com/latinoamerica/venezuela/venezuela-envia-a-otro-empresario-vinculado-a-maduro-para-enfrentar-cargos-en-eeuu/>
 38. Alonso Moleiro, “La entrega a Estados Unidos del socio de Alex Saab estrecha el cerco sobre el círculo de poder de Maduro,” *El País*, 13 October 2026: <https://elpais.com/america/2026-10-13/la-entrega-a-estados-unidos-del-socio-de-alex-saab-estrecha-el-cerco-sobre-el-circulo-de-poder-de-maduro.html>
+39. US Southern Command, “Update on SOUTHCOM support to Venezuela earthquake relief,” 27 June 2026: <https://www.southcom.mil/News/PressReleases/Article/4528485/release-update-on-southcom-support-to-venezuela-earthquake-relief/>
+40. US Southern Command, “Update on SOUTHCOM support to Venezuela earthquake relief,” 2 July 2026: <https://www.southcom.mil/News/PressReleases/Article/4532663/release-update-on-southcom-support-to-venezuela-earthquake-relief-july-2/>
+41. Phil Stewart, “US military deploys over 900 personnel to Venezuela for earthquake response,” Reuters, 30 June 2026, republished by *The Straits Times*: <https://www.straitstimes.com/world/united-states/us-military-deploys-over-900-personnel-to-venezuela-for-earthquake-response>
+42. US Air Force, “Contingency Response Element Returns from Massive Earthquake Relief Operations in Venezuela,” 22 July 2026: <https://www.21af.amc.af.mil/News/Article-Display/Article/4552489/contingency-response-element-returns-from-massive-earthquake-relief-operations/>
 
 ### Authorial context
 

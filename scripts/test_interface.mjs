@@ -53,8 +53,8 @@ for (const [lang, home, study, ledger, map] of [
   const prefix = lang === 'es' ? 'es/' : '';
   await test(`${lang} home: evidence paths, trainer, search palette, mosaic card`, async () => {
     const staticPage = new JSDOM(fs.readFileSync(docs + home, 'utf8')).window.document;
-    assert.equal(staticPage.querySelectorAll('[data-path-panel]').length, 2);
-    assert.ok(staticPage.querySelectorAll('[data-path-step]').length >= 14);
+    assert.equal(staticPage.querySelectorAll('[data-path-panel]').length, 3);
+    assert.ok(staticPage.querySelectorAll('[data-path-step]').length >= 20);
     assert.equal(staticPage.querySelectorAll('[data-path-step][hidden]').length, 0,
       'every evidence step remains visible without JavaScript');
     const w = await page(home, base + prefix);
@@ -62,7 +62,7 @@ for (const [lang, home, study, ledger, map] of [
     assert.equal(d.querySelector('[data-search-open]').hidden, false);
     const paths = d.querySelector('[data-evidence-paths]');
     assert.ok(paths.classList.contains('is-enhanced'));
-    assert.equal(paths.querySelectorAll('[data-path-tab]').length, 2);
+    assert.equal(paths.querySelectorAll('[data-path-tab]').length, 3);
     assert.equal(paths.querySelectorAll('[data-path-panel]:not([hidden])').length, 1);
     let activePath = paths.querySelector('[data-path-panel]:not([hidden])');
     assert.equal(activePath.querySelectorAll('[data-path-step]:not([hidden])').length, 1);
@@ -74,6 +74,9 @@ for (const [lang, home, study, ledger, map] of [
     activePath = paths.querySelector('[data-path-panel]:not([hidden])');
     assert.equal(activePath.dataset.pathPanel, 'oil-control');
     assert.match(activePath.querySelector('.path__ledger').href, /#[A-Z0-9-]+$/);
+    paths.querySelectorAll('[data-path-tab]')[2].click();
+    activePath = paths.querySelector('[data-path-panel]:not([hidden])');
+    assert.equal(activePath.dataset.pathPanel, 'custody-control');
     assert.ok(d.querySelector('.trainer.wrap'), 'trainer uses shared page width');
     assert.equal(d.querySelector('[data-trainer]').hidden, false);
     d.querySelector('[data-trainer-next]').click();

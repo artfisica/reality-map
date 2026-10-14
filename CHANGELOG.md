@@ -4,6 +4,31 @@ Editions are dated and versioned together. When a court rules, a policy changes
 or new primary evidence appears, the ledger row is updated first and the change
 is recorded here.
 
+## 0.10.0 — 14 October 2026
+
+- Corrected the Iraq comparison with the missing legal transition: Security
+  Council Resolution 1956 ended the Development Fund arrangements in 2011,
+  Executive Order 13668 ended the special US immunity regime in 2014, and the
+  Central Bank of Iraq's audited statements identify the Iraqi-owned successor
+  accounts at the New York Fed.
+- Added the reported 2026 suspension and conditional restart of Iraqi physical-
+  dollar deliveries. The edition treats this as demonstrated leverage over one
+  access channel, not confiscation or a freeze of all electronic oil revenue.
+- Added the June–July Venezuela earthquake deployment: the Venezuelan request,
+  the official nearly 2,000-troop theatre figure, Reuters' report of more than
+  900 personnel inside Venezuela, the named airport and port nodes, and the
+  documented conclusion of the 621st Air Force element's mission.
+- Kept the legal boundaries explicit: later consent to disaster relief did not
+  retroactively legalise the January intervention; the record does not establish
+  2,000 occupation troops inside Venezuela, permanent US bases or the departure
+  of every US military or intelligence element.
+- Added **When does custody become control?** to the cover evidence paths. It
+  traces the change from the Iraq occupation fund to successor accounts,
+  Venezuela's explicit disbursement regime, demonstrated Iraqi access leverage
+  and the still-uncompleted Venezuelan gold proposal.
+- Added three matched ledger claims in each language, bringing the record to 95
+  claims per edition and three bilingual evidence paths.
+
 ## 0.9.0 — 14 October 2026
 
 - Added the 30 September letter from the ranking Democrats of four Senate
