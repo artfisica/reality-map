@@ -904,7 +904,7 @@ def trainer_html(L: dict) -> str:
         f'<span class="trainer__swatch stamp--{c["id"]}" aria-hidden="true"></span>'
         f'<span class="trainer__name">{e(c["name"])}</span>'
         f'<span class="trainer__full">{e(c["full"])}</span></button>' for c in classes)
-    return f"""<section class="trainer" data-trainer hidden>
+    return f"""<section class="trainer wrap" data-trainer hidden>
   <div class="trainer__head">
     <p class="eyebrow">{e(S.get('trainer_eyebrow', ''))}</p>
     <h2 class="h-lg">{e(S.get('trainer_h', ''))}</h2>

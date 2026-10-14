@@ -55,6 +55,7 @@ for (const [lang, home, study, ledger, map] of [
     const w = await page(home, base + prefix);
     const d = w.document;
     assert.equal(d.querySelector('[data-search-open]').hidden, false);
+    assert.ok(d.querySelector('.trainer.wrap'), 'trainer uses shared page width');
     assert.equal(d.querySelector('[data-trainer]').hidden, false);
     d.querySelector('[data-trainer-next]').click();
     assert.ok(d.querySelector('[data-trainer-claim]').textContent.length > 20);
